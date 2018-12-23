@@ -34,7 +34,7 @@ class User extends Authenticatable
     }
 
     public function cartItemsCount(){
-        return Cart::session(auth()->id())->getContent();
+        return Cart::session(auth()->id())->getContent()->count();
     }
 
     public function cartTotal(){

@@ -132,19 +132,4 @@ class CartTest extends TestCase
         $this->get(route('cart.index'))
             ->assertSee(__('front.you_cart_is_empty'));
     }
-
-    function toCart($product){
-        if(is_array($product)){
-            foreach($product as $p){
-               $this->addProductToCart($p);
-            }
-        }else{
-            $this->addProductToCart($product);
-        }
-    }
-
-    function addProductToCart($product ,$qnt = 1){
-        $data =  ['qnt' => $qnt, 'product' => $product->slug];
-        return $this->post(route('cart.index'), $data);
-    }
 }
