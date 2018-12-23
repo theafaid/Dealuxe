@@ -22,6 +22,6 @@ class ShopTest extends TestCase
 
         $this->get(route('shop.index'))
             ->assertSee($product1->name)
-            ->assertSee($product2);
+            ->assertSee($product2->name);
     }
 }
