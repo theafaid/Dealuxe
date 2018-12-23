@@ -1,184 +1,168 @@
 @extends('layouts.app')
 @section('content')
-<!-- Breadcrumb Area Start -->
-<div class="breadcrumb-area bg-image-3 ptb-150">
-    <div class="container">
-        <div class="breadcrumb-content text-center">
-            <h3>CART PAGE</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Cart page</li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- Breadcrumb Area End -->
-<!-- shopping-cart-area start -->
-<div class="cart-main-area ptb-100">
-    <div class="container">
-        <h3 class="page-title">Your cart items</h3>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                <form action="#">
-                    <div class="table-content table-responsive">
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Image</th>
-                                <th>Product Name</th>
-                                <th>Until Price</th>
-                                <th>Qty</th>
-                                <th>Subtotal</th>
-                                <th>Delete</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="product-thumbnail">
-                                    <a href="#"><img src="assets/img/cart/cart-3.jpg" alt=""></a>
-                                </td>
-                                <td class="product-name"><a href="#">Dutchman's Breeches </a></td>
-                                <td class="product-price-cart"><span class="amount">$260.00</span></td>
-                                <td class="product-quantity">
-                                    <div class="pro-dec-cart">
-                                        <input class="cart-plus-minus-box" type="text" value="02" name="qtybutton">
-                                    </div>
-                                </td>
-                                <td class="product-subtotal">$110.00</td>
-                                <td class="product-remove">
-                                    <a href="#"><i class="fa fa-pencil"></i></a>
-                                    <a href="#"><i class="fa fa-times"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="product-thumbnail">
-                                    <a href="#"><img src="assets/img/cart/cart-4.jpg" alt=""></a>
-                                </td>
-                                <td class="product-name"><a href="#">Flowers Bouquet Pink</a></td>
-                                <td class="product-price-cart"><span class="amount">$150.00</span></td>
-                                <td class="product-quantity">
-                                    <div class="pro-dec-cart">
-                                        <input class="cart-plus-minus-box" type="text" value="02" name="qtybutton">
-                                    </div>
-                                </td>
-                                <td class="product-subtotal">$150.00</td>
-                                <td class="product-remove">
-                                    <a href="#"><i class="fa fa-pencil"></i></a>
-                                    <a href="#"><i class="fa fa-times"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="product-thumbnail">
-                                    <a href="#"><img src="assets/img/cart/cart-5.jpg" alt=""></a>
-                                </td>
-                                <td class="product-name"><a href="#">Evergreen Candytuft </a></td>
-                                <td class="product-price-cart"><span class="amount">$170.00</span></td>
-                                <td class="product-quantity">
-                                    <div class="pro-dec-cart">
-                                        <input class="cart-plus-minus-box" type="text" value="02" name="qtybutton">
-                                    </div>
-                                </td>
-                                <td class="product-subtotal">$170.00</td>
-                                <td class="product-remove">
-                                    <a href="#"><i class="fa fa-pencil"></i></a>
-                                    <a href="#"><i class="fa fa-times"></i></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <div class="page-banner text-center">
+                        <h1>Cart</h1>
+                        <ul class="page-breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Cart</li>
+                        </ul>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="cart-shiping-update-wrapper">
-                                <div class="cart-shiping-update">
-                                    <a href="#">Continue Shopping</a>
-                                </div>
-                                <div class="cart-clear">
-                                    <button>Update Shopping Cart</button>
-                                    <a href="#">Clear Shopping Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cart-tax">
-                            <div class="title-wrap">
-                                <h4 class="cart-bottom-title section-bg-gray">Estimate Shipping And Tax</h4>
-                            </div>
-                            <div class="tax-wrapper">
-                                <p>Enter your destination to get a shipping estimate.</p>
-                                <div class="tax-select-wrapper">
-                                    <div class="tax-select">
-                                        <label>
-                                            * Country
-                                        </label>
-                                        <select class="email s-email s-wid">
-                                            <option>Bangladesh</option>
-                                            <option>Albania</option>
-                                            <option>Åland Islands</option>
-                                            <option>Afghanistan</option>
-                                            <option>Belgium</option>
-                                        </select>
-                                    </div>
-                                    <div class="tax-select">
-                                        <label>
-                                            * Region / State
-                                        </label>
-                                        <select class="email s-email s-wid">
-                                            <option>Bangladesh</option>
-                                            <option>Albania</option>
-                                            <option>Åland Islands</option>
-                                            <option>Afghanistan</option>
-                                            <option>Belgium</option>
-                                        </select>
-                                    </div>
-                                    <div class="tax-select">
-                                        <label>
-                                            * Zip/Postal Code
-                                        </label>
-                                        <input type="text">
-                                    </div>
-                                    <button class="cart-btn-2" type="submit">Get A Quote</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="discount-code-wrapper">
-                            <div class="title-wrap">
-                                <h4 class="cart-bottom-title section-bg-gray">Use Coupon Code</h4>
-                            </div>
-                            <div class="discount-code">
-                                <p>Enter your coupon code if you have one.</p>
-                                <form>
-                                    <input type="text" required="" name="name">
-                                    <button class="cart-btn-2" type="submit">Apply Coupon</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="grand-totall">
-                            <div class="title-wrap">
-                                <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
-                            </div>
-                            <h5>Total products <span>$260.00</span></h5>
-                            <div class="total-shipping">
-                                <h5>Total shipping</h5>
-                                <ul>
-                                    <li><input type="checkbox"> Standard <span>$20.00</span></li>
-                                    <li><input type="checkbox"> Express <span>$30.00</span></li>
-                                </ul>
-                            </div>
-                            <h4 class="grand-totall-title">Grand Total  <span>$260.00</span></h4>
-                            <a href="#">Proceed to Checkout</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </div><!-- Page Banner Section End -->
+
+    <!-- Cart Section Start -->
+    <div class="cart-section section position-relative pt-90 pb-60 pt-lg-80 pb-lg-50 pt-md-70 pb-md-40 pt-sm-60 pb-sm-30 pt-xs-50 pb-xs-20 fix">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <form action="#">
+                        <!-- Cart Table -->
+                        <div class="cart-table table-responsive mb-30">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="pro-thumbnail">Image</th>
+                                    <th class="pro-title">Product</th>
+                                    <th class="pro-price">Price</th>
+                                    <th class="pro-quantity">Quantity</th>
+                                    <th class="pro-subtotal">Total</th>
+                                    <th class="pro-remove">Remove</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-1.jpg" alt="Product"></a></td>
+                                    <td class="pro-title"><a href="#">Teritory Quentily</a></td>
+                                    <td class="pro-price"><span>$35.00</span></td>
+                                    <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
+                                    <td class="pro-subtotal"><span>$35.00</span></td>
+                                    <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-2.jpg" alt="Product"></a></td>
+                                    <td class="pro-title"><a href="#">Adurite Silocone</a></td>
+                                    <td class="pro-price"><span>$59.00</span></td>
+                                    <td class="pro-quantity"><div class="pro-qty"><input type="text" value="2"></div></td>
+                                    <td class="pro-subtotal"><span>$59.00</span></td>
+                                    <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-3.jpg" alt="Product"></a></td>
+                                    <td class="pro-title"><a href="#">Baizidale Momone</a></td>
+                                    <td class="pro-price"><span>$78.00</span></td>
+                                    <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
+                                    <td class="pro-subtotal"><span>$78.00</span></td>
+                                    <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-4.jpg" alt="Product"></a></td>
+                                    <td class="pro-title"><a href="#">Makorone Cicile</a></td>
+                                    <td class="pro-price"><span>$65.00</span></td>
+                                    <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
+                                    <td class="pro-subtotal"><span>$65.00</span></td>
+                                    <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </form>
+
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 mb-5">
+                            <!-- Calculate Shipping -->
+                            <div class="calculate-shipping">
+                                <h4>Calculate Shipping</h4>
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12 mb-25">
+                                            <select class="nice-select">
+                                                <option>Bangladesh</option>
+                                                <option>China</option>
+                                                <option>country</option>
+                                                <option>India</option>
+                                                <option>Japan</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 col-12 mb-25">
+                                            <select class="nice-select">
+                                                <option>Dhaka</option>
+                                                <option>Barisal</option>
+                                                <option>Khulna</option>
+                                                <option>Comilla</option>
+                                                <option>Chittagong</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 col-12 mb-25">
+                                            <input type="text" placeholder="Postcode / Zip">
+                                        </div>
+                                        <div class="col-md-6 col-12 mb-25">
+                                            <input type="submit" value="Estimate">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Discount Coupon -->
+                            <div class="discount-coupon">
+                                <h4>Discount Coupon Code</h4>
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12 mb-25">
+                                            <input type="text" placeholder="Coupon Code">
+                                        </div>
+                                        <div class="col-md-6 col-12 mb-25">
+                                            <input type="submit" value="Apply Code">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Cart Summary -->
+                        <div class="col-lg-6 col-12 mb-30 d-flex">
+                            <div class="cart-summary">
+                                <div class="cart-summary-wrap">
+                                    <h4>Cart Summary</h4>
+                                    <p>Sub Total <span>$296.00</span></p>
+                                    <p>Shipping Cost <span>$00.00</span></p>
+                                    <h2>Grand Total <span>$296.00</span></h2>
+                                </div>
+                                <div class="cart-summary-button">
+                                    <button class="checkout-btn">Checkout</button>
+                                    <button class="update-btn">Update Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div><!-- Cart Section End -->
+
+    <!-- Brand Section Start -->
+    <div class="brand-section section pb-90 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    @include('layouts.partials._might_like')
+                </div>
+            </div>
+        </div>
+    </div><!-- Brand Section End -->
+
 @endsection
