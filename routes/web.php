@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', 'WelcomePageController@index');
-Route::view('/products', 'Products');
+Route::get('/shop', 'ShopController@index');
 Route::view('/product', 'product');
 Route::view('/cart', 'cart');
 Route::view('/checkout', 'checkout');
