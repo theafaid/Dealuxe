@@ -17,7 +17,7 @@ class WelcomePageTest extends TestCase
 
     /** @test */
     function a_user_must_see_some_products_in_welcome_page(){
-        $product = factory('App\Product')->create();
+        $product = create('App\Product');
 
         $this->get(route('welcome'))
             ->assertSee($product->name);

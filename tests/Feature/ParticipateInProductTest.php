@@ -11,7 +11,7 @@ class ParticipateInProductTest extends TestCase
 
     /** @test */
     function a_user_can_see_single_product_page(){
-        $product = factory('App\Product')->create();
+        $product = create('App\Product');
 
         $this->get(route('shop.show', $product->slug))
             ->assertStatus(200)
@@ -21,10 +21,10 @@ class ParticipateInProductTest extends TestCase
     /** @test */
     function a_user_must_see_might_also_like_products_in_single_product_page(){
 
-        $product1 = factory('App\Product')->create();
-        $product2 = factory('App\Product')->create();
-        $product3 = factory('App\Product')->create();
-        $product4 = factory('App\Product')->create();
+        $product1 = create('App\Product');
+        $product2 = create('App\Product');
+        $product3 = create('App\Product');
+        $product4 = create('App\Product');
 
         $this->get(route('shop.show', $product1->slug))
             ->assertSee($product2->name)

@@ -17,8 +17,8 @@ class ShopTest extends TestCase
 
     /** @test */
     function a_user_must_see_some_products_in_shop_page(){
-        $product1 = factory('App\Product')->create();
-        $product2 = factory('App\Product')->create();
+        $product1 = create('App\Product');
+        $product2 = create('App\Product');
 
         $this->get(route('shop.index'))
             ->assertSee($product1->name)
