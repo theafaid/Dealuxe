@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 class ShopController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
+     * Display a listing of the Shop Products.
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -40,11 +39,11 @@ class ShopController extends Controller
         //
     }
 
+
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Display a single product page
+     * @param Product $product
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show(Product $product)
     {

@@ -1,6 +1,6 @@
-@foreach($mightLike as $product)
+@foreach($products as $product)
     <!-- Product Item Start -->
-    <div class="col">
+    <div class="col-xl-4 col-sm-6 col-12 mb-30">
         <div class="product-item">
             <!-- Image -->
             <div class="product-image">
@@ -18,7 +18,7 @@
                 <div class="head">
                     <!-- Title-->
                     <div class="top">
-                        <h4 class="title"><a href="#">{{$product->name}}</a></h4>
+                        <h4 class="title"><a href="{{route('shop.show', $product->slug)}}">{{$product->name}}</a></h4>
                     </div>
                     <!-- Price & Ratting -->
                     <div class="bottom">
@@ -30,6 +30,14 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </span>
+                    </div>
+                </div>
+                <div class="body">
+                    <!-- Product Action -->
+                    <div class="product-action">
+                        <a href="#" class="cart"><span></span></a>
+                        <a href="#" class="wishlist"><span></span></a>
+                        <a href="#" class="quickview"><span></span></a>
                     </div>
                 </div>
             </div>
