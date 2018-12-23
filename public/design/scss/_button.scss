@@ -1,0 +1,272 @@
+/*-- 
+    Button Default
+-----------------------------------------------*/
+/*Button Group*/
+.button-group {
+    & > *, & > .btn {
+        margin-right: 20px;
+        &.btn-xs {
+            margin-right: 10px;
+        }
+        &.btn-sm {
+            margin-right: 15px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.button-group {
+    &.no-space {
+        & > *, & > .btn {
+            margin-right: 0;
+            &:last-child {
+                margin-right: 0;
+            }
+    }
+    }
+}
+
+.btn {
+    display: inline-block;
+    background-color: $heading-color;
+    border-color: $heading-color;
+    color: $theme-color;
+    font-family: $heading-font;
+    border-radius: 4px;
+    height: 38px;
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    padding: 5px 19px;
+    border-width: 1px;
+    border-style: solid;
+    
+    & i {
+        font-size: 21px;
+        line-height: 24px;
+        margin-right: 12px;
+        float: left;
+    }
+    
+    & span {
+        display: inline-block;
+    }
+    
+    &:focus {
+        box-shadow: none;
+    }
+    
+    &:hover {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: $body-color;
+    }
+}
+
+// Theme Button
+.btn-theme {
+    background-color: $theme-color;
+    border-color: $theme-color;
+    color: $heading-color;
+    &.btn-outline {
+        background-color: transparent;
+        color: $theme-color;
+        &:hover {
+            background-color: $theme-color;
+            border-color: $theme-color;
+            color: $heading-color;
+        }
+    }
+    &:hover {
+        background-color: lighten($theme-color, 5);
+        border-color: lighten($theme-color, 5);
+        color: $heading-color;
+    }
+}
+
+// Button Link
+.btn-link {
+    height: auto !important;
+    width: auto !important;
+    background-color: transparent;
+    border: none !important;
+    color: $body-color;
+    padding: 0 !important;
+    &:hover {
+        color: $primary;
+        background-color: transparent;
+        border: none;
+    }
+    
+    & i {
+        font-size: 22px;
+    }
+    
+    &.btn-xs {
+        & i {
+            font-size: 16px;
+        }
+    }
+    &.btn-sm {
+        & i {
+            font-size: 19px;
+        }
+    }
+    &.btn-lg {
+        & i {
+            font-size: 26px;
+        }
+    }
+    &.btn-xl {
+        & i {
+            font-size: 30px;
+        }
+    }
+}
+
+// Button Outline
+.btn-outline {
+    background-color: transparent;
+    border-color: darken($heading-color, 5);
+    &:hover {
+        background-color: $heading-color;
+        border-color: $heading-color;
+    }
+}
+
+// Button Box
+.btn-box {
+    width: 38px;
+    padding: 6px 0px;
+    text-align: center;
+    
+    & i {
+        margin: 0;
+        float: none;
+    }
+    & span {
+        display: none;
+        margin: 0;
+    }
+}
+
+// Button Icon Right
+.btn-icon-right {
+    flex-direction: row-reverse;
+    & i {
+        margin-left: 12px;
+        margin-right: 0;
+        float: right;
+    }
+}
+
+// Button State
+.btn-square {
+    border-radius: 0;
+}
+.btn-round {
+    border-radius: 50px;
+}
+
+/*-- 
+    Button Sizes 
+-----------------------------------------------*/
+
+// Extra Small
+.btn-xs {
+    font-size: 11px;
+    height: 25px;
+    padding: 0 8px;
+    
+    & i {
+        font-size: 15px;
+        margin-right: 5px;
+    }
+    
+    & .btn-icon-right {
+        & i {
+            margin-left: 5px;
+            margin-right: 0;
+        }
+    }
+    
+    &.btn-box {
+        width: 26px;
+        padding: 1px 0;
+        
+        & i {
+            margin: 0;
+        }
+    }
+}
+
+// Small
+.btn-sm {
+    font-size: 13px;
+    height: 32px;
+    padding: 2px 13px;
+    
+    & i {
+        font-size: 19px;
+        margin-right: 8px;
+    }
+    
+    & .btn-icon-right {
+        & i {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+    }
+    
+    &.btn-box {
+        width: 32px;
+        padding: 3px 0;
+        
+        & i {
+            margin: 0;
+        }
+    }
+}
+
+// Large
+.btn-lg {
+    font-size: 18px;
+    height: 46px;
+    padding: 9px 30px;
+    
+    & i {
+        font-size: 24px;
+    }
+    
+    &.btn-box {
+        width: 44px;
+        padding: 9px 0;
+        
+        & i {
+            margin: 0;
+        }
+    }
+}
+
+// Extra Large
+.btn-xl {
+    font-size: 19px;
+    height: 50px;
+    padding: 11px 31px;
+    
+    & i {
+        font-size: 24px
+    }
+    
+    &.btn-box {
+        width: 50px;
+        padding: 12px 0;
+        
+        & i {
+            margin: 0;
+        }
+    }
+}

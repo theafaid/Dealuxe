@@ -1,0 +1,308 @@
+/*----------------------------------------*/
+/*  03. Hero CSS
+/*----------------------------------------*/
+
+/*-- Hero Slider --*/
+.hero-slider {
+    // Arrow
+    & .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        border: none;
+        background-color: $heading-color;
+        color: $theme-color;
+        padding: 15px 10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba($black, 0.15);
+        & i {
+            font-size: 30px;
+            line-height: 30px;
+            display: block;
+        }
+        &.slick-prev {
+            left: 15px;
+        }
+        &.slick-next {
+            right: 15px;
+        }
+        &:hover {
+            background-color: $theme-color;
+            color: $heading-color;
+        }
+    }
+    // Dots
+    & .slick-dots {
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        // Responsive
+        @media #{$tablet-device}{
+            bottom: 20px;
+        }
+        @media #{$large-mobile}{
+            bottom: 20px;
+        }
+        @media #{$small-mobile}{
+            bottom: 10px;
+        }
+        & li {
+            margin: 0 5px;
+            & button {
+                display: block;
+                padding: 0;
+                width: 15px;
+                height: 15px;
+                border: 3px solid $theme-color;
+                background-color: $heading-color;
+                text-indent: -9999px;
+                border-radius: 50px;
+                @media #{$large-mobile}{
+                    border-width: 2px;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+            &.slick-active {
+                & button {
+                    width: 30px;
+                    background-color: $theme-color;
+                    @media #{$large-mobile}{
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Hero Item --*/
+.hero-item {
+    height: calc(100vh - 80px);
+    align-items: center;
+    display: flex !important;
+    justify-content: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // Responsive
+    @media #{$tablet-device}{
+        height: auto;
+        padding: 80px 0;
+    }
+    @media #{$large-mobile}{
+        height: auto;
+        padding: 50px 0;
+    }
+}
+
+/*-- Hero Content Wrap --*/
+.hero-content-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*-- Hero Image --*/
+.hero-image {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    float: right;
+    margin-left: 90px;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeOutUp;
+    animation-delay: 0s;
+    z-index: 1;
+    &.hero-image-2 {
+        margin-left: 10px;
+        max-width: 315px;
+        padding: 0 50px 40px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 28%;
+            background-color: #26303a;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        // Responsive
+        @media #{$desktop-device}{
+            max-width: 270px;
+            padding-bottom: 30px;
+        }
+        @media #{$tablet-device}{
+            max-width: 180px;
+            padding: 0 30px 30px;
+        }
+        @media #{$large-mobile}{
+            max-width: 120px;
+            padding: 0 20px 20px;
+        }
+        @media #{$small-mobile}{
+            max-width: 100px;
+            padding: 0 20px 15px;
+        }
+        @media #{$extra-small-mobile}{
+            max-width: 80px;
+            padding: 0 15px 10px;
+        }
+    }
+    & img {
+        max-width: 100%;
+    }
+    // Responsive
+    @media #{$laptop-device}{
+        margin-left: 50px;
+    }
+    @media #{$desktop-device}{
+        max-width: 150px;
+        margin-left: 40px;
+    }
+    @media #{$tablet-device}{
+        max-width: 100px;
+        margin-left: 30px;
+    }
+    @media #{$large-mobile}{
+        max-width: 70px;
+        margin-left: 30px;
+    }
+    @media #{$small-mobile}{
+        margin-left: 15px;
+    }
+    @media #{$extra-small-mobile}{
+        max-width: 50px;
+    }
+}
+
+/*-- Hero Content --*/
+.hero-content {
+    & * {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: fadeOutUp;
+        &:nth-child(1) {
+            animation-delay: 0.3s;
+            animation-name: fadeOutLeft;
+        }
+        &:nth-child(2) {
+            animation-delay: 0.8s;
+        }
+        &:nth-child(3) {
+            animation-delay: 1.3s;
+            animation-name: fadeOutRight;
+        }
+    }
+    & h2 {
+        font-size: 40px;
+        line-height: 1;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        color: $white;
+    }
+    & h1 {
+        font-size: 70px;
+        line-height: 78px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: $white;
+        margin-bottom: 32px;
+    }
+    & .btn {
+        line-height: 25px;
+        &:hover {
+            background-color: $heading-color;
+            border-color: $heading-color;
+            color: $theme-color;
+        }
+    }
+    // Responsive
+    @media #{$laptop-device}{
+        & h2 {
+            font-size: 36px;
+        }
+        & h1 {
+            font-size: 56px;
+            line-height: 68px
+        }
+    }
+    @media #{$desktop-device}{
+        & h2 {
+            font-size: 30px;
+        }
+        & h1 {
+            font-size: 50px;
+            line-height: 60px
+        }
+    }
+    @media #{$tablet-device}{
+        & h2 {
+            font-size: 24px;
+        }
+        & h1 {
+            font-size: 40px;
+            line-height: 50px
+        }
+    }
+    @media #{$large-mobile}{
+        & h2 {
+            font-size: 18px;
+        }
+        & h1 {
+            font-size: 26px;
+            line-height: 32px;
+            margin-bottom: 20px;
+        }
+        & .btn {
+            font-size: 11px;
+            height: 32px;
+            padding: 3px 20px;
+        }
+    }
+    @media #{$extra-small-mobile}{
+        & h2 {
+            font-size: 13px;
+        }
+        & h1 {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+        & .btn {
+            font-size: 10px;
+            height: 26px;
+            padding: 0 15px;
+        }
+    }
+}
+.slick-current {
+    & .hero-image {
+        animation-name: fadeInUp;
+    }
+    & .hero-content {
+        & * {
+            &:nth-child(1) {
+                animation-name: fadeInRight;
+            }
+            &:nth-child(2) {
+                animation-name: fadeInUp;
+            }
+            &:nth-child(3) {
+                animation-name: fadeInLeft;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+/*---------------------------------------
+    20. Login & Register CSS
+-----------------------------------------*/
+
+/*--Login Register Form -*/
+.login-register-form {
+    & h3 {
+        margin-bottom: 30px;
+    }
+    & input {
+        display: block;
+        width: 100%;
+        border: 1px solid #ebebeb;
+        border-radius: 50px;
+        line-height: 24px;
+        padding: 11px 25px;
+        color: #656565;
+    }
+}

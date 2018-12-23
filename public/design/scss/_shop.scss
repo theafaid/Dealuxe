@@ -1,0 +1,132 @@
+/*----------------------------------------*/
+/*  05. Shop CSS
+/*----------------------------------------*/
+
+/*-- Shop Toolbar --*/
+.shop-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/*-- Product View Mood --*/
+.product-view-mode {
+    display: flex;
+    margin-right: 80px;
+    margin-bottom: 10px;
+    & button {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        height: 21px;
+        margin-right: 15px;
+        position: relative;
+        &:hover {
+            &.grid {
+                & span {
+                    background-position: 0 -21px;
+                    width: 21px;
+                }
+            }
+            &.list {
+                & span {
+                    background-position: -21px -21px;
+                    width: 29px;
+                }
+            }
+        }
+        &.active {
+            &.grid {
+                & span {
+                    background-position: 0 -21px;
+                    width: 21px;
+                }
+            }
+            &.list {
+                & span {
+                    background-position: -21px -21px;
+                    width: 29px;
+                }
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        & span {
+            display: block;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            width: 21px;
+            height: 21px;
+            text-indent: -9999px;
+            background-image: url(../images/icons/view-mode-sprites.png)
+        }
+        &.grid {
+            & span {
+                background-position: 0 0;
+                width: 21px;
+            }
+        }
+        &.list {
+            & span {
+                background-position: -21px 0;
+                width: 29px;
+            }
+        }
+    }
+}
+/*-- Product Showing --*/
+.product-showing {
+    margin-bottom: 10px;
+    & p {
+        margin: 0;
+        line-height: 21px;
+    }
+}
+/*-- Product Short --*/
+.product-short {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    & p {
+        margin: 0;
+        line-height: 21px;
+        float: left;
+        margin-right: 20px;
+    }
+    & .nice-select {
+        width: 160px;
+        height: 30px;
+        border: 1px solid #cccccc;
+        border-radius: 50px;
+        font-size: 13px;
+        padding: 0 15px;
+        & .current {
+            line-height: 29px;
+            display: block;
+        }
+        & .list {
+            padding: 10px 0;
+            width: 100%;
+            & li {
+                padding: 0 15px;
+                line-height: 30px;
+                height: auto;
+                min-height: auto;
+            }
+        }
+    }
+}
+
+/*-- Shop Product Wrap --*/
+.shop-product-wrap {
+    & > .col, & > [class*="col-"] {
+        transition: all 0.3s ease 0s;
+    }
+    &.list {
+        & > .col, & > [class*="col-"] {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}

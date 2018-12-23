@@ -1,437 +1,379 @@
-(function($) {
-    'use strict';
-    
-    /*--
-    Menu Stick
-    -----------------------------------*/
-    var header = $('.transparent-bar');
-    var win = $(window);
-    
-    win.on('scroll', function() {
-        var scroll = win.scrollTop();
-        if (scroll < 200) {
-            header.removeClass('stick');
-        } else {
-            header.addClass('stick');
-        }
-    });
-    
-    
-    /* jQuery MeanMenu */
-    $('#mobile-menu-active').meanmenu({
-        meanScreenWidth: "991",
-        meanMenuContainer: ".mobile-menu-area .mobile-menu",
-    });
-    
-    /* Cart */
-    $(".language-click , .icon-cart , .icon-setting").on("click", function() {
-        $(this).parent().find('.language-dropdown , .shopping-cart-content , .setting-wrapper').slideToggle('medium');
-    })
-    
-    /* Slider active */
-    $('.slider-active').owlCarousel({
-        loop: true,
-        nav: false,
-        autoplay: false,
-        autoplayTimeout: 5000,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-        item: 1,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    })
-    
-    /* Best selling active */
-    $('.featured-product-active').owlCarousel({
-        loop: true,
-        nav: false,
-        autoplay: false,
-        autoplayTimeout: 5000,
-        navText: ['<i class="ion-ios-arrow-back"></i>', '<i class="ion-ios-arrow-forward"></i>'],
-        item: 4,
-        margin: 30,
-        responsive: {
-            0: {
-                items: 1
-            },
-            576: {
-                items: 2
-            },
-            768: {
-                items: 3
-            },
-            992: {
-                items: 3
-            },
-            1100: {
-                items: 3
-            },
-            1200: {
-                items: 4
-            }
-        }
-    })
-    
-    /* Best selling active */
-    $('.best-selling-active').owlCarousel({
-        loop: true,
-        nav: true,
-        autoplay: false,
-        autoplayTimeout: 5000,
-        navText: ['<i class="ion-ios-arrow-back"></i>', '<i class="ion-ios-arrow-forward"></i>'],
-        item: 1,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 1
-            },
-            992: {
-                items: 1
-            },
-            1100: {
-                items: 1
-            },
-            1200: {
-                items: 1
-            }
-        }
-    })
-    
-    /* Best selling active 2 */
-    $('.best-selling-active-2').owlCarousel({
-        loop: true,
-        nav: false,
-        item: 1,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 1
-            },
-            992: {
-                items: 1
-            },
-            1100: {
-                items: 1
-            },
-            1200: {
-                items: 1
-            }
-        }
-    })
-    
-    /* Testimonial active */
-    $('.testimonial-active').owlCarousel({
-        loop: true,
-        nav: false,
-		dots: false,
-        autoplay: false,
-        autoplayTimeout: 5000,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        item: 1,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    })
-    
-    /* Brand logo active */
-    $('.brand-logo-active').owlCarousel({
-        loop: true,
-        nav: false,
-        autoplay: false,
-        autoplayTimeout: 5000,
-        item: 5,
-        margin: 80,
-        responsive: {
-            0: {
-                items: 1,
-                margin: 0,
-            },
-            480: {
-                items: 2,
-                margin: 30,
-            },
-            768: {
-                items: 4,
-                margin: 30,
-            },
-            992: {
-                items: 4,
-                margin: 100,
-            },
-            1200: {
-                items: 5
-            }
-        }
-    })
-    
-    /*---------------------
-        Countdown
-    --------------------- */
-    $('[data-countdown]').each(function() {
-        var $this = $(this),
-            finalDate = $(this).data('countdown');
-        $this.countdown(finalDate, function(event) {
-            $this.html(event.strftime('<span class="cdown day">%-D <p>Days</p></span> <span class="cdown hour">%-H <p>Hour</p></span> <span class="cdown minutes">%M <p>Min</p></span class="cdown second"> <span>%S <p>Sec</p></span>'));
-        });
-    });
-    
-    
-    /* Hover 3d init for tilt */
-    if ($('.tilter').length > 0) {
-        $('.tilter').tilt({
-            maxTilt: 40,
-            perspective: 800,
-            easing: "cubic-bezier(.03,.98,.52,.99)",
-            scale: 1,
-            speed: 800,
-            transition: true,
-        });
+(function ($) {
+    "use strict";
+/*--
+    Commons Variables
+-----------------------------------*/
+var windows = $(window);
+var windowWidth = windows.width();
+var mainWrapper = $('.main-wrapper');
+
+
+/*--
+    Header Cart
+-----------------------------------*/
+var cartToggle = $('.header-cart-toggle');
+var miniCart = $('.header-mini-cart');
+// Toggle Header Cart
+cartToggle.on("click", function () {
+    miniCart.slideToggle();
+});
+// Closing the Header Cart by clicking in the menu button or anywhere in the screen
+$('body').on('click', function (e) {
+    var target = e.target;
+    if (!$(target).is('.header-cart-toggle') && !$(target).parents().is('.header-cart-toggle')) {
+        miniCart.slideUp();
     }
+});
+// Prevent closing Header Cart upon clicking inside the Header Cart
+$('.header-mini-cart').on('click', function (e) {
+    e.stopPropagation();
+});
     
-    /*--------------------------
-        ScrollUp
-    ---------------------------- */
-    $.scrollUp({
-        scrollText: '<i class="fa fa-angle-double-up"></i>',
-        easingType: 'linear',
-        scrollSpeed: 900,
-        animation: 'fade'
-    });
-    
-    /*---------------------
-        Price slider
-    --------------------- */
-    var sliderrange = $('#slider-range');
-    var amountprice = $('#amount');
-    $(function() {
-        sliderrange.slider({
-            range: true,
-            min: 0,
-            max: 1200,
-            values: [300, 800],
-            slide: function(event, ui) {
-                amountprice.val("$" + ui.values[0] + " - $" + ui.values[1]);
+/*--
+    Mobile Menu
+-----------------------------------*/
+var mainMenuNav = $('.main-menu');
+mainMenuNav.meanmenu({
+    meanScreenWidth: '991',
+    meanMenuContainer: '.mobile-menu',
+    meanMenuClose: '<span class="menu-close"></span>',
+    meanMenuOpen: '<span class="menu-bar"></span>',
+    meanRevealPosition: 'right',
+    meanMenuCloseSize: '0'
+});
+
+/*--
+    Sliders
+-----------------------------------*/
+// Hero Slider
+$('.hero-slider').slick({
+    infinite: true,
+    fade: true,
+    dots: false,
+    prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+    nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+    responsive: [
+        {
+        breakpoint: 992,
+            settings: {
+                dots: true,
+                arrows: false,
             }
-        });
-        amountprice.val("$" + sliderrange.slider("values", 0) +
-            " - $" + sliderrange.slider("values", 1));
-    });
-    
-    /*---------------------
-        Product dec slider
-    --------------------- */
-    $('.product-dec-slider').slick({
+        },
+    ]
+}); 
+// Product Slider 4 Column
+$('.product-slider-4').slick({
+    infinite: true,
+    dots: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+    nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+    ]
+});
+// Product Slider 3 Column
+$('.product-slider-3').slick({
+    infinite: true,
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+    nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+    ]
+});
+// Single Product Slider
+$('.single-product-slider').slick({
+    infinite: true,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+    nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+});
+// Single Product Slider
+$('.single-product-slider-syn').slick({
+    infinite: true,
+    arrows: false,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+    nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+    asNavFor: '.single-product-thumb-slider-syn',
+});
+// Single Product Thumbnail Slider
+$('.single-product-thumb-slider-syn').each(function() {
+    var $vertical = $(this).attr('data-vertical') === 'true' ? true : false;
+    var $verticalPrevArrow = $(this).attr('data-vertical') === 'true' ? 'up' : 'left';
+    var $verticalNextArrow = $(this).attr('data-vertical') === 'true' ? 'down' : 'right';
+    $(this).slick({
         infinite: true,
-        slidesToShow: 4,
+        dots: false,
+        slidesToShow: 3,
         slidesToScroll: 1,
-        centerPadding: '60px',
-        prevArrow: '<span class="product-dec-icon product-dec-prev"><i class="fa fa-angle-left"></i></span>',
-        nextArrow: '<span class="product-dec-icon product-dec-next"><i class="fa fa-angle-right"></i></span>',
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
+        focusOnSelect: true,
+        centerMode: true,
+        centerPadding: '0px',
+        prevArrow: '<button class="slick-prev"><i class="fa fa-angle-'+$verticalPrevArrow+'"></i></button>',
+        nextArrow: '<button class="slick-next"><i class="fa fa-angle-'+$verticalNextArrow+'"></i></button>',
+        asNavFor: '.single-product-slider-syn',
+        vertical: $vertical,
+        responsive: [
             {
                 breakpoint: 479,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
+                    arrows: false,
+                    vertical: false,
+                    prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+                    nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
                 }
-            }
+            },
         ]
     });
-    
-    /*------ Wow Active ----*/
-    new WOW().init();
-    
-    /* counterUp */
-    $('.count').counterUp({
-        delay: 10,
-        time: 1000
-    });
-    
-    /*----------------------------
-    	Cart Plus Minus Button
-    ------------------------------ */
-    var CartPlusMinus = $('.cart-plus-minus');
-    CartPlusMinus.prepend('<div class="dec qtybutton">-</div>');
-    CartPlusMinus.append('<div class="inc qtybutton">+</div>');
-    $(".qtybutton").on("click", function() {
-        var $button = $(this);
-        var oldValue = $button.parent().find("input").val();
-        if ($button.text() === "+") {
-            var newVal = parseFloat(oldValue) + 1;
-        } else {
-            // Don't allow decrementing below zero
-            if (oldValue > 0) {
-                var newVal = parseFloat(oldValue) - 1;
-            } else {
-                newVal = 1;
+});
+// Brand Slider
+$('.brand-slider').slick({
+    infinite: true,
+    arrows: false,
+    dots: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 4,
             }
-        }
-        $button.parent().find("input").val(newVal);
-    });
-    
-    /*-------------------------------------
-        Thumbnail Product activation
-    --------------------------------------*/
-    $('.thumb-menu').owlCarousel({
-        loop: true,
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        margin: 15,
-        smartSpeed: 1000,
-        nav: true,
-        dots: false,
-        responsive: {
-            0: {
-                items: 3,
-                autoplay: true,
-                smartSpeed: 300
-            },
-            768: {
-                items: 3
-            },
-            1000: {
-                items: 3
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
             }
-        }
-    })
-    $('.thumb-menu a').on('click', function () {
-        $('.thumb-menu a').removeClass('active');
-    })
-    
-    
-    /*---------------------
-    shop grid list
-    --------------------- */
-    $('.view-mode li a').on('click', function() {
-        var $proStyle = $(this).data('view');
-        $('.view-mode li').removeClass('active');
-        $(this).parent('li').addClass('active');
-        $('.product-view').removeClass('product-grid product-list').addClass($proStyle);
-    })
-    
-    /* blog gallery slider */
-    $('.blog-gallery-slider').owlCarousel({
-        loop: true,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        navText:['<i class="ion-chevron-left"></i>','<i class="ion-chevron-right"></i>'],
-        item: 1,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 1
-            },
-            1000: {
-                items: 1
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 2,
             }
-        }
-    })
-    
-    /* isotop active */
-    // filter items on button click
-    $('.blog-area').imagesLoaded(function() {
-        $('.portfolio-menu-active').on('click', 'button', function() {
-            var filterValue = $(this).attr('data-filter');
-            $grid.isotope({
-                filter: filterValue
-            });
-        });
-        // init Isotope
-        var $grid = $('.blog-grid').isotope({
-            itemSelector: '.blog-grid-item',
-            percentPosition: true,
-            masonry: {
-                // use outer width of grid-sizer for columnWidth
-                columnWidth: '.blog-grid-item',
-            }
-        });
-    });
-    
-    /*--------------------------
-        Product Zoom
-	---------------------------- */
-    $(".zoompro").elevateZoom({
-        gallery: "gallery",
-        galleryActiveClass: "active",
-        zoomWindowWidth: 300,
-        zoomWindowHeight: 100,
-        scrollZoom: false,
-        zoomType: "inner",
-        cursor: "crosshair"
-    });
-    
-    $('.testimonial-2-active').owlCarousel({
-        loop: true,
-        margin:20,
-        nav:true,
-        navText: [ '<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>' ],
-        items:2,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            800:{
-                items:1
-            },
-            992:{
-                items:2
-            },
-            1024:{
-                items:2
-            },
-            1200:{
-                items:2
-            },
-            1400:{
-                items:2
-            },
-            1920:{
-                items:2
-            }
-        }
-    });
+        },
+    ]
+});
+// Brand Slider
+$('.blog-slider').slick({
+    infinite: true,
+    arrows: true,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+    nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+});
+// Testimonial Slider
+$('.testimonial-image-slider').slick({
+    infinite: true,
+    arrows: true,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev">prev</button>',
+    nextArrow: '<button class="slick-next">next</button>',
+    asNavFor: '.testimonial-content-slider'
+});
+$('.testimonial-content-slider').slick({
+    infinite: true,
+    arrows: false,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.testimonial-image-slider'
+});
 
-})(jQuery);
+/*--
+    Imageloaded & Masonry
+-----------------------------------*/
+var $masonryGird = $('.masonry-grid');
+$masonryGird.imagesLoaded( function() {
+    $masonryGird.masonry({
+      // options
+      itemSelector: '.masonry-grid > *',
+    });
+});
+
+/*--
+    Rellax Parallax
+-----------------------------------*/
+windows.on('load', function(){
+    if($('.rellax').length){
+        var rellax = new Rellax('.rellax');
+    }
+});
+/*--
+    Perfect Scrollbar
+-----------------------------------*/
+$('.custom-scroll').each(function(){
+    const ps = new PerfectScrollbar($(this)[0],);
+});
+    
+/*--
+    Nice Select
+-----------------------------------*/
+$('.nice-select').niceSelect();
+    
+/*--
+	MailChimp
+-----------------------------------*/
+$('#mc-form').ajaxChimp({
+	language: 'en',
+	callback: mailChimpResponse,
+	// ADD YOUR MAILCHIMP URL BELOW HERE!
+	url: 'http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef'
+
+});
+function mailChimpResponse(resp) {
+	
+	if (resp.result === 'success') {
+		$('.mailchimp-success').html('' + resp.msg).fadeIn(900);
+		$('.mailchimp-error').fadeOut(400);
+		
+	} else if(resp.result === 'error') {
+		$('.mailchimp-error').html('' + resp.msg).fadeIn(900);
+	}  
+}
+
+/*--
+	Price Range
+-----------------------------------*/
+$('#price-range').slider({
+    range: true,
+    min: 0,
+    max: 300,
+    values: [ 25, 225 ],
+    slide: function( event, ui ) {
+        $('.ui-slider-handle:eq(0)').html( '<span>' + '$' + ui.values[ 0 ] + '</span>');
+        $('.ui-slider-handle:eq(1)').html( '<span>' + '$' + ui.values[ 1 ] + '</span>');
+    }
+});
+$('.ui-slider-handle:eq(0)').html( '<span>' + '$' + $( "#price-range" ).slider( "values", 0 ) + '</span>' );
+$('.ui-slider-handle:eq(1)').html( '<span>' + '$' + $( "#price-range" ).slider( "values", 1 ) + '</span>' );   
+    
+
+/*----- 
+	Quantity
+--------------------------------*/
+$('.pro-qty').prepend('<span class="dec qtybtn">-</span>');
+$('.pro-qty').append('<span class="inc qtybtn">+</span>');
+$('.qtybtn').on('click', function() {
+	var $button = $(this);
+	var oldValue = $button.parent().find('input').val();
+	if ($button.hasClass('inc')) {
+	  var newVal = parseFloat(oldValue) + 1;
+	} else {
+	   // Don't allow decrementing below zero
+	  if (oldValue > 0) {
+		var newVal = parseFloat(oldValue) - 1;
+		} else {
+		newVal = 0;
+	  }
+	  }
+	$button.parent().find('input').val(newVal);
+});  
+    
+/*--
+	Product View Mode
+-----------------------------------*/
+$('body').on('click', '.product-view-mode button', function(e) {
+    e.stopPropagation();
+    var $this = $(this);
+    var $modeClass = $this.data('mode');
+    var $productWrap = $this.closest('body').find('.shop-product-wrap');
+    
+    $('.product-view-mode button').removeClass('active');
+    $this.addClass('active');
+    
+    $productWrap.removeClass('grid-3 grid-4 list').addClass($modeClass).find('.product-item').removeClass('list');
+    
+    if($modeClass === 'list') {
+        $productWrap.find('.product-item').addClass('list');
+    }
+    
+});
+    
+/*----- 
+	Shipping Form Toggle
+--------------------------------*/ 
+$('[data-shipping]').on('click', function(){
+    if( $('[data-shipping]:checked').length > 0 ) {
+        $('#shipping-form').slideDown();
+    } else {
+        $('#shipping-form').slideUp();
+    }
+})
+    
+/*----- 
+	Payment Method Select
+--------------------------------*/
+$('[name="payment-method"]').on('click', function(){
+    
+    var $value = $(this).attr('value');
+
+    $('.single-method p').slideUp();
+    $('[data-method="'+$value+'"]').slideDown();
+    
+})
+    
+/*--
+	Sticky Sidebar
+-----------------------------------*/
+if($('.product-details-with-gallery').length) {
+    var sidebar = new StickySidebar('.product-content', {
+        containerSelector: '.product-details-with-gallery',
+        innerWrapperSelector: '.product-content-inner',
+        topSpacing: 20,
+        bottomSpacing: 20,
+        minWidth: 992,
+    });
+};
+    
+    
+    
+})(jQuery);	

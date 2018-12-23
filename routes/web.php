@@ -1,6 +1,6 @@
 <?php
 
-Route::view('/', 'welcome');
+Route::get('/', 'WelcomePageController@index');
 Route::view('/products', 'Products');
 Route::view('/product', 'product');
 Route::view('/cart', 'cart');

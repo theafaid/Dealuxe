@@ -1,0 +1,113 @@
+/*----------------------------------------*/
+/*  14. Comment CSS
+/*----------------------------------------*/
+
+/*-- Comment Wrap --*/
+.comment-wrap {
+    & h3 {
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 40px;
+    }
+}
+/*-- Comment List --*/
+.comment-list {
+    overflow: hidden;
+    margin-bottom: 40px;
+    & > li {}
+}
+/*-- Child Comment --*/
+.child-comment {
+    margin-left: 120px;
+    // Responsive
+    @media #{$extra-small-mobile}{
+        margin-left: 0;
+    }
+}
+/*-- Comment --*/
+.comment {
+    margin-bottom: 50px;
+    & .image {
+        width: 90px;
+        float: left;
+        margin-right: 30px;
+        border-radius: 4px;
+        overflow: hidden;
+        & img {
+            width: 100%;
+        }
+    }
+    & .content {
+        overflow: hidden;
+        & h5 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        & .time {
+            font-size: 13px;
+            line-height: 18px;
+            margin-bottom: 5px;
+        }
+        & .reply {
+            line-height: 18px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+        & .decs {
+            margin-top: 2px;
+            & p {
+                line-height: 26px;
+            }
+        }
+    }
+}
+/*-- Comment Form --*/
+.comment-form {
+    & input {
+        display: block;
+        width: 100%;
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: #9d9d9d;
+        height: auto;
+        line-height: 18px;
+        padding: 0 0 10px;
+        margin-bottom: 40px;
+        &:focus {
+            border-color: $theme-color;
+        }
+    }
+    & textarea {
+        display: block;
+        width: 100%;
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: #9d9d9d;
+        height: 130px;
+        line-height: 18px;
+        padding: 0 0 10px;
+        margin-bottom: 40px;
+        resize: none;
+        &:focus {
+            border-color: $theme-color;
+        }
+    }
+    & button {
+        padding: 10px 30px;
+        border-radius: 50px;
+        background-color: $heading-color;
+        color: $theme-color;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 25px;
+        border: none;
+        font-family: $heading-font;
+        &:hover {
+            background-color: $theme-color;
+            color: $heading-color;
+        }
+    }
+}

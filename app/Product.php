@@ -11,4 +11,8 @@ class Product extends Model
 
     protected $guarded = [];
     public $translatable = ['name', 'description', 'details', 'slug'];
+
+    public function presentPrice(){
+        return "$" . $this->price / 100;
+    }
 }

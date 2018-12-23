@@ -1,0 +1,186 @@
+/*----------------------------------------*/
+/*  04. About CSS
+/*----------------------------------------*/
+
+/*-- About Shape --*/
+.about-shape {
+    position: absolute;
+    &.one {
+        left: 0;
+        top: 60px;
+    }
+    &.two {
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/*-- About Content --*/
+.about-content {
+    & h3 {
+        margin-bottom: 0;
+    }
+    & h1 {
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+    & p {
+        max-width: 570px;
+    }
+    & .btn {
+        margin-top: 20px;
+    }
+    
+    & .desc {
+        margin-bottom: 15px;
+    }
+    
+    &.about-content-1 {
+        padding-left: 40px;
+        padding-right: 70px;
+
+        // Responsive
+        @media #{$large-mobile}{
+            padding-right: 0;
+        }
+        & h3 {
+            display: inline-flex;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 100%;
+                margin-left: 15px;
+                top: 50%;
+                width: 60px;
+                height: 1px;
+                margin-top: 2px;
+                background-color: #c8c8c8;
+            }
+        }
+        & .desc {
+            position: relative;
+            &::before, &::after {
+                width: 1px;
+                height: 90%;
+                background-color: #c8c8c8;
+                content: "";
+                position: absolute;
+                top: 0;
+            }
+            &::before {
+                left: -40px;
+                top: 8px;
+            }
+            &::after {
+                left: -35px;
+                top: 16px;
+            }
+        }
+    }
+}
+/*-- About Content Light --*/
+.about-content-light {
+    & h3 {
+        color: $body-color-light;
+    }
+    & h1 {
+        color: $body-color-light;
+    }
+    & p {
+        color: $body-color-light;
+    }
+}
+
+/*-- About Image --*/
+.about-image {
+    position: relative;
+    margin-left: -30px;
+    margin-bottom: -10px;
+    // Responsive
+    @media #{$tablet-device}{
+        margin-left: -7px;
+    }
+    @media #{$large-mobile}{
+        margin-left: -7px;
+    }
+    & .col {
+        margin-bottom: 14px;
+        &:first-child {
+            margin-top: 30px;
+        }
+        & img {
+            z-index: 1;
+            width: 100%;
+        }
+        // Responsive
+        @media #{$tablet-device}{
+            margin-left: 0;
+        }
+        @media #{$large-mobile}{
+            margin-left: 0;
+        }
+        @media #{$extra-small-mobile}{
+            margin-left: 0;
+        }
+    }
+}
+
+/*-- About Image Wrap --*/
+.about-image-wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    & .image-1, & .image-2 {
+        min-height: 450px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    & .image-1 {
+        width: 65%;
+    }
+    & .image-2 {
+        width: 40%;
+        position: relative;
+        &::before {
+            position: absolute;
+            left: 8%;
+            top: 8%;
+            right: 8%;
+            bottom: 8%;
+            content: "";
+            border: 15px solid rgba($theme-color, 0.3);
+        }
+    }
+    
+    // Responsive
+    @media #{$tablet-device}{
+        & .image-1, & .image-2 {
+            min-height: 380px;
+        }
+        & .image-1 {
+            width: 60%;
+        }
+        & .image-2 {
+            width: 40%;
+        }
+    }
+    @media #{$large-mobile}{
+        & .image-1, & .image-2 {
+            min-height: 300px;
+        }
+        & .image-1 {
+            width: 60%;
+        }
+        & .image-2 {
+            width: 40%;
+        }
+    }
+    @media #{$small-mobile}{
+        & .image-1, & .image-2 {
+            min-height: 250px;
+        }
+    }
+}

@@ -1,25 +1,37 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bardy - SHARED ON THEMELOCK.COM</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('design')}}/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('design')}}/images/favicon.ico">
 
-    <!-- all css here -->
+    <!-- CSS
+	============================================ -->
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('design')}}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('design')}}/css/animate.css">
-    <link rel="stylesheet" href="{{asset('design')}}/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="{{asset('design')}}/css/slick.css">
-    <link rel="stylesheet" href="{{asset('design')}}/css/chosen.min.css">
+
+    <!-- Icon Font CSS -->
     <link rel="stylesheet" href="{{asset('design')}}/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{asset('design')}}/css/themify-icons.css">
-    <link rel="stylesheet" href="{{asset('design')}}/css/ionicons.min.css">
-    <link rel="stylesheet" href="{{asset('design')}}/css/jquery-ui.css">
-    <link rel="stylesheet" href="{{asset('design')}}/css/meanmenu.min.css">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{{asset('design')}}/css/plugins.css">
+
+    <!-- Helper CSS -->
+    <link rel="stylesheet" href="{{asset('design')}}/css/helper.css">
+
+    <!-- Main Style CSS -->
     <link rel="stylesheet" href="{{asset('design')}}/css/style.css">
-    <link rel="stylesheet" href="{{asset('design')}}/css/responsive.css">
+
+    <!-- Modernizer JS -->
     <script src="{{asset('design')}}/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
+
 <body>
+<div class="main-wrapper">

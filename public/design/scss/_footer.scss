@@ -1,0 +1,106 @@
+/*---------------------------------------
+    21. Footer CSS
+-----------------------------------------*/
+
+/*-- Footer Top Section --*/
+.footer-top-section {
+    padding: 180px 0 50px;
+        // Responsive
+        @media #{$large-mobile}{
+            padding-top: 90px;
+        }
+}
+
+/*-- Footer Widget Wrap --*/
+.footer-widget-wrap {
+    justify-content: space-between;
+    & > .col, & > [class*="col-"] {
+        flex-grow: 0;
+        // Responsive
+        @media #{$tablet-device}{
+            flex: 1 0 50%;
+        }
+        @media #{$large-mobile}{
+            flex: 1 0 50%;
+            max-width: 50%;
+        }
+        @media #{$small-mobile}{
+            flex: 1 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+/*-- Footer Widget --*/
+.footer-widget {
+    & .title {
+        color: $body-color-light;
+        white-space: nowrap;
+        margin-top: 15px;
+        margin-bottom: 19px;
+        // Responsive
+        @media #{$tablet-device}{
+            margin-top: 0;
+        }
+        @media #{$large-mobile}{
+            margin-top: 0;
+        }
+    }
+    
+    & img {
+        margin-bottom: 18px;
+    }
+    & p {
+        color: $body-color-light;
+        width: 270px;
+        line-height: 23px;
+        // Responsive
+        @media #{$large-mobile}{
+            width: auto;
+        }
+    }
+    & ul {
+        & li {
+            margin-bottom: 12px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            & a {
+                color: $body-color-light;
+                white-space: nowrap;
+                display: block;
+                line-height: 23px;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+/*-- Footer Bottom Section --*/
+.footer-bottom-section {
+    padding: 15px 0;
+}
+.copyright {
+    line-height: 22px;
+    margin: 4px 0;
+    // Responsive
+    @media #{$tablet-device}{
+        text-align: center;
+    }
+    @media #{$large-mobile}{
+        text-align: center;
+    }
+}
+.payment-method {
+    text-align: right;
+    margin: 4px 0;
+    // Responsive
+    @media #{$tablet-device}{
+        text-align: center;
+    }
+    @media #{$large-mobile}{
+        text-align: center;
+    }
+}

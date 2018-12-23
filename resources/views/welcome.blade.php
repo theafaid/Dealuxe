@@ -1,735 +1,590 @@
 @extends('layouts.app')
 @section('content')
-    <!-- Slider Start -->
-    <div class="slider-area">
-        <div class="slider-active owl-dot-style owl-carousel">
-            <div class="single-slider ptb-240 bg-img" style="background-image:url({{asset('design')}}/img/slider/slider-1.jpg);">
-                <div class="container">
-                    <div class="slider-content slider-animated-1">
-                        <h1 class="animated">Want to stay <span class="theme-color">healthy</span></h1>
-                        <h1 class="animated">drink matcha.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetu adipisicing elit sedeiu tempor inci ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="single-slider ptb-240 bg-img" style="background-image:url({{asset('design')}}/img/slider/slider-1-1.jpg);">
-                <div class="container">
-                    <div class="slider-content slider-animated-1">
-                        <h1 class="animated">Want to stay <span class="theme-color">healthy</span></h1>
-                        <h1 class="animated">drink matcha.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetu adipisicing elit sedeiu tempor inci ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Slider End -->
-    <!-- Product Area Start -->
-    <div class="product-area bg-image-1 pt-100 pb-95">
-        <div class="container">
-            <div class="featured-product-active hot-flower owl-carousel product-nav">
-                <div class="product-wrapper">
-                    <div class="product-img">
-                        <a href="product-details.html">
-                            <img alt="" src="{{asset('design')}}/img/product/product-1.jpg">
-                        </a>
-                        <span>-20%</span>
-                        <div class="product-action">
-                            <a class="action-wishlist" href="#" title="Wishlist">
-                                <i class="ion-android-favorite-outline"></i>
-                            </a>
-                            <a class="action-cart" href="#" title="Add To Cart">
-                                <i class="ion-ios-shuffle-strong"></i>
-                            </a>
-                            <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                <i class="ion-ios-search-strong"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product-content text-left">
-                        <div class="product-hover-style">
-                            <div class="product-title">
-                                <h4>
-                                    <a href="product-details.html">Nature Close Tea</a>
-                                </h4>
-                            </div>
-                            <div class="cart-hover">
-                                <h4><a href="product-details.html">+ Add to cart</a></h4>
-                            </div>
-                        </div>
-                        <div class="product-price-wrapper">
-                            <span>$100.00 -</span>
-                            <span class="product-price-old">$120.00 </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-wrapper">
-                    <div class="product-img">
-                        <a href="product-details.html">
-                            <img alt="" src="{{asset('design')}}/img/product/product-2.jpg">
-                        </a>
-                        <div class="product-action">
-                            <a class="action-wishlist" href="#" title="Wishlist">
-                                <i class="ion-android-favorite-outline"></i>
-                            </a>
-                            <a class="action-cart" href="#" title="Add To Cart">
-                                <i class="ion-ios-shuffle-strong"></i>
-                            </a>
-                            <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                <i class="ion-ios-search-strong"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product-content text-left">
-                        <div class="product-hover-style">
-                            <div class="product-title">
-                                <h4>
-                                    <a href="product-details.html">Pink wave Cup</a>
-                                </h4>
-                            </div>
-                            <div class="cart-hover">
-                                <h4><a href="product-details.html">+ Add to cart</a></h4>
-                            </div>
-                        </div>
-                        <div class="product-price-wrapper">
-                            <span>$100.00 -</span>
-                            <span class="product-price-old">$120.00 </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-wrapper">
-                    <div class="product-img">
-                        <a href="product-details.html">
-                            <img alt="" src="{{asset('design')}}/img/product/product-3.jpg">
-                        </a>
-                        <span>-50%</span>
-                        <div class="product-action">
-                            <a class="action-wishlist" href="#" title="Wishlist">
-                                <i class="ion-android-favorite-outline"></i>
-                            </a>
-                            <a class="action-cart" href="#" title="Add To Cart">
-                                <i class="ion-ios-shuffle-strong"></i>
-                            </a>
-                            <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                <i class="ion-ios-search-strong"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product-content text-left">
-                        <div class="product-hover-style">
-                            <div class="product-title">
-                                <h4>
-                                    <a href="product-details.html">Tea and Chai</a>
-                                </h4>
-                            </div>
-                            <div class="cart-hover">
-                                <h4><a href="product-details.html">+ Add to cart</a></h4>
-                            </div>
-                        </div>
-                        <div class="product-price-wrapper">
-                            <span>$100.00 -</span>
-                            <span class="product-price-old">$120.00 </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-wrapper">
-                    <div class="product-img">
-                        <a href="product-details.html">
-                            <img alt="" src="{{asset('design')}}/img/product/product-4.jpg">
-                        </a>
-                        <div class="product-action">
-                            <a class="action-wishlist" href="#" title="Wishlist">
-                                <i class="ion-android-favorite-outline"></i>
-                            </a>
-                            <a class="action-cart" href="#" title="Add To Cart">
-                                <i class="ion-ios-shuffle-strong"></i>
-                            </a>
-                            <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                <i class="ion-ios-search-strong"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product-content text-left">
-                        <div class="product-hover-style">
-                            <div class="product-title">
-                                <h4>
-                                    <a href="product-details.html">Pearly Everlasting</a>
-                                </h4>
-                            </div>
-                            <div class="cart-hover">
-                                <h4><a href="product-details.html">+ Add to cart</a></h4>
-                            </div>
-                        </div>
-                        <div class="product-price-wrapper">
-                            <span>$100.00 -</span>
-                            <span class="product-price-old">$120.00 </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-wrapper">
-                    <div class="product-img">
-                        <a href="product-details.html">
-                            <img alt="" src="{{asset('design')}}/img/product/product-5.jpg">
-                        </a>
-                        <span>-30%</span>
-                        <div class="product-action">
-                            <a class="action-wishlist" href="#" title="Wishlist">
-                                <i class="ion-android-favorite-outline"></i>
-                            </a>
-                            <a class="action-cart" href="#" title="Add To Cart">
-                                <i class="ion-ios-shuffle-strong"></i>
-                            </a>
-                            <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                <i class="ion-ios-search-strong"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product-content text-left">
-                        <div class="product-hover-style">
-                            <div class="product-title">
-                                <h4>
-                                    <a href="product-details.html">Que herbal Tea</a>
-                                </h4>
-                            </div>
-                            <div class="cart-hover">
-                                <h4><a href="product-details.html">+ Add to cart</a></h4>
-                            </div>
-                        </div>
-                        <div class="product-price-wrapper">
-                            <span>$100.00 -</span>
-                            <span class="product-price-old">$120.00 </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Product Area End -->
-    <!-- Banner Start -->
-    <div class="banner-area pt-100 pb-70">
-        <div class="container">
-            <div class="banner-wrap">
+    <!-- Hero Section Start -->
+    <div class="hero-slider section">
+        <!-- Hero Item Start -->
+        <div class="hero-item" style="background-image: url({{asset('design')}}/images/slider/slider-bg-2.jpg)">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-banner img-zoom mb-30">
-                            <a href="#">
-                                <img src="{{asset('design')}}/img/banner/banner-1.png" alt="">
-                            </a>
-                            <div class="banner-content">
-                                <h4>-50% Sale</h4>
-                                <h5>Summer Vacation</h5>
-                            </div>
+
+                    <div class="hero-content-wrap col">
+                        <div class="hero-content hero-content-2 text-left">
+                            <h2>BEARD OIL</h2>
+                            <h1>FOR GLOSSY AND <br>STYLISH BEARD</h1>
+                            <a class="btn btn-round btn-lg btn-theme" href="shop-4-column.html">SHOP NOW</a>
+                        </div>
+                        <div class="hero-image hero-image-2">
+                            <img src="{{asset('design')}}/images/slider/slider-product-1.png" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-banner img-zoom mb-30">
-                            <a href="#">
-                                <img src="{{asset('design')}}/img/banner/banner-2.png" alt="">
-                            </a>
-                            <div class="banner-content">
-                                <h4>-20% Sale</h4>
-                                <h5>Winter Vacation</h5>
-                            </div>
+
+                </div>
+            </div>
+        </div><!-- Hero Item End -->
+        <!-- Hero Item Start -->
+        <div class="hero-item" style="background-image: url({{asset('design')}}/images/slider/slider-bg-2.jpg)">
+            <div class="container">
+                <div class="row">
+
+                    <div class="hero-content-wrap col">
+                        <div class="hero-content hero-content-2 text-left">
+                            <h2>BEARD OIL</h2>
+                            <h1>FOR GLOSSY AND <br>STYLISH BEARD</h1>
+                            <a class="btn btn-round btn-lg btn-theme" href="shop-4-column.html">SHOP NOW</a>
+                        </div>
+                        <div class="hero-image hero-image-2">
+                            <img src="{{asset('design')}}/images/slider/slider-product-1.png" alt="">
                         </div>
                     </div>
+
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Banner End -->
-    <!-- New Products Start -->
-    <div class="product-area gray-bg pt-90 pb-65">
-        <div class="container">
-            <div class="product-top-bar section-border mb-55">
-                <div class="section-title-wrap text-center">
-                    <h3 class="section-title">New Products</h3>
-                </div>
-            </div>
-            <div class="tab-content jump">
-                <div class="tab-pane active">
-                    <div class="featured-product-active owl-carousel product-nav">
-                        <div class="product-wrapper-single">
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-1.jpg">
-                                    </a>
-                                    <span>-30%</span>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">BeBe Bloom tea</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-2.jpg">
-                                    </a>
-                                    <span>-50%</span>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">Every spice Tea</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-wrapper-single">
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-3.jpg">
-                                    </a>
-                                    <span>-60%</span>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">Que herbal Tea</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-4.jpg">
-                                    </a>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">Tea and Chai</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-wrapper-single">
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-5.jpg">
-                                    </a>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">Society Ice Tea</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-6.jpg">
-                                    </a>
-                                    <span>-40%</span>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">Green Tea Tulsi</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-wrapper-single">
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-7.jpg">
-                                    </a>
-                                    <span>-60%</span>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">Best Friends Tea</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-8.jpg">
-                                    </a>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">Instant Tea Premix</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-wrapper-single">
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-4.jpg">
-                                    </a>
-                                    <span>-30%</span>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">Black Ossum Tea</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-wrapper mb-30">
-                                <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img alt="" src="{{asset('design')}}/img/product/product-3.jpg">
-                                    </a>
-                                    <span>-70%</span>
-                                    <div class="product-action">
-                                        <a class="action-wishlist" href="#" title="Wishlist">
-                                            <i class="ion-android-favorite-outline"></i>
-                                        </a>
-                                        <a class="action-cart" href="#" title="Add To Cart">
-                                            <i class="ion-ios-shuffle-strong"></i>
-                                        </a>
-                                        <a class="action-compare" href="#" data-target="#exampleModal" data-toggle="modal" title="Quick View">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-content text-left">
-                                    <div class="product-hover-style">
-                                        <div class="product-title">
-                                            <h4>
-                                                <a href="product-details.html">Le Bongai Tea</a>
-                                            </h4>
-                                        </div>
-                                        <div class="cart-hover">
-                                            <h4><a href="product-details.html">+ Add to cart</a></h4>
-                                        </div>
-                                    </div>
-                                    <div class="product-price-wrapper">
-                                        <span>$100.00 -</span>
-                                        <span class="product-price-old">$120.00 </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- New Products End -->
-    <!-- Testimonial Area Start -->
-    <div class="testimonials-area bg-img pt-100 pb-100">
-        <div class="container">
+        </div><!-- Hero Item End -->
+    </div><!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <div class="about-section section position-relative fix">
+
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-12">
-                    <div class="testimonial-active owl-carousel">
-                        <div class="single-testimonial text-center">
-                            <div class="testimonial-img">
-                                <img alt="" src="{{asset('design')}}/img/icon-img/testi.png">
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eiusmod tempor incididunt ut labore</p>
-                            <h4>Gregory Perkins</h4>
-                            <h5>Customer</h5>
-                        </div>
-                        <div class="single-testimonial text-center">
-                            <div class="testimonial-img">
-                                <img alt="" src="{{asset('design')}}/img/icon-img/testi.png">
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eiusmod tempor incididunt ut labore</p>
-                            <h4>Khabuli Teop</h4>
-                            <h5>Marketing</h5>
-                        </div>
-                        <div class="single-testimonial text-center">
-                            <div class="testimonial-img">
-                                <img alt="" src="{{asset('design')}}/img/icon-img/testi.png">
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eiusmod tempor incididunt ut labore </p>
-                            <h4>Lotan Jopon</h4>
-                            <h5>Admin</h5>
-                        </div>
+
+                <!-- About Image Start -->
+                <div class="d-flex col-xl-7 col-12 pl-0 pr-0">
+                    <div class="about-image-wrap">
+                        <div class="image-1" style="background-image: url({{asset('design')}}/images/about/about-2.jpg)"></div>
+                        <div class="image-2" style="background-image: url({{asset('design')}}/images/about/about-3.jpg)"></div>
                     </div>
-                </div>
+                </div><!-- About Image End -->
+
+                <!-- About Content Start -->
+                <div class="bg-dark col-xl-5 col-12 mr-auto order-2 order-md-1 pt-90 pb-90 pt-lg-80 pb-lg-80 pt-md-70 pb-md-70 pt-sm-60 pb-sm-60 pt-xs-50 pb-xs-50  pl-80 pr-80 pl-md-70 pr-md-70 pl-sm-60 pr-sm-60 pl-xs-30 pr-xs-30">
+
+                    <!-- About Section Shape -->
+                    <div class="about-shape two rellax" data-rellax-speed="3" data-rellax-percentage="0.5"><img src="{{asset('design')}}/images/shape/subscribe-shape-1.png" alt=""></div>
+
+                    <div class="about-content about-content-light">
+                        <h3>Provide the best</h3>
+                        <h1>Beard Oil For You</h1>
+                        <div class="desc">
+                            <p>We provide the best Beard oil all over the world. We are the worldd best store for Beard Oil. You can buy our product without any hegitation because we always consus about our product quality and always maintain it properly so your can trust and this is our main goal we belive that...</p>
+                            <p>Some of our customer say’s that they trust us and buy our product without any hagitation because they belive us and always happy to buy our product.</p>
+                        </div>
+                        <a href="about.html" class="btn btn-lg btn-round btn-theme">LEARN MORE</a>
+                    </div>
+                </div><!-- About Content End -->
+
             </div>
         </div>
-    </div>
-    <!-- Testimonial Area End -->
-    <!-- News Area Start -->
-    <div class="blog-area bg-image-1 pt-90 pb-70">
+
+    </div><!-- About Section End -->
+
+    <!-- Product Section Start -->
+    <div class="product-section section pt-90 pb-90 pt-lg-80 pb-lg-80 pt-md-70 pb-md-70 pt-sm-60 pb-sm-60 pt-xs-50 pb-xs-50">
         <div class="container">
-            <div class="product-top-bar section-border mb-55">
-                <div class="section-title-wrap text-center">
-                    <h3 class="section-title">Latest News</h3>
-                </div>
-            </div>
-        </div>
-        <div class="container">
+
+            <!-- Section Title Start -->
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-single mb-30">
-                        <div class="blog-thumb">
-                            <a href="#"><img src="{{asset('design')}}/img/blog/blog-single-1.jpg" alt="" /></a>
-                        </div>
-                        <div class="blog-content pt-25">
-                            <span class="blog-date">14 Sep</span>
-                            <h3><a href="#">Lorem ipsum sit ame co.</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eius tempor incididunt ut labore et dolore</p>
-                            <a href="#">Read More</a>
-                        </div>
+                <div class="col">
+                    <div class="section-title left mb-60 mb-xs-40">
+                        <h1>New Arrivals</h1>
+                        <p>Some of our customer say’s that they trust us and buy our product without any hagitation because they belive us and always happy to buy our product.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-single mb-30">
-                        <div class="blog-thumb">
-                            <a href="#"><img src="{{asset('design')}}/img/blog/blog-single-2.jpg" alt="" /></a>
-                        </div>
-                        <div class="blog-content pt-25">
-                            <span class="blog-date">20 Dec</span>
-                            <h3><a href="#">Lorem ipsum sit ame co.</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eius tempor incididunt ut labore et dolore</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-single mb-30">
-                        <div class="blog-thumb">
-                            <a href="#"><img src="{{asset('design')}}/img/blog/blog-single-3.jpg" alt="" /></a>
-                        </div>
-                        <div class="blog-content pt-25">
-                            <span class="blog-date">18 Aug</span>
-                            <h3><a href="#">Lorem ipsum sit ame co.</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eius tempor incididunt ut labore et dolore</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- News Area End -->
-    <!-- Newsletter Araea Start -->
-    <div class="newsletter-area bg-image-2 pt-90 pb-100">
-        <div class="container">
-            <div class="product-top-bar section-border mb-45">
-                <div class="section-title-wrap text-center">
-                    <h3 class="section-title">Join to our Newsletter</h3>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="col-lg-6 col-md-10 col-md-auto">
-                    <div class="footer-newsletter">
-                        <div id="mc_embed_signup" class="subscribe-form">
-                            <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll" class="mc-form">
-                                    <input type="email" value="" name="EMAIL" class="email" placeholder="Your Email Address*" required>
-                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                    <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                    <div class="submit-button">
-                                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div><!-- Section Title End -->
+
+            <div class="row">
+
+                <!-- Product Slider 4 Column Start-->
+                <div class="product-slider product-slider-4 section">
+
+                    @foreach($products as $product)
+                        <!-- Product Item Start -->
+                            <div class="col">
+                                <div class="product-item">
+                                    <!-- Image -->
+                                    <div class="product-image">
+                                        <!-- Image -->
+                                        <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-1.jpg" alt=""></a>
+                                        <!-- Product Action -->
+                                        <div class="product-action">
+                                            <a href="#" class="cart"><span></span></a>
+                                            <a href="#" class="wishlist"><span></span></a>
+                                            <a href="#" class="quickview"><span></span></a>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="product-content">
+                                        <div class="head">
+                                            <!-- Title -->
+                                            <div class="top">
+                                                <h4 class="title"><a href="#">{{$product->name}}</a></h4>
+                                            </div>
+                                            <!-- Price & Ratting -->
+                                            <div class="bottom">
+                                                <span class="price">{{$product->presentPrice()}} <span class="old">$65</span></span>
+                                                <span class="ratting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div><!-- Product Item End -->
+                    @endforeach
+
+                </div><!-- Product Slider 4 Column Start-->
+
+            </div>
+
+        </div>
+    </div><!-- Product Section End -->
+
+    <!-- Banner Section Start -->
+    <div class="banner-section section pb-90 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="banner"><a href="#"><img src="{{asset('design')}}/images/banner/banner-2.jpg" alt=""></a></div>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- Banner Section End -->
+
+    <!-- Subscribe Section Start -->
+    <div class="subscribe-section section position-relative pt-70 pb-70 pt-md-60 pb-md-60 pt-sm-50 pb-sm-50 pt-xs-50 pb-xs-50 fix">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-12">
+                    <div class="subscribe-wrap">
+                        <h3>Special <span>Offers</span> for Subscription</h3>
+                        <h1>GET INSTANT DISCOUNT FOR MEMBERSHIP</h1>
+                        <p>Subscribe our newsletter and get all latest news abot our latest <br> products, promotions, offers and discount</p>
+
+                        <form id="mc-form" class="mc-form subscribe-form" >
+                            <input id="mc-email" type="email" autocomplete="off" placeholder="Enter your email here" />
+                            <button id="mc-submit">submit</button>
+                        </form>
+                        <!-- mailchimp-alerts Start -->
+                        <div class="mailchimp-alerts text-centre">
+                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                        </div><!-- mailchimp-alerts end -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div><!-- Subscribe Section End -->
+
+    <!-- Product Section Start -->
+    <div class="product-section section pt-90 pb-60 pt-lg-80 pb-lg-50 pt-md-70 pb-md-40 pt-sm-60 pb-sm-30 pt-xs-50 pb-xs-20">
+        <div class="container">
+
+            <!-- Section Title Start -->
+            <div class="row">
+                <div class="col">
+                    <div class="section-title left mb-60 mb-xs-40">
+                        <h1>Popular Products</h1>
+                        <p>Some of our customer say’s that they trust us and buy our product without any hagitation because they belive us and always happy to buy our product.</p>
+                    </div>
+                </div>
+            </div><!-- Section Title End -->
+
+            <div class="row">
+
+                <!-- Product Item Start -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-30">
+                    <div class="product-item">
+                        <!-- Image -->
+                        <div class="product-image">
+                            <!-- Image -->
+                            <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-5.jpg" alt=""></a>
+                            <!-- Product Action -->
+                            <div class="product-action">
+                                <a href="#" class="cart"><span></span></a>
+                                <a href="#" class="wishlist"><span></span></a>
+                                <a href="#" class="quickview"><span></span></a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="product-content">
+                            <div class="head">
+                                <!-- Title -->
+                                <div class="top">
+                                    <h4 class="title"><a href="#">Moisturizing Oil</a></h4>
+                                </div>
+                                <!-- Price & Ratting -->
+                                <div class="bottom">
+                                    <span class="price">$45 <span class="old">$75</span></span>
+                                    <span class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Product Item End -->
+
+                <!-- Product Item Start -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-30">
+                    <div class="product-item">
+                        <!-- Image -->
+                        <div class="product-image">
+                            <!-- Image -->
+                            <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-6.jpg" alt=""></a>
+                            <!-- Product Action -->
+                            <div class="product-action">
+                                <a href="#" class="cart"><span></span></a>
+                                <a href="#" class="wishlist"><span></span></a>
+                                <a href="#" class="quickview"><span></span></a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="product-content">
+                            <div class="head">
+                                <!-- Title -->
+                                <div class="top">
+                                    <h4 class="title"><a href="#">Katopeno Altuni</a></h4>
+                                </div>
+                                <!-- Price & Ratting -->
+                                <div class="bottom">
+                                    <span class="price">$100 <span class="old">$125</span></span>
+                                    <span class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Product Item End -->
+
+                <!-- Product Item Start -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-30">
+                    <div class="product-item">
+                        <!-- Image -->
+                        <div class="product-image">
+                            <!-- Image -->
+                            <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-7.jpg" alt=""></a>
+                            <!-- Product Action -->
+                            <div class="product-action">
+                                <a href="#" class="cart"><span></span></a>
+                                <a href="#" class="wishlist"><span></span></a>
+                                <a href="#" class="quickview"><span></span></a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="product-content">
+                            <div class="head">
+                                <!-- Title -->
+                                <div class="top">
+                                    <h4 class="title"><a href="#">Murikhete Paris</a></h4>
+                                </div>
+                                <!-- Price & Ratting -->
+                                <div class="bottom">
+                                    <span class="price">$99 <span class="old">$165</span></span>
+                                    <span class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Product Item End -->
+
+                <!-- Product Item Start -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-30">
+                    <div class="product-item">
+                        <!-- Image -->
+                        <div class="product-image">
+                            <!-- Image -->
+                            <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-8.jpg" alt=""></a>
+                            <!-- Product Action -->
+                            <div class="product-action">
+                                <a href="#" class="cart"><span></span></a>
+                                <a href="#" class="wishlist"><span></span></a>
+                                <a href="#" class="quickview"><span></span></a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="product-content">
+                            <div class="head">
+                                <!-- Title -->
+                                <div class="top">
+                                    <h4 class="title"><a href="#">Vortahole Valohoi</a></h4>
+                                </div>
+                                <!-- Price & Ratting -->
+                                <div class="bottom">
+                                    <span class="price">$92 <span class="old">$110</span></span>
+                                    <span class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Product Item End -->
+
+                <!-- Product Item Start -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-30">
+                    <div class="product-item">
+                        <!-- Image -->
+                        <div class="product-image">
+                            <!-- Image -->
+                            <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-9.jpg" alt=""></a>
+                            <!-- Product Action -->
+                            <div class="product-action">
+                                <a href="#" class="cart"><span></span></a>
+                                <a href="#" class="wishlist"><span></span></a>
+                                <a href="#" class="quickview"><span></span></a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="product-content">
+                            <div class="head">
+                                <!-- Title -->
+                                <div class="top">
+                                    <h4 class="title"><a href="#">Egentry Etumeni</a></h4>
+                                </div>
+                                <!-- Price & Ratting -->
+                                <div class="bottom">
+                                    <span class="price">$39 <span class="old">$70</span></span>
+                                    <span class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Product Item End -->
+
+                <!-- Product Item Start -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-30">
+                    <div class="product-item">
+                        <!-- Image -->
+                        <div class="product-image">
+                            <!-- Image -->
+                            <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-10.jpg" alt=""></a>
+                            <!-- Product Action -->
+                            <div class="product-action">
+                                <a href="#" class="cart"><span></span></a>
+                                <a href="#" class="wishlist"><span></span></a>
+                                <a href="#" class="quickview"><span></span></a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="product-content">
+                            <div class="head">
+                                <!-- Title -->
+                                <div class="top">
+                                    <h4 class="title"><a href="#">Origeno Veledita</a></h4>
+                                </div>
+                                <!-- Price & Ratting -->
+                                <div class="bottom">
+                                    <span class="price">$110 <span class="old">$139</span></span>
+                                    <span class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Product Item End -->
+
+                <!-- Product Item Start -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-30">
+                    <div class="product-item">
+                        <!-- Image -->
+                        <div class="product-image">
+                            <!-- Image -->
+                            <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-11.jpg" alt=""></a>
+                            <!-- Product Action -->
+                            <div class="product-action">
+                                <a href="#" class="cart"><span></span></a>
+                                <a href="#" class="wishlist"><span></span></a>
+                                <a href="#" class="quickview"><span></span></a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="product-content">
+                            <div class="head">
+                                <!-- Title -->
+                                <div class="top">
+                                    <h4 class="title"><a href="#">Baizidale Momone</a></h4>
+                                </div>
+                                <!-- Price & Ratting -->
+                                <div class="bottom">
+                                    <span class="price">$78 <span class="old">$99</span></span>
+                                    <span class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Product Item End -->
+
+                <!-- Product Item Start -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb-30">
+                    <div class="product-item">
+                        <!-- Image -->
+                        <div class="product-image">
+                            <!-- Image -->
+                            <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-12.jpg" alt=""></a>
+                            <!-- Product Action -->
+                            <div class="product-action">
+                                <a href="#" class="cart"><span></span></a>
+                                <a href="#" class="wishlist"><span></span></a>
+                                <a href="#" class="quickview"><span></span></a>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="product-content">
+                            <div class="head">
+                                <!-- Title -->
+                                <div class="top">
+                                    <h4 class="title"><a href="#">Buffekete Chai</a></h4>
+                                </div>
+                                <!-- Price & Ratting -->
+                                <div class="bottom">
+                                    <span class="price">$82 <span class="old">$105</span></span>
+                                    <span class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Product Item End -->
+
+            </div>
+
+        </div>
+    </div><!-- Product Section End -->
+
+    <!-- Blog Section Start -->
+    <div class="blog-section section pb-90 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
+        <div class="container">
+            <div class="row row-3">
+
+                <div class="col-lg-4 col-12 mb-5">
+                    <div class="blog-section-title">
+                        <h1>Latest Blog Post</h1>
+                        <p>Some of our customer say’s that they trust us and buy our product without any gitation because they can belive us</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-12 mb-5">
+                    <div class="blog-slider">
+                        <div class="home-blog">
+                            <a class="image" href="blog-details.html" style="background-image: url({{asset('design')}}/images/blog/home-blog-1.jpg)">image</a>
+                            <div class="content">
+                                <h3 class="title"><a href="blog-details.html">New Brand Beard Oil</a></h3>
+                                <ul class="blog-meta">
+                                    <li>By - <a href="#">Adam</a></li>
+                                    <li>10 August, 2018</li>
+                                </ul>
+                                <p>Some of our customer say’s that they trust us and buy our product without any gitation because they can belive us and always</p>
+                                <a href="blog-details.html" class="read-more">read more...</a>
+                            </div>
+                        </div>
+                        <div class="home-blog">
+                            <a class="image" href="blog-details.html" style="background-image: url({{asset('design')}}/images/blog/home-blog-2.jpg)">image</a>
+                            <div class="content">
+                                <h3 class="title"><a href="blog-details.html">Oil for Beard Growing</a></h3>
+                                <ul class="blog-meta">
+                                    <li>By - <a href="#">Adam</a></li>
+                                    <li>10 August, 2018</li>
+                                </ul>
+                                <p>Some of our customer say’s that they trust us and buy our product without any gitation because they can belive us and always</p>
+                                <a href="blog-details.html" class="read-more">read more...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-    </div>
-    <!-- Newsletter Araea End -->
+    </div><!-- Blog Section End -->
+
+    <!-- Service Section Start -->
+    <div class="service-section section pl-15 pr-15 pl-lg-30 pr-lg-30 pl-md-30 pr-md-30">
+        <div class="service-container">
+            <div class="row ml-0 mr-0">
+
+                <div class="service col-xl-3 col-md-6 col-12">
+                    <div class="icon"></div>
+                    <div class="content">
+                        <h3>Free home delivery</h3>
+                        <p>Provide free home delivery for all product over $100</p>
+                    </div>
+                </div>
+
+                <div class="service col-xl-3 col-md-6 col-12">
+                    <div class="icon"></div>
+                    <div class="content">
+                        <h3>Quality Products</h3>
+                        <p>We ensure the product quality that is our main goal</p>
+                    </div>
+                </div>
+
+                <div class="service col-xl-3 col-md-6 col-12">
+                    <div class="icon"></div>
+                    <div class="content">
+                        <h3>3 Days Return</h3>
+                        <p>Return product within 3 days for any product you buy</p>
+                    </div>
+                </div>
+
+                <div class="service col-xl-3 col-md-6 col-12">
+                    <div class="icon"></div>
+                    <div class="content">
+                        <h3>Online Support</h3>
+                        <p>We ensure the product quality that you can trust easily</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div><!-- Service Section End -->
+
 @endsection

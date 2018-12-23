@@ -1,0 +1,91 @@
+/*----------------------------------------*/
+/*  15. Contact CSS
+/*----------------------------------------*/
+
+/*-- Contact Information --*/
+.contact-info {
+    background-color: $heading-color;
+    max-width: 435px;
+    padding: 95px 60px;
+    // Responsive
+    @media #{$extra-small-mobile}{
+        padding: 50px 30px;
+    }
+    & ul {
+        & li {
+            border-bottom: 1px dashed #636363;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+            & h4 {
+                color: $body-color-light;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 9px;
+            }
+            & p {
+                color: $body-color-light;
+                max-width: 250px;
+                & a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/*-- Contact Form Wrap --*/
+.contact-form-wrap {
+    & h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    & p {
+        margin-bottom: 30px;
+    }
+}
+
+/*-- Contact Form --*/
+.contact-form {
+    & input {
+        display: block;
+        width: 100%;
+        border: 1px solid #ebebeb;
+        border-radius: 50px;
+        line-height: 24px;
+        padding: 11px 25px;
+        color: #656565;
+    }
+    & textarea {
+        display: block;
+        width: 100%;
+        border: 1px solid #ebebeb;
+        border-radius: 20px;
+        line-height: 24px;
+        padding: 20px 25px;
+        color: #656565;
+        height: 190px;
+        resize: none;
+    }
+    & button {
+        font-size: 18px;
+        line-height: 25px;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        background-color: $heading-color;
+        color: $theme-color;
+        border: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-family: $heading-font;
+        &:hover {
+            background-color: $theme-color;
+            color: $heading-color;
+        }
+    }
+}

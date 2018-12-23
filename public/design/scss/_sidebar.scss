@@ -1,0 +1,178 @@
+/*----------------------------------------*/
+/*  07. Sidebar CSS
+/*----------------------------------------*/
+
+.sidebar {
+    margin-bottom: 60px;
+    float: left;
+    width: 100%;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    & .sidebar-title {
+        font-size: 18px;
+        border: 10px solid #f4f4f4;
+        line-height: 26px;
+        padding: 5px 20px;
+        margin-bottom: 30px;
+    }
+}
+
+/*-- Search --*/
+.sidebar-search {
+    position: relative;
+    & input {
+        width: 100%;
+        border-radius: 50px;
+        border: 1px solid #b4b4b4;
+        height: 45px;
+        line-height: 23px;
+        padding: 10px 25px;
+        padding-right: 80px;
+        font-size: 13px;
+        &[type="submit"] {
+            width: auto;
+            border: none;
+            background-color: $theme-color;
+            color: $heading-color;
+            text-transform: uppercase;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: $heading-font;
+            padding: 11px 20px;
+        }
+    }
+}
+
+/*-- List --*/
+.sidebar-list {
+    & li {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & a {
+            display: block;
+            line-height: 20px;
+        }
+    }
+}
+
+/*-- Post List --*/
+.sidebar-post-list {}
+.sidebar-post {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    & .image {
+        display: block;
+        max-width: 80px;
+        flex: 1 0 80px;
+        border-radius: 4px;
+        overflow: hidden;
+        & img {
+            width: 100%;
+        }
+    }
+    & .content {
+        flex: 1 0 calc(100% - 80px);
+        padding-left: 15px;
+        & .title {
+            font-size: 18px;
+            line-height: 24px;
+            & a {}
+        }
+        & p {
+            font-size: 13px;
+            line-height: 22px;
+            max-width: 180px;
+        }
+    }
+}
+
+/*-- Tweet List --*/
+.sidebar-tweet-list {}
+.sidebar-tweet {
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    & p {
+        font-size: 15px;
+        line-height: 22px;
+        color: $body-color;
+        & a {
+            font-weight: 600;
+            color: $theme-color;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*-- Price Range --*/
+#price-range {
+    background-color: #f4f4f4;
+    height: 7px;
+    width: 100%;
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 30px;
+    & .ui-slider-range {
+        background-color: $heading-color;
+        height: 100%;
+        border-radius: 50px;
+        position: absolute;
+        top: 0;
+    }
+    & .ui-slider-handle {
+        position: absolute;
+        top: -2px;
+        height: 11px;
+        width: 11px;
+        background-color: #f4f4f4;
+        border: 2px solid $heading-color;
+        border-radius: 50px;
+        transition: none;
+        cursor: pointer;
+        & span {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            margin-top: 11px;
+            font-weight: 600;
+            display: block;
+            line-height: 23px;
+        }
+        &:nth-child(2) {
+        }
+        &:nth-child(3) {
+            margin-left: -11px;
+        }
+    }
+}
+
+/*-- Tag Cloud --*/
+.tag-cloud {
+    overflow: hidden;
+    & a {
+        font-size: 15px;
+        line-height: 23px;
+        margin-right: 15px;
+        float: left;
+        margin-bottom: 7px;
+        &:hover {
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+}

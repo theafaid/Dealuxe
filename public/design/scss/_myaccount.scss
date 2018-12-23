@@ -1,0 +1,91 @@
+/*---------------------------------------
+    19. My Account CSS
+-----------------------------------------*/
+
+/*-- My Account Tab Menu -*/
+.myaccount-tab-menu {
+    flex-direction: column;
+    & a {
+        border: 1px solid #eeeeee;
+        border-bottom: none;
+        color: $body-color;
+        font-weight: 600;
+        font-size: 12px;
+        display: block;
+        padding: 15px 15px 13px;
+        text-transform: uppercase;
+        &:last-child {
+          border-bottom: 1px solid #eeeeee;
+        }
+        &:hover, &.active {
+          background-color: $theme-color;
+          color: $white;
+        }
+        & i {
+          font-size: 16px;
+          text-align: center;
+          width: 25px;
+        }
+    }
+}
+/*-- My Account Content -*/
+.myaccount-content {
+    font-size: 16px;
+    border: 1px solid #eeeeee;
+    padding: 30px;
+    @media #{$small-mobile} {
+        padding: 20px 15px;
+    }
+    & h3 {
+        border-bottom: 1px dashed #eeeeee;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+    }
+    & .welcome {
+        & a {
+            color: $black;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+        & strong {
+            font-weight: 600;
+        }
+    }
+}
+/*-- My Account Table -*/
+.myaccount-table {
+    white-space: nowrap;
+    font-size: 15px;
+    & table, & .table {
+        & th {
+            padding: 10px;
+        }
+        & td {
+            padding: 20px 10px;
+            vertical-align: middle;
+        }
+    }
+}
+.saved-message {
+    border-top: 3px solid $theme-color;
+    border-radius: 5px 5px 0 0;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 20px;
+}
+/*-- My Account Details Form -*/
+.account-details-form {
+    & h4 {
+        margin: 0;
+    }
+    & input {
+        display: block;
+        width: 100%;
+        border: 1px solid #ebebeb;
+        border-radius: 50px;
+        line-height: 24px;
+        padding: 11px 25px;
+        color: #656565;
+    }
+}

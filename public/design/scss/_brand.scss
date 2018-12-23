@@ -1,0 +1,11 @@
+/*----------------------------------------*/
+/*  11. Brand CSS
+/*----------------------------------------*/
+.brand-slider {}
+.brand-item {
+    text-align: center;
+    & img {
+        max-width: 100%;
+        margin: auto;
+    }
+}

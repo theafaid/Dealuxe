@@ -1,0 +1,101 @@
+/*---------------------------------------
+    18. Compare CSS
+-----------------------------------------*/
+
+/*-- Compare Table --*/
+.compare-table {
+    & .table {
+        & tbody {
+            & tr {
+                &:first-child {
+                    border-top: 1px solid #eeeeee;
+                }
+                & td {
+                    text-align: center;
+                    border: none;
+                    padding: 25px 30px;
+                    vertical-align: middle;
+                    border-bottom: 1px solid #eeeeee;
+                    border-left: 1px solid #eeeeee;
+                    &:last-child {
+                        border-right: 1px solid #eeeeee;
+                    }
+                    &.first-column {
+                        min-width: 180px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: $heading-color;
+                        margin: 0;
+                        line-height: 1;
+                    }
+                    &.product-image-title {
+                        min-width: 310px;
+                        vertical-align: bottom;
+                        padding-top: 70px;
+                        & .image {
+                            clear: both;
+                            width: 100%;
+                            margin-bottom: 40px;
+                            & img {
+                                max-width: 100%;
+                            }
+                        }
+                        & .title {
+                            float: left;
+                            clear: both;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: $body-color;
+                            line-height: 20px;
+                            margin-bottom: 10px;
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                    &.pro-desc {
+                        & p {
+                            text-align: left;
+                            margin: 0;
+                        }
+                    }
+                    &.pro-price {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $body-color;
+                    }
+                    &.pro-color {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $body-color;
+                    }
+                    &.pro-stock {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $body-color;
+                    }
+                    &.pro-addtocart {}
+                    &.pro-remove {
+                        & button {
+                            border: none;
+                            background-color: transparent;
+                            padding: 0;
+                            & i {
+                                font-size: 20px;
+                            }
+                            &:hover {
+                                color: #ff0000;
+                            }
+                        }
+                    }
+                    &.pro-ratting {
+                        & i {
+                            color: $body-color;
+                            font-size: 14px;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}

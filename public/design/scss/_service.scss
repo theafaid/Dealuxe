@@ -1,0 +1,149 @@
+/*----------------------------------------*/
+/*  12. Service CSS
+/*----------------------------------------*/
+
+/*-- Service Container --*/
+.service-container {
+    background-color: $white;
+    max-width: 1520px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid #ebebeb;
+    border-radius: 500px;
+    padding: 25px 0;
+    margin-bottom: -90px;
+    position: relative;
+    z-index: 9;
+    // Responsive
+    @media #{$large-mobile}{
+        margin-bottom: 50px;
+        max-width: 540px;
+        border: none;
+        padding: 0;
+        border-radius: 0px;
+    }
+}
+
+/*-- Service --*/
+.service {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px 40px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 18px;
+        bottom: 18px;
+        width: 1px;
+        background-color: #ebebeb;
+    }
+    &:last-child {
+        &::before {
+            display: none;
+        }
+    }
+    & .icon {
+        width: 52px;
+        height: 43px;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease 0s;
+        background-image: url(../images/icons/service-sprites.png);
+    }
+    &:nth-child(1) {
+        & .icon {
+            background-position: 0 0;
+        }
+    }
+    &:nth-child(2) {
+        & .icon {
+            background-position: -52px 0;
+        }
+    }
+    &:nth-child(3) {
+        & .icon {
+            background-position: -104px 0;
+        }
+    }
+    &:nth-child(4) {
+        & .icon {
+            background-position: -156px 0;
+        }
+    }
+    & .content {
+        width: calc(100% - 52px);
+        padding-left: 25px;
+        & h3 {
+            font-weight: 500;
+            margin-bottom: 7px;
+        }
+        & p {}
+    }
+    &:hover {
+        &:nth-child(1) {
+            & .icon {
+                background-position: 0 -43px;
+            }
+        }
+        &:nth-child(2) {
+            & .icon {
+                background-position: -52px -43px;
+            }
+        }
+        &:nth-child(3) {
+            & .icon {
+                background-position: -104px -43px;
+            }
+        }
+        &:nth-child(4) {
+            & .icon {
+                background-position: -156px -43px;
+            }
+        }
+    }
+    // Responsive
+    @media #{$laptop-device}{
+        padding: 15px 25px;
+        & .content {
+            padding-left: 20px;
+            & h3 {
+                font-size: 20px;
+            }
+            & p {
+                font-size: 13px;
+                line-height: 24px;
+            }
+        }
+    }
+    @media #{$desktop-device}{
+        &:nth-child(2) {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    @media #{$tablet-device}{
+        &:nth-child(2) {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    @media #{$large-mobile}{
+        padding: 0 15px;
+        margin-bottom: 30px;
+        &::before {
+            display: none;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & p {
+            max-width: 300px;
+        }
+    }
+    @media #{$small-mobile}{
+    }
+}

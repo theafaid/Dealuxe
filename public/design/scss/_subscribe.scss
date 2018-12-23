@@ -1,0 +1,103 @@
+/*----------------------------------------*/
+/*  09. Subscribe CSS
+/*----------------------------------------*/
+.subscribe-section {
+    background-image: url(../images/bg/subscribe-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*-- Subscribe Wrap --*/
+.subscribe-wrap {
+    text-align: center;
+    & h3 {
+        font-weight: 300;
+        color: $body-color-light;
+        letter-spacing: 0.1px;
+        margin-bottom: 10px;
+        & span {
+            color: $theme-color;
+            font-weight: 600;
+        }
+    }
+    & h1 {
+        font-weight: 600;
+        color: $body-color-light;
+        letter-spacing: 0.1px;
+        margin-bottom: 10px;
+    }
+    & p {
+        color: $body-color-light;
+    }
+    // Responsive
+    @media #{$tablet-device}{
+        & h3 {
+            font-size: 22px;
+        }
+        & h1 {
+            font-size: 30px;
+        }
+        & p {}
+    }
+    @media #{$large-mobile}{
+        margin-right: 0
+    }
+}
+
+/*-- Subscribe Form --*/
+.subscribe-form {
+    position: relative;
+    max-width: 525px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    & input[type="email"] {
+        width: 100%;
+        border: 1px solid #b4b4b4;
+        border-radius: 50px;
+        height: 50px;
+        line-height: 24px;
+        padding: 12px 30px;
+        background-color: transparent;
+        color: $body-color-light;
+        font-size: 13px;
+        // Responsive
+        @media #{$extra-small-mobile}{
+            text-align: center;
+        }
+        &::placeholder {
+            color: $body-color-light;
+        }
+    }
+    & button {
+        font-size: 18px;
+        font-family: $heading-font;
+        color: $heading-color;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 24px;
+        padding: 13px 30px;
+        border-radius: 50px;
+        background-color: $theme-color;
+        border: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        // Responsive
+        @media #{$extra-small-mobile}{
+            position: static;
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+}
+
+/*-- Mailchimp Message --*/
+.mailchimp-error {
+    color: #ff0000;
+}
+.mailchimp-success {
+    color: #28a745;
+}

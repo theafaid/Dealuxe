@@ -1,0 +1,193 @@
+/*----------------------------------------*/
+/*  10. Testimonial CSS
+/*----------------------------------------*/
+
+/*-- Testimonial Section Title --*/
+.testimonial-section-title {
+    position: absolute;
+    left: 41.666667%;
+    top: 85px;
+    z-index: 9;
+    padding-left: 15px;
+    padding-right: 30px;
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: -90px;
+        bottom: -20px;
+        height: 9px;
+        background-color: $heading-color;
+    }
+    // Responsive
+    @media #{$desktop-device}{
+        top: 50px;
+    }
+    @media #{$tablet-device}{
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 60px;
+        padding: 0;
+        display: inline-block;
+        &::before {
+            left: 0;
+            right: 0;
+        }
+    }
+    @media #{$large-mobile}{
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 50px;
+        padding: 0;
+        display: inline-block;
+        &::before {
+            left: 0;
+            right: 0;
+        }
+    }
+    & h1 {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+/*-- Testimonial Image Slider --*/
+.testimonial-image-slider {
+    padding: 0 40px;
+    max-width: 415px;
+    margin: auto;
+    z-index: 9;
+    // Responsive
+    @media #{$tablet-device}{
+        margin: 0;
+    }
+    @media #{$large-mobile}{
+        margin: 0;
+    }
+    @media #{$extra-small-mobile}{
+        padding: 0 30px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 65px;
+        bottom: 65px;
+        background-color: $heading-color;
+        // Responvie
+        @media #{$extra-small-mobile}{
+            top: 30px;
+            bottom: 30px;
+        }
+    }
+    & .slick-arrow {
+        position: absolute;
+        left: -15px;
+        bottom: 65px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        transform: rotate(-90deg);
+        transform-origin: left bottom;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: $heading-font;
+        text-transform: uppercase;
+        line-height: 1;
+        &.slick-prev {
+            &::after {
+                position: absolute;
+                right: -11px;
+                top: 0;
+                content: "/";
+            }
+        }
+        &.slick-next {
+            bottom: 120px;
+        }
+        &:hover {
+            color: $theme-color;
+        }
+        // Responsive
+        @media #{$extra-small-mobile}{
+            bottom: 30px;
+            &.slick-next {
+                bottom: 85px;
+            }
+        }
+    }
+}
+
+/*-- Testimonial Image --*/
+.testimonial-image {
+    & img {}
+}
+
+/*-- Testimonial Content Slider --*/
+.testimonial-content-slider {
+    margin-top: 175px;
+    // Responsive
+    @media #{$desktop-device}{
+        margin-top: 140px;
+    }
+    @media #{$tablet-device}{
+        margin-top: 30px;
+    }
+    @media #{$large-mobile}{
+        margin-top: 30px;
+    }
+}
+/*-- Testimonial Content --*/
+.testimonial-content {
+    padding: 50px 60px 0;
+    position: relative;
+    // Responsive
+    @media #{$desktop-device}{
+        padding: 40px 40px 0;
+    }
+    @media #{$tablet-device}{
+        padding: 40px 40px 0;
+    }
+    @media #{$large-mobile}{
+        padding: 40px 40px 0;
+    }
+    @media #{$extra-small-mobile}{
+        padding: 30px 30px 0;
+    }
+    &::before, &::after {
+        position: absolute;
+        width: 30px;
+        height: 27px;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &::before {
+        left: 0;
+        top: 0;
+        background-image: url(../images/icons/quote-left.png);
+    }
+    &::after {
+        right: 0;
+        bottom: 25px;
+        background-image: url(../images/icons/quote-right.png);
+    }
+    & p {
+        margin-bottom: 20px;
+    }
+    & h4 {
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    & span {
+        display: block;
+        font-family: $heading-font;
+        line-height: 1;
+        margin: 0;
+    }
+}
