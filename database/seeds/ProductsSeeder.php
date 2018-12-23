@@ -31,11 +31,7 @@ class ProductsSeeder extends Seeder
                 'ar' => '15 انش, 1 تيرا هارد ديسك, 8 جيجا رام'
             ]);
 
-            $product->setTranslations('slug', [
-                'en' => "laptop-{$i}",
-                'ar' => "لاب توب-{$i}"
-            ]);
-
+            $product->slug = "laptop-{$i}";
             $product->price = $i * 1024;
 
             $product->save();

@@ -10,9 +10,14 @@ class Product extends Model
     use HasTranslations;
 
     protected $guarded = [];
-    public $translatable = ['name', 'description', 'details', 'slug'];
+    public $translatable = ['name', 'description', 'details'];
 
     public function presentPrice(){
         return "$" . $this->price / 100;
+    }
+
+    public function getRouteKeyName()
+    {
+        return "slug";
     }
 }
