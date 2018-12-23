@@ -7,10 +7,10 @@
                 <div class="col">
 
                     <div class="page-banner text-center">
-                        <h1>Shop</h1>
+                        <h1>{{__('front.shop')}}</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li>Shop</li>
+                            <li><a href="{{route('welcome')}}">{{__('front.home')}}</a></li>
+                            <li>{{__('front.shop')}}}</li>
                         </ul>
                     </div>
 

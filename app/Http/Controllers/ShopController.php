@@ -48,7 +48,10 @@ class ShopController extends Controller
      */
     public function show(Product $product)
     {
-        return $product;
+        return view('product', [
+            'product'   => $product,
+            'mightLike' => Product::where('name', '!=', $product->name)->take(10)->get()
+        ]);
     }
 
     /**
