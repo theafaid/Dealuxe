@@ -26,7 +26,7 @@ class ProductToCartRequest extends FormRequest
     {
         return [
             'product' => 'required|string|exists:products,slug',
-            'qnt'     => 'required|integer|min:1|max:15',
+            'qnt'     => 'sometimes|integer|min:1|max:15',
         ];
     }
 
@@ -37,7 +37,7 @@ class ProductToCartRequest extends FormRequest
             'id' => $product->id,
             'name' => $product->name,
             'price' => $product->price,
-            'quantity' => request('qnt'),
+            'quantity' => $this->qnt ?: 1,
             'attributes' => [
                 'product' => $product
             ]

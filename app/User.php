@@ -40,4 +40,20 @@ class User extends Authenticatable
     public function cartTotal(){
         return "$" . (Cart::session(auth()->id())->getTotal() / 100);
     }
+
+    /**
+     * Get user wishlist
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function wishlist(){
+        return $this->belongsToMany('App\Product', 'user_wishlist', 'user_id', 'product_id');
+    }
+
+    /**
+     * Add product to user wishlist
+     * @param $product
+     */
+    public function addToWishlist($product){
+        return $this->wishlist()->sync($product->id);
+    }
 }

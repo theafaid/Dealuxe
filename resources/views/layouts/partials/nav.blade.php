@@ -64,7 +64,7 @@
                 <div class="header-action">
 
                     <!-- Wishlist -->
-                    <a href="wishlist.html" class="header-wishlist"><span class="icon">wishlist</span></a>
+                    <a href="{{route('wishlist.index')}}" class="header-wishlist"><span class="icon">wishlist</span></a>
                     @auth
                         @include('layouts.partials._header_cart_data')
                     @endauth

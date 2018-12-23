@@ -61,4 +61,26 @@ class UserTest extends TestCase
 
         $this->assertEquals("$".($product->price/100), $cartTotal);
     }
+
+    /** @test */
+    function it_has_many_wishlist(){
+        $user = create('App\User');
+        $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $user->wishlist);
+    }
+
+    /** @test */
+    function can_add_a_product_to_his_wishlist(){
+
+        $user = create('App\User');
+        $product = create('App\Product');
+
+        $user->addToWishlist($product);
+
+        $this->assertInstanceOf('App\Product', $user->wishlist->first());
+
+        $this->assertDatabaseHas('user_wishlist', [
+            'user_id' => $user->id,
+            'product_id' => $product->id
+        ]);
+    }
 }

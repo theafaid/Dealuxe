@@ -8,6 +8,9 @@ Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::post('/cart/clear', 'CartController@clear')->name('cart.clear');
 Route::delete('/cart/remove', 'CartController@remove')->name('cart.remove');
 
+Route::get('/wishlist', 'WishlistController@index')->name('wishlist.index');
+Route::post('/wishlist', 'WishlistController@store')->name('wishlist.store');
+
 Route::view('/product', 'product');
 Route::view('/checkout', 'checkout');
 Route::view('/thankyou', 'thankyou');

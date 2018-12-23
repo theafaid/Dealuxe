@@ -7,10 +7,10 @@
                 <div class="col">
 
                     <div class="page-banner text-center">
-                        <h1>{{__('front.cart')}}</h1>
+                        <h1>{{__('front.wishlist')}}</h1>
                         <ul class="page-breadcrumb">
                             <li><a href="{{route('welcome')}}">{{__('front.home')}}</a></li>
-                            <li>{{__('front.cart')}}</li>
+                            <li>{{__('front.wishlist')}}</li>
                         </ul>
                     </div>
 
@@ -27,56 +27,54 @@
                 <div class="col-12">
 
                     @if($successMsg = session("success"))
-                       <div class="alert alert-success">{{$successMsg}}</div>
+                        <div class="alert alert-success">{{$successMsg}}</div>
                     @endif
-                    
-                    <!-- Cart Table -->
-                    <div class="cart-table table-responsive mb-30">
-                        @if($count = $cartItems->count())
-                        <div class="section-title left section col mb-40 mb-xs-30">
-                            <h1> {{ "( {$count} ) " . __('front.items_in_your_cart')}}</h1>
-                        </div>
 
-                        <table class="table">
-                            <thead>
+                <!-- Cart Table -->
+                    <div class="cart-table table-responsive mb-30">
+                        @if($count = count($wishlist))
+                            <div class="section-title left section col mb-40 mb-xs-30">
+                                <h1> {{ "( {$count} ) " . __('front.items_in_your_wishlist')}}</h1>
+                            </div>
+
+                            <table class="table">
+                                <thead>
                                 <tr>
                                     <th class="pro-thumbnail">{{__('front.image')}}</th>
                                     <th class="pro-title">{{__('front.name')}}</th>
                                     <th class="pro-price">{{__('front.price')}}</th>
-                                    <th class="pro-quantity">{{__('front.quantity')}}</th>
-                                    <th class="pro-subtotal">{{__('front.total')}}</th>
-                                    <th class="pro-remove">{{__('front.settings')}}</th>
+                                    <th class="pro-subtotal">{{__('front.add_to_cart')}}</th>
+                                    <th class="pro-remove">{{__('front.remove')}}</th>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($cartItems as $item)
+                                </thead>
+                                <tbody>
+                                @foreach($wishlist as $item)
                                     <tr>
-                                        <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-1.jpg" alt="Product"></a></td>
-                                        <td class="pro-title"><a href="{{route('shop.show', slugFromItem($item))}}">{{$item->name}}</a></td>
+                                        <td class="pro-thumbnail">
+                                            <a href="{{route('shop.show', $item->slug)}}">
+                                                <img src="{{asset('design')}}/images/product/product-1.jpg" alt="Product">
+                                            </a>
+                                        </td>
+                                        <td class="pro-title"><a href="{{route('shop.show', $item->slug)}}">{{$item->name}}</a></td>
                                         <td class="pro-price"><span>{{presentPrice($item->price)}}</span></td>
-                                        <td class="pro-quantity"><div class="pro-qty"><input type="text" value="{{$item->quantity}}"></div></td>
-                                        <td class="pro-subtotal"><span>{{presentPrice($item->price)}}</span></td>
-                                        <td class="pro-remove">
-                                            <form action="{{route('cart.remove')}}" method="POST">
+                                        <td class="pro-addtocart">
+                                            <form method="POST" action="{{route('cart.store')}}">
                                                 @csrf
-                                                {{method_field('DELETE')}}
-                                                <input type="hidden" name="product" value="{{slugFromItem($item)}}">
-                                                <button type="submit"><i class="fa fa-trash-o"></i></button>
-                                            </form>
-
-                                            <form action="{{route('wishlist.store')}}" method="POST">
-                                                @csrf
-                                                <input type="hidden" name="product" value="{{slugFromItem($item)}}">
-                                                <button type="submit">Save for later</button>
+                                                <input type="hidden" name="product" value="{{$item->slug}}">
+                                                <!-- Product Action -->
+                                                <div class="product-action">
+                                                    <button type="submit" class="cart">{{__('front.add_to_cart')}}</button>
+                                                </div>
                                             </form>
                                         </td>
+                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
                                     </tr>
                                 @endforeach
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
                         @else
                             <div class="section-title left section col mb-40 mb-xs-30">
-                                <h1>{{__('front.your_cart_is_empty')}}</h1>
+                                <h1>{{__('front.your_wishlist_is_empty')}}</h1>
                             </div>
                         @endif
                     </div>
@@ -144,12 +142,12 @@
                                 <div class="cart-summary-button">
                                     <button class="checkout-btn">Checkout</button>
                                     <button class="update-btn">Update Cart</button>
-                                    @if($cartItems->count())
-                                        <form action="{{route('cart.clear')}}" method="POST">
-                                            @csrf
-                                            <button type="submit" class="btn btn-danger">{{__('front.empty_cart')}}</button>
-                                        </form>
-                                    @endif
+                                    {{--@if($cartItems->count())--}}
+                                        {{--<form action="{{route('cart.clear')}}" method="POST">--}}
+                                            {{--@csrf--}}
+                                            {{--<button type="submit" class="btn btn-danger">{{__('front.empty_cart')}}</button>--}}
+                                        {{--</form>--}}
+                                    {{--@endif--}}
                                 </div>
                             </div>
                         </div>
@@ -161,16 +159,4 @@
         </div>
 
     </div><!-- Cart Section End -->
-
-    <!-- Brand Section Start -->
-    <div class="brand-section section pb-90 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    @include('layouts.partials._might_like')
-                </div>
-            </div>
-        </div>
-    </div><!-- Brand Section End -->
-
 @endsection

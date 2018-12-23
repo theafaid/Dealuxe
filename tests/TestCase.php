@@ -28,4 +28,10 @@ abstract class TestCase extends BaseTestCase
         $data =  ['qnt' => $qnt, 'product' => $product->slug];
         return $this->post(route('cart.index'), $data);
     }
+
+    public function toSaveLater($product){
+        return $this->post(route('wishlist.store'), [
+            'product' => $product->slug
+        ]);
+    }
 }

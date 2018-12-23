@@ -53,13 +53,13 @@ class CartTest extends TestCase
     }
 
     /** @test */
-    function cart_is_require_a_product_and_quantity_to_add_a_product_in_it()
+    function cart_is_require_a_product_to_add_a_product_in_it()
     {
         $this->signIn();
         $product = create('App\Product');
         $this->post(route('cart.store'), [])
             ->assertRedirect()
-            ->assertSessionHasErrors(['product', 'qnt']);
+            ->assertSessionHasErrors(['product']);
     }
 
     /** @test */
