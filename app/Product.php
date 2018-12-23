@@ -21,9 +21,7 @@ class Product extends Model
         return "$" . $this->price / 100;
     }
 
-    public function scopeMightLike($query, $limit = 8, $canIncludeThis= false){
-        return ! $canIncludeThis ?
-            $query->where('slug', '!=', $this->slug)->inRandomOrder()->take($limit) :
-            $query->inRandomOrder()->take($limit);
+    public function scopeMightLike($query, $limit = 8){
+        return $query->inRandomOrder()->take($limit);
     }
 }
