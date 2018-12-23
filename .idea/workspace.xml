@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95f7c15c-5887-468d-afe0-102c2326b20d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/cart.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/product.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/thankyou.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="95f7c15c-5887-468d-afe0-102c2326b20d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +23,7 @@
         <counts>
           <entry key="env" value="1" />
           <entry key="html" value="4" />
-          <entry key="php" value="8" />
+          <entry key="php" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -39,20 +31,20 @@
           <entry key=".env file" value="1" />
           <entry key="Blade" value="5" />
           <entry key="HTML" value="4" />
-          <entry key="PHP" value="3" />
+          <entry key="PHP" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="23" />
-          <entry key="php" value="513" />
+          <entry key="php" value="739" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="23" />
           <entry key="Blade" value="206" />
-          <entry key="PHP" value="307" />
+          <entry key="PHP" value="533" />
         </counts>
       </usages-collector>
     </session>
@@ -60,98 +52,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_23_084249_create_products_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/products.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="818" column="11" selection-end-line="818" selection-end-column="11" />
-              <folding>
-                <element signature="e#83#481#0#HTML" />
-                <element signature="e#553#54133#0#HTML" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/Compressed/nice-templates/sabujchahtml/sabujcha/product-details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="559" column="50" lean-forward="true" selection-start-line="299" selection-start-column="8" selection-end-line="716" selection-end-column="14" />
-              <folding>
-                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/product.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/Compressed/nice-templates/sabujchahtml/sabujcha/checkout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="298" column="27" lean-forward="true" selection-start-line="298" selection-start-column="27" selection-end-line="298" selection-end-column="27" />
-              <folding>
-                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/checkout.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" selection-end-column="19" />
-              <folding>
-                <element signature="e#87#483#0#HTML" />
-                <element signature="e#560#38732#0#HTML" />
-              </folding>
+            <state relative-caret-position="310">
+              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/thankyou.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="248">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -173,6 +86,8 @@
         <option value="$PROJECT_DIR$/resources/views/cart.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/checkout.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/thankyou.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_12_23_084249_create_products_table.php" />
+        <option value="$PROJECT_DIR$/app/Product.php" />
       </list>
     </option>
   </component>
@@ -331,7 +246,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="web&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;web.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php" />
+    <property name="SearchEverywhereHistoryKey" value="create_prod&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/database/migrations/2018_12_23_084249_create_products_table.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;web.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -359,12 +274,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545552935603</updated>
-      <workItem from="1545552953015" duration="1211000" />
+      <workItem from="1545552953015" duration="1822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1211000" />
+    <option name="totallyTimeSpent" value="1822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1296" height="1010" extended-state="6" />
@@ -504,8 +419,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/thankyou.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="93">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_23_084249_create_products_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
