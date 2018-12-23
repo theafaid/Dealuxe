@@ -16,59 +16,9 @@
             <div class="col d-none d-lg-block">
                 <nav class="main-menu">
                     <ul>
-                        <li><a href="index.html">HOME</a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html">Home One</a></li>
-                                <li><a href="index-2.html">Home Two</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="shop-4-column.html">SHOP</a>
-                            <ul class="mega-menu">
-                                <li class="col"><a href="#">Shop Grid Pages</a>
-                                    <ul>
-                                        <li><a href="shop-4-column.html">Shop Four Column</a></li>
-                                        <li><a href="shop-3-column.html">Shop Three Column</a></li>
-                                        <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                                        <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                    </ul>
-                                </li>
+                        <li><a href="{{route('welcome')}}">{{__('front.home')}}</a></li>
+                        <li><a href="{{route('shop.index')}}">{{__('front.shop')}}</a></li>
 
-                                <li class="col"><a href="#">Shop List Pages</a>
-                                    <ul>
-                                        <li><a href="shop-list.html">Shop List</a></li>
-                                        <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
-                                        <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="col"><a href="#">Product Details Pages</a>
-                                    <ul>
-                                        <li><a href="product-details.html">Product Details Standard</a></li>
-                                        <li><a href="product-details-variable.html">Product Details Variable</a></li>
-                                        <li><a href="product-details-affiliate.html">Product Details Affiliate</a></li>
-                                        <li><a href="product-details-group.html">Product Details Group</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="col"><a href="#">Product Details Layout 1</a>
-                                    <ul>
-                                        <li><a href="product-details-bottom-thumbnail.html">Bottom Thumbnail</a></li>
-                                        <li><a href="product-details-left-thumbnail.html">Left Thumbnail</a></li>
-                                        <li><a href="product-details-right-thumbnail.html">Right Thumbnail</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="col"><a href="#">Product Details Layout 2</a>
-                                    <ul>
-                                        <li><a href="product-details-left-gallery.html">Left Gallery</a></li>
-                                        <li><a href="product-details-right-gallery.html">Right Gallery</a></li>
-                                        <li><a href="product-details-left-sticky.html">Left Sticky</a></li>
-                                        <li><a href="product-details-right-sticky.html">Right Sticky</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
                         <li><a href="blog-grid.html">BLOG</a>
                             <ul class="sub-menu">
                                 <li><a href="blog-grid.html">Blog Grid</a>
@@ -119,70 +69,55 @@
                     <!-- Cart Wrap Start-->
                     <div class="header-cart-wrap">
                         <!-- Cart Toggle -->
-                        <button class="header-cart-toggle"><span class="icon">cart</span><span class="number">2</span><span class="price">$289</span></button>
+                        <button class="header-cart-toggle">
+                            <span class="icon">cart</span>
+                            <span class="number">{{auth()->user()->cartItems()->count()}}</span>
+                            <span class="price">{{auth()->user()->totalCartItems()}}</span>
+                        </button>
 
                         <!-- Header Mini Cart Start -->
                         <div class="header-mini-cart">
                             <!-- Mini Cart Head -->
                             <div class="mini-cart-head">
-                                <h3>Your cart</h3>
+                                <h3>{{__('front.your_cart')}}</h3>
                             </div>
                             <!-- Mini Cart Body -->
                             <div class="mini-cart-body">
                                 <div class="mini-cart-body-inner custom-scroll">
                                     <ul>
-                                        <!-- Mini Cart Product -->
-                                        <li class="mini-cart-product">
-                                            <div class="image">
-                                                <a href="#"><img src="{{asset('design')}}/images/product/product-1.jpg" alt=""></a>
-                                                <button class="remove"><i class="fa fa-trash-o"></i></button>
-                                            </div>
-                                            <div class="content">
-                                                <a href="product-details-variable.html" class="title">Teritory Quentily</a>
-                                                <span>2 x $35.00</span>
-                                            </div>
-                                        </li>
-                                        <!-- Mini Cart Product -->
-                                        <li class="mini-cart-product">
-                                            <div class="image">
-                                                <a href="#"><img src="{{asset('design')}}/images/product/product-2.jpg" alt=""></a>
-                                                <button class="remove"><i class="fa fa-trash-o"></i></button>
-                                            </div>
-                                            <div class="content">
-                                                <a href="product-details-variable.html" class="title">Adurite Silocone</a>
-                                                <span>1 x $59.00</span>
-                                            </div>
-                                        </li>
-                                        <!-- Mini Cart Product -->
-                                        <li class="mini-cart-product">
-                                            <div class="image">
-                                                <a href="#"><img src="{{asset('design')}}/images/product/product-3.jpg" alt=""></a>
-                                                <button class="remove"><i class="fa fa-trash-o"></i></button>
-                                            </div>
-                                            <div class="content">
-                                                <a href="product-details-variable.html" class="title">Baizidale Momone</a>
-                                                <span>1 x $78.00</span>
-                                            </div>
-                                        </li>
-                                        <!-- Mini Cart Product -->
-                                        <li class="mini-cart-product">
-                                            <div class="image">
-                                                <a href="#"><img src="{{asset('design')}}/images/product/product-4.jpg" alt=""></a>
-                                                <button class="remove"><i class="fa fa-trash-o"></i></button>
-                                            </div>
-                                            <div class="content">
-                                                <a href="product-details-variable.html" class="title">Makorone Cicile</a>
-                                                <span>2 x $65.00</span>
-                                            </div>
-                                        </li>
+                                       @forelse(auth()->user()->cartItems() as $item)
+                                              <!-- Mini Cart Product -->
+                                               <li class="mini-cart-product">
+                                                   <div class="image">
+                                                       <a href="{{route('cart.index')}}">
+                                                           <img src="{{asset('design')}}/images/product/product-4.jpg" alt="">
+                                                       </a>
+                                                       <form action="{{route('cart.remove')}}" method="POST">
+                                                           @csrf
+                                                           {{method_field('DELETE')}}
+                                                           <input type="hidden" name="product" value="{{$item['attributes']['product']['slug']}}">
+                                                           <button class="remove" type="submit"><i class="fa fa-trash-o"></i></button>
+                                                       </form>
+                                                   </div>
+
+                                                   <div class="content">
+                                                       <a href="{{route('shop.show', $item['attributes']['product']['slug'])}}" class="title">{{$item->name}}</a>
+                                                       <span>{{$item->quantity}} x | ${{$item->price}}</span>
+                                                   </div>
+                                               </li>
+                                       @empty
+                                               <div class="alert alert-danger">
+                                                   {{__('front.you_cart_is_empty')}}
+                                               </div>
+                                       @endforelse
                                     </ul>
                                 </div>
                             </div>
                             <!-- Mini Cart Footer -->
                             <div class="mini-cart-footer">
-                                <h4>Subtotal: $272.00</h4>
+                                <h4>{{__('front.total')}}: {{auth()->user()->totalCartItems()}}</h4>
                                 <div class="buttons">
-                                    <a href="cart.html">View cart</a>
+                                    <a href="{{route('cart.index')}}">{{__('front.view_cart')}}</a>
                                     <a href="checkout.html">Checkout</a>
                                 </div>
                             </div>

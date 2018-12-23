@@ -32,4 +32,8 @@ class User extends Authenticatable
     public function cartItems(){
         return Cart::session(auth()->id())->getContent();
     }
+
+    public function totalCartItems(){
+        return "$" . Cart::session(auth()->id())->getTotal();
+    }
 }
