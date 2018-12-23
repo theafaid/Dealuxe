@@ -10,5 +10,5 @@ class Product extends Model
     use HasTranslations;
 
     protected $guarded = [];
-    public $translatable = ['name', 'description', 'details'];
+    public $translatable = ['name', 'description', 'details', 'slug'];
 }
