@@ -50,20 +50,17 @@
                             </thead>
                             <tbody>
                                 @foreach($cartItems as $item)
-                                    @php
-                                        $slug = $item['attributes']['product']['slug'];
-                                    @endphp
                                     <tr>
                                         <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-1.jpg" alt="Product"></a></td>
-                                        <td class="pro-title"><a href="{{route('shop.show', $slug)}}">{{$item->name}}</a></td>
-                                        <td class="pro-price"><span>${{$item->price/100}}</span></td>
+                                        <td class="pro-title"><a href="{{route('shop.show', slugFromItem($item))}}">{{$item->name}}</a></td>
+                                        <td class="pro-price"><span>{{presentPrice($item->price)}}</span></td>
                                         <td class="pro-quantity"><div class="pro-qty"><input type="text" value="{{$item->quantity}}"></div></td>
-                                        <td class="pro-subtotal"><span>${{$item->price/100}}</span></td>
+                                        <td class="pro-subtotal"><span>{{presentPrice($item->price)}}</span></td>
                                         <td class="pro-remove">
                                             <form action="{{route('cart.remove')}}" method="POST">
                                                 @csrf
                                                 {{method_field('DELETE')}}
-                                                <input type="hidden" name="product" value="{{$slug}}">
+                                                <input type="hidden" name="product" value="{{slugFromItem($item)}}">
                                                 <button type="submit"><i class="fa fa-trash-o"></i></button>
                                             </form>
                                         </td>

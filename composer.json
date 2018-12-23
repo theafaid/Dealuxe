@@ -39,6 +39,7 @@
             "App\\": "app/"
         },
         "files": [
+            "app/http/helpers.php",
             "tests/utilities/helper.php"
         ],
         "classmap": [
