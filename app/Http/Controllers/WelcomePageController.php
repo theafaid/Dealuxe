@@ -8,7 +8,7 @@ class WelcomePageController extends Controller
 {
     public function index(){
 
-        $products = Product::inRandomOrder()->take(8)->get();
+        $products = Product::mightLike()->get();
 
         return view('welcome', ['products' => $products]);
     }

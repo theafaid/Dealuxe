@@ -12,12 +12,18 @@ class Product extends Model
     protected $guarded = [];
     public $translatable = ['name', 'description', 'details'];
 
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
+
     public function presentPrice(){
         return "$" . $this->price / 100;
     }
 
-    public function getRouteKeyName()
-    {
-        return "slug";
+    public function scopeMightLike($query, $limit = 8, $canIncludeThis= false){
+        return ! $canIncludeThis ?
+            $query->where('slug', '!=', $this->slug)->inRandomOrder()->take($limit) :
+            $query->inRandomOrder()->take($limit);
     }
 }

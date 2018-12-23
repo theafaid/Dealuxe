@@ -50,7 +50,7 @@ class ShopController extends Controller
     {
         return view('product', [
             'product'   => $product,
-            'mightLike' => Product::where('name', '!=', $product->name)->take(10)->get()
+            'mightLike' => $product->mightLike(10, $canIncludeThis= false)->get()
         ]);
     }
 
