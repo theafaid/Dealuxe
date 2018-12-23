@@ -30,40 +30,53 @@
                        <div class="alert alert-success">{{$successMsg}}</div>
                     @endif
                     
-                    <form action="" method="POST">
-                        @csrf
-                        <!-- Cart Table -->
-                        <div class="cart-table table-responsive mb-30">
-                            @if($cartItems->count())
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="pro-thumbnail">Image</th>
-                                        <th class="pro-title">Product</th>
-                                        <th class="pro-price">Price</th>
-                                        <th class="pro-quantity">Quantity</th>
-                                        <th class="pro-subtotal">Total</th>
-                                        <th class="pro-remove">Remove</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($cartItems as $item)
-                                        <tr>
-                                            <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-1.jpg" alt="Product"></a></td>
-                                            <td class="pro-title"><a href="#">{{$item->name}}</a></td>
-                                            <td class="pro-price"><span>$35.00</span></td>
-                                            <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
-                                            <td class="pro-subtotal"><span>$35.00</span></td>
-                                            <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                            @else
-                                <p class="alert alert-danger">{{__('front.you_cart_is_empty')}}</p>
-                            @endif
+                    <!-- Cart Table -->
+                    <div class="cart-table table-responsive mb-30">
+                        @if($count = $cartItems->count())
+                        <div class="section-title left section col mb-40 mb-xs-30">
+                            <h1> {{ "( {$count} ) " . __('front.items_in_your_cart')}}</h1>
                         </div>
-                    </form>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="pro-thumbnail">{{__('front.image')}}</th>
+                                    <th class="pro-title">{{__('front.name')}}</th>
+                                    <th class="pro-price">{{__('front.price')}}</th>
+                                    <th class="pro-quantity">{{__('front.quantity')}}</th>
+                                    <th class="pro-subtotal">{{__('front.total')}}</th>
+                                    <th class="pro-remove">{{__('front.settings')}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($cartItems as $item)
+                                    @php
+                                        $slug = $item['attributes']['product']['slug'];
+                                    @endphp
+                                    <tr>
+                                        <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-1.jpg" alt="Product"></a></td>
+                                        <td class="pro-title"><a href="{{route('shop.show', $slug)}}">{{$item->name}}</a></td>
+                                        <td class="pro-price"><span>${{$item->price/100}}</span></td>
+                                        <td class="pro-quantity"><div class="pro-qty"><input type="text" value="{{$item->quantity}}"></div></td>
+                                        <td class="pro-subtotal"><span>${{$item->price/100}}</span></td>
+                                        <td class="pro-remove">
+                                            <form action="{{route('cart.remove')}}" method="POST">
+                                                @csrf
+                                                {{method_field('DELETE')}}
+                                                <input type="hidden" name="product" value="{{$slug}}">
+                                                <button type="submit"><i class="fa fa-trash-o"></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        @else
+                            <div class="section-title left section col mb-40 mb-xs-30">
+                                <h1>{{__('front.you_cart_is_empty')}}</h1>
+                            </div>
+                        @endif
+                    </div>
 
                     <div class="row">
 

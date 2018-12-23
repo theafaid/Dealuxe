@@ -37,7 +37,10 @@ class ProductToCartRequest extends FormRequest
             'id' => $product->id,
             'name' => $product->name,
             'price' => $product->price,
-            'quantity' => request('qnt')
+            'quantity' => request('qnt'),
+            'attributes' => [
+                'product' => $product
+            ]
         ]);
 
         session()->flash('success', $product->name . " " . __('front.added_to_your_cart'));

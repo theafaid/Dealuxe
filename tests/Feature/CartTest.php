@@ -7,7 +7,12 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class CartTest extends TestCase
 {
     use RefreshDatabase;
-
+    protected function setUp(){
+        parent::setUp();
+        if($userId = auth()->id()){
+            \Cart::session($userId)->clear();
+        }
+    }
     /** @test */
     function a_guest_cannot_see_cart_page(){
         $this->get(route('cart.index'))
@@ -101,6 +106,24 @@ class CartTest extends TestCase
             ->assertSessionHas('success', __('front.shopping_cart_has_been_emptied'));
 
         $this->assertEquals(0, auth()->user()->cartItems()->count());
+    }
+
+    /** @test */
+    function an_autnenticated_user_can_remove_an_item_from_his_cart(){
+
+        $this->signIn();
+
+       $product = create('App\Product');
+
+        $this->toCart($product);
+
+        $this->assertCount(1, auth()->user()->cartItems());
+
+        $this->delete(route('cart.remove'), [
+            'product' => $product->slug
+        ]);
+
+        $this->assertCount(0, auth()->user()->cartItems());
     }
 
     /** @test */

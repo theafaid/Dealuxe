@@ -42,8 +42,25 @@ class CartController extends Controller
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function clear(){
+
         Cart::session(auth()->id())->clear();
+
         session()->flash('success', __('front.shopping_cart_has_been_emptied'));
+
         return redirect(route('cart.index'));
+    }
+
+    /**
+     * Remove an item from a cart
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function remove(){
+        $data = request()->validate(['product' => 'required|string|exists:products,slug']);
+
+        $product = Product::whereSlug($data['product'])->first();
+
+        Cart::session(auth()->id())->remove($product->id);
+
+        return back();
     }
 }

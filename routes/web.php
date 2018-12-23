@@ -6,6 +6,7 @@ Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::post('/cart/clear', 'CartController@clear')->name('cart.clear');
+Route::delete('/cart/remove', 'CartController@remove')->name('cart.remove');
 
 Route::view('/product', 'product');
 Route::view('/checkout', 'checkout');
