@@ -71,17 +71,23 @@
                                     {{$product->description}}
                                 </p>
 
-                                <div class="quantity">
-                                    <h4>Quantity:</h4>
-                                    <div class="pro-qty"><input type="text" value="1"></div>
-                                </div>
+                                <form method="POST" action="{{route('cart.store')}}">
+                                    @csrf
+                                    <input type="hidden" name="product" value="{{$product->slug}}">
 
-                                <!-- Product Action -->
-                                <div class="product-action">
-                                    <a href="#" class="cart"><span></span></a>
-                                    <a href="#" class="compare"><span></span></a>
-                                    <a href="#" class="wishlist"><span></span></a>
-                                </div>
+                                    <div class="quantity">
+                                        <h4>Quantity:</h4>
+                                        <div class="pro-qty"><input type="number" name="qnt" value="1" min="1" max="15"></div>
+                                    </div>
+
+                                    <!-- Product Action -->
+                                    <div class="product-action">
+                                        <button type="submit" class="cart"><span></span></button>
+                                        <a href="#" class="compare"><span></span></a>
+                                        <a href="#" class="wishlist"><span></span></a>
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
                     </div>

@@ -7,10 +7,10 @@
                 <div class="col">
 
                     <div class="page-banner text-center">
-                        <h1>Cart</h1>
+                        <h1>{{__('front.cart')}}</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li>Cart</li>
+                            <li><a href="{{route('welcome')}}">{{__('front.home')}}</a></li>
+                            <li>{{__('front.cart')}}</li>
                         </ul>
                     </div>
 
@@ -26,57 +26,43 @@
             <div class="row">
                 <div class="col-12">
 
-                    <form action="#">
+                    @if($successMsg = session("success"))
+                       <div class="alert alert-success">{{$successMsg}}</div>
+                    @endif
+                    
+                    <form action="" method="POST">
+                        @csrf
                         <!-- Cart Table -->
                         <div class="cart-table table-responsive mb-30">
+                            @if($cartItems->count())
                             <table class="table">
                                 <thead>
-                                <tr>
-                                    <th class="pro-thumbnail">Image</th>
-                                    <th class="pro-title">Product</th>
-                                    <th class="pro-price">Price</th>
-                                    <th class="pro-quantity">Quantity</th>
-                                    <th class="pro-subtotal">Total</th>
-                                    <th class="pro-remove">Remove</th>
-                                </tr>
+                                    <tr>
+                                        <th class="pro-thumbnail">Image</th>
+                                        <th class="pro-title">Product</th>
+                                        <th class="pro-price">Price</th>
+                                        <th class="pro-quantity">Quantity</th>
+                                        <th class="pro-subtotal">Total</th>
+                                        <th class="pro-remove">Remove</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-1.jpg" alt="Product"></a></td>
-                                    <td class="pro-title"><a href="#">Teritory Quentily</a></td>
-                                    <td class="pro-price"><span>$35.00</span></td>
-                                    <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
-                                    <td class="pro-subtotal"><span>$35.00</span></td>
-                                    <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-2.jpg" alt="Product"></a></td>
-                                    <td class="pro-title"><a href="#">Adurite Silocone</a></td>
-                                    <td class="pro-price"><span>$59.00</span></td>
-                                    <td class="pro-quantity"><div class="pro-qty"><input type="text" value="2"></div></td>
-                                    <td class="pro-subtotal"><span>$59.00</span></td>
-                                    <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-3.jpg" alt="Product"></a></td>
-                                    <td class="pro-title"><a href="#">Baizidale Momone</a></td>
-                                    <td class="pro-price"><span>$78.00</span></td>
-                                    <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
-                                    <td class="pro-subtotal"><span>$78.00</span></td>
-                                    <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-4.jpg" alt="Product"></a></td>
-                                    <td class="pro-title"><a href="#">Makorone Cicile</a></td>
-                                    <td class="pro-price"><span>$65.00</span></td>
-                                    <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
-                                    <td class="pro-subtotal"><span>$65.00</span></td>
-                                    <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                                </tr>
+                                    @foreach($cartItems as $item)
+                                        <tr>
+                                            <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-1.jpg" alt="Product"></a></td>
+                                            <td class="pro-title"><a href="#">{{$item->name}}</a></td>
+                                            <td class="pro-price"><span>$35.00</span></td>
+                                            <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
+                                            <td class="pro-subtotal"><span>$35.00</span></td>
+                                            <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
+                            @else
+                                <p class="alert alert-danger">{{__('front.you_cart_is_empty')}}</p>
+                            @endif
                         </div>
-
                     </form>
 
                     <div class="row">
@@ -142,6 +128,12 @@
                                 <div class="cart-summary-button">
                                     <button class="checkout-btn">Checkout</button>
                                     <button class="update-btn">Update Cart</button>
+                                    @if($cartItems->count())
+                                        <form action="{{route('cart.clear')}}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger">{{__('front.empty_cart')}}</button>
+                                        </form>
+                                    @endif
                                 </div>
                             </div>
                         </div>
