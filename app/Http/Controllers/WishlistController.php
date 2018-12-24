@@ -36,4 +36,18 @@ class WishlistController extends Controller
 
         return $request->save($product);
     }
+
+    /**
+     * Clear authenticated user wishlist
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function clear(){
+        $wishlist = auth()->user()->wishlist();
+
+        $wishlist ? $wishlist->detach(): null;
+        
+        session()->flash('success', __("front.your_wishlist_has_cleared"));
+
+        return back();
+    }
 }

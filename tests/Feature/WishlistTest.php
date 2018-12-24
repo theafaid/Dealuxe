@@ -44,4 +44,23 @@ class WishlistTest extends TestCase
 
       $this->assertCount(0, auth()->user()->cartItems());
   }
+
+  /** @test */
+  function an_authenticated_user_can_clear_his_wishlist(){
+      $this->signIn();
+    
+      $product1 = create('App\Product');
+      $product2 = create('App\Product');
+      $product3 = create('App\Product');
+    
+      $this->toSaveLater([$product1, $product2, $product3]);
+
+      $this->assertCount(3, auth()->user()->wishlist);
+
+      $this->post(route('wishlist.clear'))
+        ->assertRedirect()
+        ->assertSessionHas('success', __("front.your_wishlist_has_cleared"));
+
+        $this->assertCount(0, auth()->user()->fresh()->wishlist);
+  }
 }

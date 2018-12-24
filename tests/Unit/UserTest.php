@@ -83,4 +83,18 @@ class UserTest extends TestCase
             'product_id' => $product->id
         ]);
     }
+
+    /** @test */
+    function an_item_cannot_be_add_to_user_wishlist_twice(){
+        $user = create('App\User');
+        $product = create('App\Product');
+
+        $user->addToWishlist($product);
+
+        $this->assertCount(1, $user->wishlist);
+
+        $user->addToWishlist($product);
+
+        $this->assertCount(1, $user->fresh()->wishlist);
+    }
 }

@@ -54,6 +54,11 @@ class User extends Authenticatable
      * @param $product
      */
     public function addToWishlist($product){
-        return $this->wishlist()->sync($product->id);
+        $wishlist = $this->wishlist();
+
+        if(! $wishlist->where(['product_id' => $product->id])->exists()){
+            return $this->wishlist()->attach($product->id);
+        }
+        return;
     }
 }

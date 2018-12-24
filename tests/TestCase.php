@@ -30,8 +30,16 @@ abstract class TestCase extends BaseTestCase
     }
 
     public function toSaveLater($product){
-        return $this->post(route('wishlist.store'), [
-            'product' => $product->slug
-        ]);
+        if(is_array($product)){
+            foreach($product as $p){
+                $this->post(route('wishlist.store'), [
+                    'product' => $p->slug
+                ]); 
+            }
+        }else{
+            return $this->post(route('wishlist.store'), [
+                'product' => $product->slug
+            ]); 
+        }
     }
 }
