@@ -107,8 +107,20 @@
                                         <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-1.jpg" alt=""></a>
                                         <!-- Product Action -->
                                         <div class="product-action">
-                                            <a href="#" class="cart"><span></span></a>
-                                            <a href="#" class="wishlist"><span></span></a>
+                                            <form method="POST" action="{{route('cart.store')}}">
+                                                @csrf
+                                                <input type="hidden" name="product" value="{{$product->slug}}">
+                                                <!-- Product Action -->
+                                                <div class="product-action">
+                                                    <button type="submit" class="cart"><span></span></button>
+                                                </div>
+                                            </form>
+                                            
+                                            <form action="{{route('wishlist.store')}}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="product" value="{{ $product->slug }}">
+                                                <button type="submit" class="wishlist"><span></span></button>
+                                            </form>
                                             <a href="#" class="quickview"><span></span></a>
                                         </div>
                                     </div>
