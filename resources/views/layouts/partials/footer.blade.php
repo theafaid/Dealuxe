@@ -92,7 +92,8 @@
 <script src="{{asset('design')}}/js/plugins.js"></script>
 <!-- Main JS -->
 <script src="{{asset('design')}}/js/main.js"></script>
-
+<!-- App js -->
+<script src="{{asset('js/app.js')}}"></script>
 </body>
 
 </html>
