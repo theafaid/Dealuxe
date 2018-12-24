@@ -5,7 +5,6 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-
                     <div class="page-banner text-center">
                         <h1>{{__('front.shop')}}</h1>
                         <ul class="page-breadcrumb">
@@ -18,7 +17,7 @@
             </div>
         </div>
     </div><!-- Page Banner Section End -->
-
+    <shop-page inline-template>
         <!-- Product Section Start -->
         <div class="product-section section pt-90 pb-90 pt-lg-80 pb-lg-80 pt-md-70 pb-md-70 pt-sm-60 pb-sm-60 pt-xs-50 pb-xs-50">
             <div class="container">
@@ -53,7 +52,7 @@
                         </div><!-- Shop Toolbar End -->
 
                         <div class="shop-product-wrap grid row">
-                            <!-- products -->
+                            @include('layouts.partials._products_list')
                         </div>
 
                         <div class="row mt-20">
@@ -118,5 +117,7 @@
 
                 </div>
             </div>
-        </div><!-- Product Section End -->
+        </div>
+        <!-- Product Section End -->
+    </shop-page>
 @endsection
