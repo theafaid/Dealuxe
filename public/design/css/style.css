@@ -810,6 +810,14 @@ input::placeholder, textarea::placeholder {
     background-image: url(../images/icons/action-sprites.png);
     background-position: -81px 0; }
 
+.num{
+    position: absolute;
+    top: 25px;
+    right: 180px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;}
+
 /*-- Header Cart Wrap --*/
 .header-cart-wrap {
     position: relative; }

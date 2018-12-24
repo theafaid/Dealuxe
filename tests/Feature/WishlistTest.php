@@ -16,6 +16,18 @@ class WishlistTest extends TestCase
   }
 
   /** @test */
+  function an_authenticated_user_can_display_wishlist_page(){
+      $this->signIn();
+      $product = create('App\Product');
+      
+      $this->toSaveLater($product);
+      
+      $this->get(route('wishlist.index'))
+        ->assertStatus(200)
+        ->assertSee($product->name);
+  }
+
+  /** @test */
   function an_authenticated_user_can_add_item_in_his_wishlist(){
       $this->signIn();
 

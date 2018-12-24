@@ -59,17 +59,19 @@
                 </nav>
             </div>
 
+         @auth
             <!-- Header Action -->
             <div class="col">
-                <div class="header-action">
-
-                    <!-- Wishlist -->
-                    <a href="{{route('wishlist.index')}}" class="header-wishlist"><span class="icon">wishlist</span></a>
-                    @auth
+                    <div class="header-action">
+                        <!-- Wishlist -->
+                        <a href="{{route('wishlist.index')}}" class="header-wishlist">
+                            <span class="icon">wishlist</span>
+                            <span class="num">{{ auth()->user()->wishlist_count }}</span>
+                        </a>
                         @include('layouts.partials._header_cart_data')
-                    @endauth
+                    </div>
                 </div>
-            </div>
+         @endauth
 
             <div class="col-12 d-block d-lg-none">
                 <div class="mobile-menu"></div>
