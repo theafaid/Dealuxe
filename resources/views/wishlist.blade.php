@@ -67,7 +67,14 @@
                                                 </div>
                                             </form>
                                         </td>
-                                        <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                        <td class="pro-remove">
+                                            <form action="{{route('wishlist.remove')}}" method="POST">
+                                                @csrf
+                                                {{method_field('DELETE')}}
+                                                <input type="hidden" name="product" value="{{$item->slug}}">
+                                                <button type="submit"><i class="fa fa-trash-o"></i></button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -142,12 +149,12 @@
                                 <div class="cart-summary-button">
                                     <button class="checkout-btn">Checkout</button>
                                     <button class="update-btn">Update Cart</button>
-                                    {{--@if($cartItems->count())--}}
-                                        {{--<form action="{{route('cart.clear')}}" method="POST">--}}
-                                            {{--@csrf--}}
-                                            {{--<button type="submit" class="btn btn-danger">{{__('front.empty_cart')}}</button>--}}
-                                        {{--</form>--}}
-                                    {{--@endif--}}
+                                    @if($wishlist->count())
+                                        <form action="{{route('wishlist.clear')}}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger">{{__('front.empty_your_wishlist')}}</button>
+                                        </form>
+                                    @endif
                                 </div>
                             </div>
                         </div>

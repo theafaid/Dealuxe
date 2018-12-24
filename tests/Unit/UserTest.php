@@ -97,4 +97,19 @@ class UserTest extends TestCase
 
         $this->assertCount(1, $user->fresh()->wishlist);
     }
+
+    /** @test */
+    function can_remove_an_item_from_his_wishlist(){
+        $user = create('App\User');
+    
+        $product = create('App\Product');
+
+        $user->addToWishlist($product);
+
+        $this->assertCount(1, $user->wishlist);
+
+        $user->removeFromWishlist($product);
+
+        $this->assertCount(0, $user->fresh()->wishlist);
+    }
 }

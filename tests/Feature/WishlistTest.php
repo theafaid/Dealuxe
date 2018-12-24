@@ -63,4 +63,44 @@ class WishlistTest extends TestCase
 
         $this->assertCount(0, auth()->user()->fresh()->wishlist);
   }
+
+  /** @test */
+  function an_authenticated_user_can_remove_an_item_from_wishlist(){
+        $this->signIn();
+        $user = auth()->user();
+        $product1 = create('App\Product');
+        $product2 = create('App\Product');
+        $product3 = create('App\Product');
+
+        $this->toSaveLater([$product1, $product2, $product3]);
+
+        $this->assertCount(3, $user->wishlist);
+
+        $this->delete(route('wishlist.remove'), [
+            'product' => $product1->slug
+        ]);
+
+        $this->assertCount(2, $user->fresh()->wishlist);
+
+        $this->delete(route('wishlist.remove'), [
+            'product' => $product2->slug
+        ]);
+
+        $this->assertCount(1, $user->fresh()->wishlist);
+
+        $this->assertDatabaseMissing('user_wishlist', [
+            'product_id' => $product1->id,
+            'user_id' => $user->id
+        ]);
+
+        $this->assertDatabaseMissing('user_wishlist', [
+            'product_id' => $product2->id,
+            'user_id' => $user->id
+        ]);
+
+        $this->assertDatabaseHas('user_wishlist', [
+            'product_id' => $product3->id,
+            'user_id' => $user->id
+        ]);
+    }
 }

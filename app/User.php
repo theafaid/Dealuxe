@@ -61,4 +61,13 @@ class User extends Authenticatable
         }
         return;
     }
+
+    /** @test */
+    public function removeFromWishlist($product){
+        $wishlist = $this->wishlist();
+        if($wishlist->where(['product_id' => $product->id])->exists()){
+            return $wishlist->detach($product->id);
+        }
+        return;
+    }
 }

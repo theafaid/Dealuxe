@@ -38,6 +38,19 @@ class WishlistController extends Controller
     }
 
     /**
+     * Remove an item from user wishlist
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function remove(){
+        request()->validate(['product' => 'required|string|exists:products,slug']);
+
+        $product = Product::whereSlug(request('product'))->first();
+
+        auth()->user()->removeFromWishlist($product);
+
+        return back();
+    }
+    /**
      * Clear authenticated user wishlist
      * @return \Illuminate\Http\RedirectResponse
      */
