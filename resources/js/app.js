@@ -1,6 +1,7 @@
 window.Vue = require('vue');
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('shop-page', require('./pages/Shop.vue'));
+
 
 const app = new Vue({
     el: '#dealuxe'
