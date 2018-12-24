@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Cart;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 
@@ -23,5 +24,9 @@ class Product extends Model
 
     public function scopeMightLike($query, $limit = 8){
         return $query->inRandomOrder()->take($limit);
+    }
+
+    public function inCart(){
+        return !! Cart::session(auth()->id())->get($this->id);
     }
 }

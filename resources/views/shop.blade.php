@@ -19,7 +19,6 @@
         </div>
     </div><!-- Page Banner Section End -->
 
-    <shop-page inline-template>
         <!-- Product Section Start -->
         <div class="product-section section pt-90 pb-90 pt-lg-80 pb-lg-80 pt-md-70 pb-md-70 pt-sm-60 pb-sm-60 pt-xs-50 pb-xs-50">
             <div class="container">
@@ -54,7 +53,7 @@
                         </div><!-- Shop Toolbar End -->
 
                         <div class="shop-product-wrap grid row">
-                            @include('layouts.partials._products_list')
+                            <!-- products -->
                         </div>
 
                         <div class="row mt-20">
@@ -67,6 +66,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-4 col-12 order-2 order-lg-1 pr-30 pr-sm-15 pr-md-15 pr-xs-15">
+
 
                         <div class="sidebar">
                             <h4 class="sidebar-title">Search</h4>
@@ -119,5 +119,4 @@
                 </div>
             </div>
         </div><!-- Product Section End -->
-    </shop-page>
 @endsection

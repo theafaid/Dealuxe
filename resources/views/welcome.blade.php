@@ -6,7 +6,6 @@
         <div class="hero-item" style="background-image: url({{asset('design')}}/images/slider/slider-bg-2.jpg)">
             <div class="container">
                 <div class="row">
-
                     <div class="hero-content-wrap col">
                         <div class="hero-content hero-content-2 text-left">
                             <h2>BEARD OIL</h2>
