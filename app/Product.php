@@ -59,10 +59,9 @@ class Product extends Model
      * @return bool
      */
     public function getInWishlistAttribute(){
-        return true;
+        // return auth()->user() ? $this->fans()->where('user_id', auth()->id())->exists() : false;
         $wishlistIds = auth()->user()->wishlist->pluck('id')->toArray();
-        return in_array($this->id, $wishlistIds);
 
-//        return auth()->user() ? $this->fans()->where('user_id', auth()->id())->exists() : false;
+        return in_array($this->id, $wishlistIds);
     }
 }
