@@ -93,61 +93,76 @@
 
             <div class="row">
 
-                <!-- Product Slider 4 Column Start-->
-                <div class="product-slider product-slider-4 section">
+                <shop-page inline-template>
+                    <!-- Product Slider 4 Column Start-->
+                    <div class="product-slider product-slider-4 section">
 
-                    @foreach($products as $product)
-                        <!-- Product Item Start -->
-                            <div class="col">
-                                <div class="product-item">
-                                    <!-- Image -->
-                                    <div class="product-image">
+                        @foreach($products as $product)
+                            <product
+                                    inline-template
+                                    v-cloak
+                                    :product="{{$product}}"
+                                    to-cart-route="{{route('cart.store')}}"
+                                    remove-from-cart-route="{{route('cart.remove')}}"
+                                    to-wishlist-route="{{route('wishlist.store')}}"
+                                    remove-from-wishlist-route="{{route('wishlist.remove')}}"
+                            >
+                                <!-- Product Item Start -->
+                                <div class="col">
+                                    <div class="product-item">
                                         <!-- Image -->
-                                        <a href="product-details-variable.html" class="image"><img src="{{asset('design')}}/images/product/product-1.jpg" alt=""></a>
-                                        <!-- Product Action -->
-                                        <div class="product-action">
-                                            <form method="POST" action="{{route('cart.store')}}">
-                                                @csrf
-                                                <input type="hidden" name="product" value="{{$product->slug}}">
+                                        <div class="product-image">
+                                            <!-- Image -->
+                                            <a href="product-details-variable.html" class="image"><img src="{{asset('design/images/product/product-1.jpg')}}" alt=""></a>
+                                        @auth
+                                            <!-- Product Action -->
+                                                <div class="product-action">
+                                                    <a @click.prevent="storeUpdate('cart')" :class="inCart ? 'btn btn-primary' : 'btn btn-default'">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                    </a>
+                                                    <a @click.prevent="storeUpdate('wishlist')" :class="inWishlist ? 'btn btn-danger' : 'btn btn-default'">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                    <a href="#" class="quickview"><span></span></a>
+                                                </div>
+                                            @endauth
+                                        </div>
+                                        <!-- Content -->
+                                        <div class="product-content">
+                                            <div class="head">
+                                                <!-- Title-->
+                                                <div class="top">
+                                                    <h4 class="title"><a href="{{route('shop.show', $product->slug)}}">{{$product->name}}</a></h4>
+                                                </div>
+                                                <!-- Price & Ratting -->
+                                                <div class="bottom">
+                                                    <span class="price">{{presentPrice($product->price)}} <span class="old">$65</span></span>
+                                                    <span class="ratting">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </span>
+                                                </div>
+                                            </div>
+                                            <div class="body">
                                                 <!-- Product Action -->
                                                 <div class="product-action">
-                                                    <button type="submit" class="cart"><span></span></button>
+                                                    <a @click.prevent="toCart()" class="cart"><span></span></a>
+                                                    <a href="#" class="wishlist"><span></span></a>
+                                                    <a href="#" class="quickview"><span></span></a>
                                                 </div>
-                                            </form>
-                                            
-                                            <form action="{{route('wishlist.store')}}" method="POST">
-                                                @csrf
-                                                <input type="hidden" name="product" value="{{ $product->slug }}">
-                                                <button type="submit" class="wishlist"><span></span></button>
-                                            </form>
-                                            <a href="#" class="quickview"><span></span></a>
-                                        </div>
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="product-content">
-                                        <div class="head">
-                                            <!-- Title -->
-                                            <div class="top">
-                                                <h4 class="title"><a href="{{route('shop.show', $product->slug)}}">{{$product->name}}</a></h4>
-                                            </div>
-                                            <!-- Price & Ratting -->
-                                            <div class="bottom">
-                                                <span class="price">{{$product->presentPrice()}} <span class="old">$65</span></span>
-                                                <span class="ratting">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- Product Item End -->
-                    @endforeach
+                                <!-- Product Item End -->
+                            </product>
+                        @endforeach
 
-                </div><!-- Product Slider 4 Column Start-->
+                    </div><!-- Product Slider 4 Column Start-->
+                </shop-page>
 
             </div>
 
