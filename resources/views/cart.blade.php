@@ -167,7 +167,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    @include('layouts.partials._might_like')
+                    <shop-page inline-template>
+                        @include('layouts.partials._might_like')
+                    </shop-page>
                 </div>
             </div>
         </div>

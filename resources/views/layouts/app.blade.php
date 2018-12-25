@@ -1,6 +1,6 @@
 @include('layouts.partials.header')
-@include('layouts.partials.nav')
 <div id="dealuxe">
+    @include('layouts.partials.nav')
     @yield('content')
 </div>
 @include('layouts.partials.service')

@@ -1,3 +1,13 @@
+{{--<cart--}}
+        {{--:cart-items="{{auth()->user()->cartItems()}}"--}}
+        {{--total-price="{{auth()->user()->cartTotal()}}"--}}
+        {{--trans_your_cart="{{trans('front.your_cart')}}"--}}
+        {{--trans_your_cart_is_empty="{{trans('front.your_cart_is_empty')}}"--}}
+        {{--trans_total="{{trans('front.total')}}"--}}
+        {{--cart-route="{{route('cart.index')}}"--}}
+    {{-->--}}
+{{--</cart>--}}
+
 <!-- Cart Wrap Start-->
 <div class="header-cart-wrap">
     <!-- Cart Toggle -->

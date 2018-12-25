@@ -24,8 +24,8 @@
                         <div class="product-image">
                             <!-- Image -->
                             <a href="product-details-variable.html" class="image"><img src="{{asset('design/images/product/product-1.jpg')}}" alt=""></a>
-                            @auth
-                                <!-- Product Action -->
+                        @auth
+                            <!-- Product Action -->
                                 <div class="product-action">
                                     <a @click.prevent="storeUpdate('cart')" :class="inCart ? 'btn btn-primary' : 'btn btn-default'">
                                         <i class="fa fa-shopping-cart"></i>
@@ -48,12 +48,12 @@
                                 <div class="bottom">
                                     <span class="price">{{presentPrice($product->price)}} <span class="old">$65</span></span>
                                     <span class="ratting">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </span>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </span>
                                 </div>
                             </div>
                             <div class="body">
