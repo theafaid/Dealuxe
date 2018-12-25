@@ -422,22 +422,6 @@ input::placeholder, textarea::placeholder {
 .button-group.no-space > *:last-child, .button-group.no-space > .btn:last-child {
     margin-right: 0; }
 
-.btn {
-    display: inline-block;
-    background-color: #222222;
-    border-color: #222222;
-    color: #d0a97e;
-    font-family: "Oswald", sans-serif;
-    border-radius: 4px;
-    height: 38px;
-    text-transform: capitalize;
-    font-size: 15px;
-    line-height: 24px;
-    font-weight: 600;
-    letter-spacing: 0.25px;
-    padding: 5px 19px;
-    border-width: 1px;
-    border-style: solid; }
 .btn i {
     font-size: 21px;
     line-height: 24px;
@@ -1859,9 +1843,11 @@ input::placeholder, textarea::placeholder {
     opacity: 0; }
 .product-item .product-image .product-action a, .product-item .product-image .product-action button {
     border: none;
-    background-color: transparent;
+    border-radius: 0;
+    /* background-color: transparent; */
     padding: 15px;
-    border-right: 1px solid #ededed; }
+    border-right: 1px solid #ededed;
+}
 .product-item .product-image .product-action a:last-child, .product-item .product-image .product-action button:last-child {
     border-right: none; }
 .product-item .product-image .product-action a span, .product-item .product-image .product-action button span {
@@ -1891,6 +1877,9 @@ input::placeholder, textarea::placeholder {
     color: #d0a97e;
     background-color: #222222; }
 .product-item .product-image .product-action .btn-action{
+    color: #d0a97e !important;
+    background-color: #222222 !important; }
+.product-item .product-image .product-action .single-btn-action{
     color: #d0a97e !important;
     background-color: #222222 !important; }
 .product-item .product-image .product-action a:hover.cart span, .product-item .product-image .product-action button:hover.cart span {
