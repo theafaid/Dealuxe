@@ -24,16 +24,18 @@
                         <div class="product-image">
                             <!-- Image -->
                             <a href="product-details-variable.html" class="image"><img src="{{asset('design/images/product/product-1.jpg')}}" alt=""></a>
-                            <!-- Product Action -->
-                            <div class="product-action">
-                                <a @click.prevent="storeUpdate('cart')" :class="inCart ? 'btn btn-primary' : 'btn btn-default'">
-                                    <i class="fa fa-shopping-cart"></i>
-                                </a>
-                                <a @click.prevent="storeUpdate('wishlist')" :class="inWishlist ? 'btn btn-danger' : 'btn btn-default'">
-                                    <i class="fa fa-heart"></i>
-                                </a>
-                                <a href="#" class="quickview"><span></span></a>
-                            </div>
+                            @auth
+                                <!-- Product Action -->
+                                <div class="product-action">
+                                    <a @click.prevent="storeUpdate('cart')" :class="inCart ? 'btn btn-primary' : 'btn btn-default'">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </a>
+                                    <a @click.prevent="storeUpdate('wishlist')" :class="inWishlist ? 'btn btn-danger' : 'btn btn-default'">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    <a href="#" class="quickview"><span></span></a>
+                                </div>
+                            @endauth
                         </div>
                         <!-- Content -->
                         <div class="product-content">

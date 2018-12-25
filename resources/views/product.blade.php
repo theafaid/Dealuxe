@@ -88,19 +88,25 @@
                                                 <div class="pro-qty"><input type="number" name="qnt" value="1" min="1" max="15"></div>
                                             </div>
 
-                                            <!-- Product Action -->
-                                            <div class="product-action">
-                                                <a
-                                                        :class="inCart ? 'btn btn-primary' : 'btn btn-default'"
-                                                        @click.prevent="storeUpdate('cart')">
-                                                    <i class="fa fa-shopping-cart"></i>
+                                            @auth
+                                                <!-- Product Action -->
+                                                <div class="product-action">
+                                                    <a
+                                                            :class="inCart ? 'btn btn-primary' : 'btn btn-default'"
+                                                            @click.prevent="storeUpdate('cart')">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                    </a>
+                                                    <a
+                                                            :class="inWishlist ? 'btn btn-danger' : 'btn btn-default'"
+                                                            @click.prevent="storeUpdate('wishlist')" :class="inWishlist ? 'btn-action' : ''">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                </div>
+                                            @else
+                                                <a class="btn btn-danger" href="{{route('auth_portal')}}">
+                                                    {{__('front.interested_signin')}}
                                                 </a>
-                                                <a
-                                                        :class="inWishlist ? 'btn btn-danger' : 'btn btn-default'"
-                                                        @click.prevent="storeUpdate('wishlist')" :class="inWishlist ? 'btn-action' : ''">
-                                                    <i class="fa fa-heart"></i>
-                                                </a>
-                                            </div>
+                                            @endauth
                                         </form>
 
                                     </div>
