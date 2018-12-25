@@ -147,7 +147,7 @@
                                     @if($cartItems->count())
                                         <form action="{{route('cart.clear')}}" method="POST">
                                             @csrf
-                                            <button type="submit" class="btn btn-danger">{{__('front.empty_cart')}}</button>
+                                            <button type="submit" class="btn btn-danger">{{__('front.empty_your_cart')}}</button>
                                         </form>
                                     @endif
                                 </div>

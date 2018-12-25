@@ -39,7 +39,7 @@
                         </li>
                     @empty
                         <div class="alert alert-danger">
-                            {{__('front.you_cart_is_empty')}}
+                            {{__('front.your_cart_is_empty')}}
                         </div>
                     @endforelse
                 </ul>
