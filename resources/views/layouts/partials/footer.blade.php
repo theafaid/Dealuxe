@@ -81,7 +81,8 @@
 
 <!-- JS
 ============================================ -->
-
+<!-- App js -->
+<script src="{{asset('js/app.js')}}"></script>
 <!-- jQuery JS -->
 <script src="{{asset('design')}}/js/vendor/jquery-1.12.4.min.js"></script>
 <!-- Popper JS -->
@@ -92,8 +93,6 @@
 <script src="{{asset('design')}}/js/plugins.js"></script>
 <!-- Main JS -->
 <script src="{{asset('design')}}/js/main.js"></script>
-<!-- App js -->
-<script src="{{asset('js/app.js')}}"></script>
 </body>
 
 </html>
