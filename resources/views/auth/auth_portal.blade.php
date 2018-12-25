@@ -8,10 +8,10 @@
                 <div class="col">
 
                     <div class="page-banner text-center">
-                        <h1>Login & Register</h1>
+                        <h1>{!!__('front.login_and_register') !!}</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li>Login & Register</li>
+                            <li><a href="{{route('home')}}">{{__('front.home')}}</a></li>
+                            <li>{!!__('front.login_and_register') !!}</li>
                         </ul>
                     </div>
 

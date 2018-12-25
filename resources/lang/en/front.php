@@ -26,6 +26,16 @@ return [
     'removed_from_your_wishlist' => 'Removed From Your Wishlist',
 
     // auth
+    'login_and_register' => 'Login &amp; Register',
     'interested_signin' => 'Are you interested ? .. Sign in',
-    
+    'login_register' => 'Login|Register',
+    'already_member' => 'Already Member ?',
+    'new_member' => 'New Member ?',
+    'email_address' => 'Email Address',
+    'password' => 'Password',
+    'name' => 'Name',
+    'repeat_password' => 'Repeat Your Password',
+    'login' => 'Login',
+    'register' => 'Register',
+
 ];
