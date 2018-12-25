@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Cart;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -47,9 +48,17 @@ class ShopController extends Controller
      */
     public function show(Product $product)
     {
+        /** check if user was put the product in his cart
+         * so in this case we will return the quantity of the product
+         * that user was stored
+         **/
+
+        $qnt = $product->inCart ? Cart::session(auth()->id())->get($product->id)->quantity : 1;
+
         return view('product', [
             'product'   => $product,
-            'mightLike' => $product->mightLike(10)->get()
+            'mightLike' => $product->mightLike(10)->get(),
+            'qnt' => $qnt
         ]);
     }
 

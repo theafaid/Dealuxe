@@ -31,6 +31,7 @@
                             inline-template
                             v-cloak
                             :product="{{$product}}"
+                            qnt="{{$qnt}}"
                             to-cart-route="{{route('cart.store')}}"
                             remove-from-cart-route="{{route('cart.remove')}}"
                             to-wishlist-route="{{route('wishlist.store')}}"
@@ -85,7 +86,7 @@
 
                                             <div class="quantity">
                                                 <h4>Quantity:</h4>
-                                                <div class="pro-qty"><input type="number" name="qnt" value="1" min="1" max="15"></div>
+                                                <div><input type="number" name="qnt" value="" min="1" max="15" v-model="quantity"></div>
                                             </div>
 
                                             @auth

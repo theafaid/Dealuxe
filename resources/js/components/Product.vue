@@ -7,14 +7,16 @@
             'to-cart-route',
             'remove-from-cart-route',
             'to-wishlist-route',
-            'remove-from-wishlist-route'
+            'remove-from-wishlist-route',
+            'qnt'
         ],
 
         data(){
             return {
                 productData: this.product,
                 inCart: this.product.inCart,
-                inWishlist: this.product.inWishlist
+                inWishlist: this.product.inWishlist,
+                quantity: this.qnt ? this.qnt : 1
             }
         },
 
@@ -23,7 +25,10 @@
                 if(type == 'cart'){
                     // update user cart data
                     if(! this.inCart){
-                        this.addToCart(this.toCartRoute, {product: this.productData.slug})
+                        this.addToCart(this.toCartRoute, {
+                            product: this.productData.slug,
+                            qnt: this.quantity ? this.quantity: 1
+                        })
                     } else{
                         this.removeFromCart(this.removeFromCartRoute, {product: this.productData.slug});
                     }
