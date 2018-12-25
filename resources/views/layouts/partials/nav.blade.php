@@ -55,6 +55,9 @@
                             </ul>
                         </li>
                         <li><a href="contact.html">CONTACT</a></li>
+                        @guest
+                            <li><a href="{{route('auth_portal')}}">{{__('front.login_register')}}</a></li>
+                        @endguest
                     </ul>
                 </nav>
             </div>
@@ -62,15 +65,15 @@
          @auth
             <!-- Header Action -->
             <div class="col">
-                    <div class="header-action">
-                        <!-- Wishlist -->
-                        <a href="{{route('wishlist.index')}}" class="header-wishlist">
-                            <span class="icon">wishlist</span>
-                            <span class="num">{{ auth()->user()->wishlist_count }}</span>
-                        </a>
-                        @include('layouts.partials._header_cart_data')
-                    </div>
+                <div class="header-action">
+                    <!-- Wishlist -->
+                    <a href="{{route('wishlist.index')}}" class="header-wishlist">
+                        <span class="icon">wishlist</span>
+                        <span class="num">{{ auth()->user()->wishlist_count }}</span>
+                    </a>
+                    @include('layouts.partials._header_cart_data')
                 </div>
+            </div>
          @endauth
 
             <div class="col-12 d-block d-lg-none">
