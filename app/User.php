@@ -21,6 +21,7 @@ class User extends Authenticatable
     ];
 
     protected $withCount = ['wishlist'];
+    protected $with = ['wishlist'];
 
     /**
      * The attributes that should be hidden for arrays.

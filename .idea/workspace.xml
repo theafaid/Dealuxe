@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="95f7c15c-5887-468d-afe0-102c2326b20d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishlistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishlistController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AddProductToWishlistRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AddProductToWishlistRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Product.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/front.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/front.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +36,7 @@
           <entry key="js" value="15" />
           <entry key="json" value="14" />
           <entry key="lock" value="1" />
-          <entry key="php" value="194" />
+          <entry key="php" value="197" />
           <entry key="rnc" value="1" />
           <entry key="vue" value="9" />
           <entry key="xml" value="1" />
@@ -55,7 +50,7 @@
           <entry key="HTML" value="16" />
           <entry key="JSON" value="15" />
           <entry key="JavaScript" value="15" />
-          <entry key="PHP" value="125" />
+          <entry key="PHP" value="128" />
           <entry key="RNG Compact" value="1" />
           <entry key="Vue.js" value="9" />
           <entry key="XML" value="1" />
@@ -69,7 +64,7 @@
           <entry key="html" value="9" />
           <entry key="js" value="315" />
           <entry key="json" value="91" />
-          <entry key="php" value="31667" />
+          <entry key="php" value="32942" />
           <entry key="vue" value="3922" />
           <entry key="xml" value="34" />
         </counts>
@@ -82,7 +77,7 @@
           <entry key="HTML" value="9" />
           <entry key="JSON" value="91" />
           <entry key="JavaScript" value="315" />
-          <entry key="PHP" value="22795" />
+          <entry key="PHP" value="24070" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Vue.js" value="3922" />
           <entry key="XML" value="34" />
@@ -92,11 +87,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/components/Product.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="231">
+              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -122,8 +117,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state relative-caret-position="510">
+              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -137,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="651">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -223,7 +227,6 @@
         <option value="$PROJECT_DIR$/app/Wishlist.php" />
         <option value="$PROJECT_DIR$/tests/TestCase.php" />
         <option value="$PROJECT_DIR$/tests/Unit/UserTest.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/tests/Feature/WishlistTest.php" />
         <option value="$PROJECT_DIR$/resources/views/wishlist.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/footer.blade.php" />
@@ -256,14 +259,15 @@
         <option value="$PROJECT_DIR$/app/Http/Requests/ProductToCartRequest.php" />
         <option value="$PROJECT_DIR$/public/design/css/style.css" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CartController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/tests/Unit/ProductTest.php" />
-        <option value="$PROJECT_DIR$/app/Product.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/front.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/AddProductToWishlistRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WishlistController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Product.vue" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Product.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
       </list>
     </option>
   </component>
@@ -557,7 +561,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="front.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/lang/en/front.php&#10;User.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;Product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;web.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/style.css&#10;حقخيعؤف_&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;ProductTest&#9;null&#9;null&#10;product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;carttest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Feature/CartTest.php&#10;Response.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/symfony/http-foundation/Response.php&#10;cartcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;_product&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;Product.v&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;cart.blade.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;car&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_header_cart_data.blade.php&#10;nav.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;router.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;registercont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/Auth/RegisterController.php&#10;logincont&#9;null&#9;null&#10;login.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/auth/login.blade.php&#10;product.vu&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;app.js&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;shop.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;produc&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;welcome.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;cartcont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;shopcont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/ShopController.php&#10;app.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;shop.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;header.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;app.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;foot&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;header.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;welcome.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;wishlist.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/wishlist.blade.php&#10;cart.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;wishlist.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/wishlist.blade.php&#10;user.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;wishlistcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/WishlistController.php&#10;cart.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;product.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;wish&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/WishlistController.php&#10;nav.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;product.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;cart.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;UserTest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Unit/UserTest.php&#10;User.p&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;create_wi&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/database/migrations/2018_12_23_184511_create_wishlists_table.php" />
+    <property name="SearchEverywhereHistoryKey" value="web.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;web.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;front.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/lang/en/front.php&#10;User.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;Product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/style.css&#10;حقخيعؤف_&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;ProductTest&#9;null&#9;null&#10;product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;carttest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Feature/CartTest.php&#10;Response.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/symfony/http-foundation/Response.php&#10;cartcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;_product&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;Product.v&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;cart.blade.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;car&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_header_cart_data.blade.php&#10;nav.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;router.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;registercont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/Auth/RegisterController.php&#10;logincont&#9;null&#9;null&#10;login.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/auth/login.blade.php&#10;product.vu&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;app.js&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;shop.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;produc&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;welcome.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;cartcont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;shopcont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/ShopController.php&#10;app.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;shop.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;header.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;app.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;foot&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;header.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;welcome.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;wishlist.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/wishlist.blade.php&#10;cart.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;wishlist.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/wishlist.blade.php&#10;user.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;wishlistcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/WishlistController.php&#10;cart.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;product.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;wish&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/WishlistController.php&#10;nav.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;product.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;cart.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;UserTest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Unit/UserTest.php&#10;User.p&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -597,12 +601,12 @@
       <workItem from="1545577138427" duration="17124000" />
       <workItem from="1545644204334" duration="14003000" />
       <workItem from="1545674353231" duration="4077000" />
-      <workItem from="1545730982924" duration="11565000" />
+      <workItem from="1545730982924" duration="14323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68529000" />
+    <option name="totallyTimeSpent" value="71287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="22" width="1296" height="1010" extended-state="6" />
@@ -915,24 +919,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="71" lean-forward="true" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/UserTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="67" column="92" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -953,17 +943,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/AddProductToWishlistRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WishlistController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
           <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/AddProductToWishlistRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="727">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -974,17 +964,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Product.php">
+    <entry file="file://$PROJECT_DIR$/resources/js/components/Product.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        <state relative-caret-position="231">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Product.vue">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="696">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
