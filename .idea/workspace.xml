@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95f7c15c-5887-468d-afe0-102c2326b20d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,11 +44,11 @@
         <counts>
           <entry key="css" value="7" />
           <entry key="env" value="1" />
-          <entry key="html" value="16" />
+          <entry key="html" value="17" />
           <entry key="js" value="18" />
           <entry key="json" value="14" />
           <entry key="lock" value="1" />
-          <entry key="php" value="231" />
+          <entry key="php" value="234" />
           <entry key="rnc" value="1" />
           <entry key="vue" value="12" />
           <entry key="xml" value="1" />
@@ -56,12 +57,12 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="1" />
-          <entry key="Blade" value="93" />
+          <entry key="Blade" value="94" />
           <entry key="CSS" value="7" />
-          <entry key="HTML" value="16" />
+          <entry key="HTML" value="17" />
           <entry key="JSON" value="15" />
           <entry key="JavaScript" value="18" />
-          <entry key="PHP" value="138" />
+          <entry key="PHP" value="140" />
           <entry key="RNG Compact" value="1" />
           <entry key="Vue.js" value="12" />
           <entry key="XML" value="1" />
@@ -75,7 +76,7 @@
           <entry key="html" value="9" />
           <entry key="js" value="338" />
           <entry key="json" value="91" />
-          <entry key="php" value="35068" />
+          <entry key="php" value="35345" />
           <entry key="vue" value="4650" />
           <entry key="xml" value="34" />
         </counts>
@@ -83,12 +84,12 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="23" />
-          <entry key="Blade" value="10418" />
+          <entry key="Blade" value="10482" />
           <entry key="CSS" value="66" />
           <entry key="HTML" value="9" />
           <entry key="JSON" value="91" />
           <entry key="JavaScript" value="338" />
-          <entry key="PHP" value="24650" />
+          <entry key="PHP" value="24863" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Vue.js" value="4650" />
           <entry key="XML" value="34" />
@@ -125,13 +126,58 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+            <state relative-caret-position="572">
+              <caret line="161" column="35" lean-forward="true" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
               <folding>
                 <element signature="e#5084#9115#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/checkout.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="268" selection-start-line="268" selection-end-line="268" />
+              <folding>
+                <element signature="e#88#658#0#HTML" />
+                <element signature="e#732#14160#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/Compressed/nice-templates/bardyhtml/bardy/checkout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="242" column="3" lean-forward="true" selection-start-line="242" selection-start-column="3" selection-end-line="508" selection-end-column="4" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -153,30 +199,6 @@
               <caret line="70" column="22" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="70" selection-end-column="22" />
               <folding>
                 <element signature="n#product#0;n#div#1;n#div#0;n#shop#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-              <folding>
-                <element signature="e#279#310#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/CartTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-              <folding>
-                <element signature="e#32#51#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,7 +230,6 @@
       <find>wishlist</find>
       <find>items</find>
       <find>count()</find>
-      <find>src</find>
       <find>shop-product-wrap grid row</find>
       <find />
       <find>logout</find>
@@ -223,6 +244,7 @@
       <find>login</find>
       <find>type</find>
       <find>href</find>
+      <find>src</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -231,8 +253,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/TestCase.php" />
-        <option value="$PROJECT_DIR$/resources/views/wishlist.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Products.vue" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
@@ -254,7 +274,6 @@
         <option value="$PROJECT_DIR$/app/Http/Requests/AddProductToWishlistRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/WishlistController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Product.vue" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/js/bootstrap.js" />
@@ -282,6 +301,9 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/_might_like.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/cart.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/checkout.blade.php" />
       </list>
     </option>
   </component>
@@ -575,7 +597,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="mig&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_might_like.blade.php&#10;_produc&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;welcome.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;shop.v&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/pages/Shop.vue&#10;cart.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;app.js&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;shop.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;app.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;nav.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;nav.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;auth&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/auth/auth_portal.blade.php&#10;front.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/lang/en/front.php&#10;product.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;like&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_might_like.blade.php&#10;shop.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;bootstrap.min&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/bootstrap.min.css&#10;header.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;foo&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;shop.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;Product.vue&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/style.css&#10;cart.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;product.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;footer.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;app.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/config/app.php&#10;_list.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;product.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;product.blade.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;web.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;web.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;User.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;Product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/style.css&#10;حقخيعؤف_&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;ProductTest&#9;null&#9;null&#10;carttest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Feature/CartTest.php&#10;Response.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/symfony/http-foundation/Response.php&#10;cartcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;_product&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;Product.v&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;cart.blade.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;car&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_header_cart_data.blade.php&#10;router.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;registercont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/Auth/RegisterController.php&#10;logincont&#9;null&#9;null&#10;login.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/auth/login.blade.php&#10;product.vu&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue" />
+    <property name="SearchEverywhereHistoryKey" value="web.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;mig&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_might_like.blade.php&#10;_produc&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;welcome.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;shop.v&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/pages/Shop.vue&#10;cart.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;app.js&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;shop.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;app.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;nav.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;nav.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;auth&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/auth/auth_portal.blade.php&#10;front.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/lang/en/front.php&#10;product.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;like&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_might_like.blade.php&#10;shop.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;bootstrap.min&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/bootstrap.min.css&#10;header.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;foo&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;shop.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;Product.vue&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/style.css&#10;cart.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;product.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;footer.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;app.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/config/app.php&#10;_list.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;product.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;product.blade.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;web.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;web&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;web.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;User.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;Product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/style.css&#10;حقخيعؤف_&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;ProductTest&#9;null&#9;null&#10;carttest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Feature/CartTest.php&#10;Response.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/symfony/http-foundation/Response.php&#10;cartcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;_product&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;Product.v&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;cart.blade.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;car&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_header_cart_data.blade.php&#10;router.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;registercont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/Auth/RegisterController.php&#10;logincont&#9;null&#9;null&#10;login.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/auth/login.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -615,39 +637,17 @@
       <workItem from="1545577138427" duration="17124000" />
       <workItem from="1545644204334" duration="14003000" />
       <workItem from="1545674353231" duration="4077000" />
-      <workItem from="1545730982924" duration="24121000" />
+      <workItem from="1545730982924" duration="24493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81085000" />
+    <option name="totallyTimeSpent" value="81457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="22" width="1296" height="1010" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" weight="0.1890625" />
-      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32911393" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout>
-    <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1890625" />
@@ -668,7 +668,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -677,27 +677,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../edume/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="19" selection-start-line="19" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.mix.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -806,13 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1055,10 +1027,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+        <state relative-caret-position="572">
+          <caret line="161" column="35" lean-forward="true" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
           <folding>
             <element signature="e#5084#9115#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Compressed/nice-templates/bardyhtml/bardy/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="242" column="3" lean-forward="true" selection-start-line="242" selection-start-column="3" selection-end-line="508" selection-end-column="4" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/checkout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="268" selection-start-line="268" selection-end-line="268" />
+          <folding>
+            <element signature="e#88#658#0#HTML" />
+            <element signature="e#732#14160#0#HTML" />
           </folding>
         </state>
       </provider>

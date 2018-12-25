@@ -15,6 +15,8 @@ Route::post('/wishlist', 'WishlistController@store')->name('wishlist.store');
 Route::post('/wishlist/clear', 'WishlistController@clear')->name('wishlist.clear');
 Route::delete('/wishlist/remove', 'WishlistController@remove')->name('wishlist.remove');
 
+Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+
 Route::view('/product', 'product');
 Route::view('/checkout', 'checkout');
 Route::view('/thankyou', 'thankyou');
@@ -26,7 +28,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('test', function(){
-    return auth()->user()->wishlist->pluck('id');
-});
