@@ -1888,7 +1888,11 @@ input::placeholder, textarea::placeholder {
 .product-item .product-image .product-action a.wishlist.is-active:hover span, .product-item .product-image .product-action button.wishlist.is-active:hover span {
     background-position: -80px -19px; }
 .product-item .product-image .product-action a:hover, .product-item .product-image .product-action button:hover {
+    color: #d0a97e;
     background-color: #222222; }
+.product-item .product-image .product-action .btn-action{
+    color: #d0a97e !important;
+    background-color: #222222 !important; }
 .product-item .product-image .product-action a:hover.cart span, .product-item .product-image .product-action button:hover.cart span {
     background-position: 0 -19px; }
 .product-item .product-image .product-action a:hover.compare span, .product-item .product-image .product-action button:hover.compare span {

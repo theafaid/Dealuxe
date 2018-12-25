@@ -1798,9 +1798,53 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Product",
-  props: ['to-cart-route'],
+  props: ['to-cart-route', 'remove-from-cart-route', 'product'],
+  data: function data() {
+    return {
+      productData: this.product,
+      inCart: this.product.inCart
+    };
+  },
   methods: {
-    toCart: function toCart() {}
+    toCart: function toCart() {
+      if (!this.inCart) {
+        this.addToCart(this.toCartRoute, {
+          product: this.productData.slug
+        });
+      } else {
+        this.removeFromCart(this.removeFromCartRoute, {
+          product: this.productData.slug
+        });
+      }
+
+      this.inCart = !this.inCart;
+    },
+    addToCart: function addToCart(endpoint, data) {
+      var _this = this;
+
+      axios.post(endpoint, data).then(function (response) {
+        _this.success(response);
+      }).catch(function (error) {
+        _this.error('Something went wrong');
+      });
+    },
+    removeFromCart: function removeFromCart(endpoint, data) {
+      var _this2 = this;
+
+      axios.delete(endpoint, {
+        data: data
+      }).then(function (response) {
+        _this2.success();
+      }).catch(function (error) {
+        _this2.error('Something went wrong');
+      });
+    },
+    success: function success(response) {
+      this.$toaster.success(response.data.msg);
+    },
+    error: function error(msg) {
+      this.$toaster.error(msg);
+    }
   }
 });
 

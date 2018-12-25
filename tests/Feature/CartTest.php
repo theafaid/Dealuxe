@@ -130,6 +130,6 @@ class CartTest extends TestCase
     function an_authenticated_user_must_have_an_alert_msg_if_his_cart_is_empty(){
         $this->signIn();
         $this->get(route('cart.index'))
-            ->assertSee(__('front.you_cart_is_empty'));
+            ->assertSee(__('front.your_cart_is_empty'));
     }
 }

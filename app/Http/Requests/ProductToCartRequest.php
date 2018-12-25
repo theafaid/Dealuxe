@@ -43,6 +43,11 @@ class ProductToCartRequest extends FormRequest
             ]
         ]);
 
+
+        if(request()->wantsJson()){
+            return response(['msg' => $product->name . " " . __('front.added_to_your_cart')], 200);
+        }
+
         session()->flash('success', $product->name . " " . __('front.added_to_your_cart'));
 
         return redirect(route('cart.index'));

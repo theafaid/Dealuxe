@@ -28,6 +28,22 @@ class ProductTest extends TestCase
         $this->assertTrue($mightLikeIds->contains($product2->id));
         $this->assertTrue($mightLikeIds->contains($product3->id));
         $this->assertTrue($mightLikeIds->contains($product4->id));
+    }
 
+    /** @test */
+    function it_can_check_if_the_product_in_the_authenticated_user_cart(){
+        $product = create('App\Product');
+        $user = create('App\User');
+
+        $this->assertFalse($product->inCart);
+
+        $this->actingAs($user);
+
+        $this->assertFalse($product->inCart);
+
+        $this->signIn();
+        $this->toCart($product);
+
+        $this->assertTrue($product->fresh()->inCart);
     }
 }

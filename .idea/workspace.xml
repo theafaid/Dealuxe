@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95f7c15c-5887-468d-afe0-102c2326b20d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/front.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/_header_cart_data.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/_header_cart_data.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductToCartRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProductToCartRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/design/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/design/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/front.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/front.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CartTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CartTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ProductTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProductTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,54 +37,56 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="4" />
+          <entry key="css" value="5" />
           <entry key="env" value="1" />
           <entry key="html" value="16" />
           <entry key="js" value="15" />
           <entry key="json" value="14" />
           <entry key="lock" value="1" />
-          <entry key="php" value="179" />
+          <entry key="php" value="188" />
           <entry key="rnc" value="1" />
-          <entry key="vue" value="8" />
+          <entry key="vue" value="9" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="1" />
-          <entry key="Blade" value="67" />
-          <entry key="CSS" value="4" />
+          <entry key="Blade" value="68" />
+          <entry key="CSS" value="5" />
           <entry key="HTML" value="16" />
           <entry key="JSON" value="15" />
           <entry key="JavaScript" value="15" />
-          <entry key="PHP" value="112" />
+          <entry key="PHP" value="120" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Vue.js" value="8" />
+          <entry key="Vue.js" value="9" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="css" value="51" />
           <entry key="dummy" value="1" />
           <entry key="env" value="23" />
           <entry key="html" value="9" />
           <entry key="js" value="315" />
           <entry key="json" value="91" />
-          <entry key="php" value="28807" />
-          <entry key="vue" value="1480" />
+          <entry key="php" value="29844" />
+          <entry key="vue" value="3112" />
           <entry key="xml" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="23" />
-          <entry key="Blade" value="8548" />
+          <entry key="Blade" value="8740" />
+          <entry key="CSS" value="51" />
           <entry key="HTML" value="9" />
           <entry key="JSON" value="91" />
           <entry key="JavaScript" value="315" />
-          <entry key="PHP" value="20259" />
+          <entry key="PHP" value="21104" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Vue.js" value="1480" />
+          <entry key="Vue.js" value="3112" />
           <entry key="XML" value="34" />
         </counts>
       </usages-collector>
@@ -84,70 +94,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomePageController.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WishlistController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/Product.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/en/front.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+            <state relative-caret-position="496">
+              <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/cart.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CartController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="149" column="116" selection-start-line="149" selection-start-column="101" selection-end-line="149" selection-end-column="116" />
+            <state relative-caret-position="155">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/partials/_header_cart_data.blade.php">
+        <entry file="file://$PROJECT_DIR$/tests/Unit/ProductTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+            <state relative-caret-position="572">
+              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+              <folding>
+                <element signature="e#30#49#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/CartTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
+            <state>
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#32#51#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -189,6 +200,10 @@
       <find>logout</find>
       <find>cart</find>
       <find>empty</find>
+      <find>an_authenticated_user_must_have_an_alert_msg_if_his_cart_is_em</find>
+      <find>alert</find>
+      <find>.cart</find>
+      <find>product-action</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -197,9 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/design/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/partials/_might_like.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CartController.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Providers/ViewServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
@@ -208,11 +220,8 @@
         <option value="$PROJECT_DIR$/tests/Feature/HelpersTest.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_12_23_184511_create_wishlists_table.php" />
         <option value="$PROJECT_DIR$/app/Wishlist.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/AddProductToWishlistRequest.php" />
         <option value="$PROJECT_DIR$/tests/TestCase.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/ProductToCartRequest.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/CartTest.php" />
         <option value="$PROJECT_DIR$/tests/Unit/UserTest.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/tests/Feature/WishlistTest.php" />
@@ -224,7 +233,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Products.vue" />
-        <option value="$PROJECT_DIR$/app/Product.php" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -234,8 +242,6 @@
         <option value="$PROJECT_DIR$/resources/js/pages/Shop.vue" />
         <option value="$PROJECT_DIR$/resources/views/shop.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/Product.vue" />
         <option value="$USER_HOME$/Downloads/Compressed/nice-templates/bardyhtml/bardy/login-register.html" />
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/_login_form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
@@ -247,7 +253,16 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/_header_cart_data.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/cart.blade.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/CartTest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/ProductToCartRequest.php" />
+        <option value="$PROJECT_DIR$/app/Product.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/ProductTest.php" />
+        <option value="$PROJECT_DIR$/public/design/css/style.css" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/front.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CartController.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/Product.vue" />
       </list>
     </option>
   </component>
@@ -541,7 +556,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="cart.blade.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;car&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_header_cart_data.blade.php&#10;nav.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;router.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;registercont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/Auth/RegisterController.php&#10;logincont&#9;null&#9;null&#10;login.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/auth/login.blade.php&#10;product.vu&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;app.js&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;shop.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;produc&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;welcome.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;cartcont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;shopcont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/ShopController.php&#10;app.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;shop.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;header.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;app.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;foot&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;header.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;welcome.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;wishlist.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/wishlist.blade.php&#10;cart.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;wishlist.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/wishlist.blade.php&#10;user.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;wishlistcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/WishlistController.php&#10;cart.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;carttest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Feature/CartTest.php&#10;product.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;wish&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/WishlistController.php&#10;nav.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;product.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;cart.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;UserTest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Unit/UserTest.php&#10;User.p&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;User.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;create_wi&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/database/migrations/2018_12_23_184511_create_wishlists_table.php&#10;Req&#9;null&#9;null&#10;create&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/database/migrations/2018_12_23_184511_create_wishlists_table.php&#10;wishlisttest&#9;null&#9;null&#10;Wishlistcon&#9;null&#9;null&#10;web.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;User.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;cart&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;Product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;seede&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/database/seeds/ProductsSeeder.php&#10;app.p&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/config/app.php&#10;appserv&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="web.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;style.css&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/style.css&#10;حقخيعؤف_&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;ProductTest&#9;null&#9;null&#10;product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;front.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/lang/en/front.php&#10;carttest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Feature/CartTest.php&#10;Response.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/symfony/http-foundation/Response.php&#10;cartcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;_product&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;Product.v&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;cart.blade.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;car&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_header_cart_data.blade.php&#10;nav.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;router.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/vendor/laravel/framework/src/Illuminate/Routing/Router.php&#10;registercont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/Auth/RegisterController.php&#10;logincont&#9;null&#9;null&#10;login.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/auth/login.blade.php&#10;product.vu&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;app.js&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;shop.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;produc&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;welcome.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;cartcont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;shopcont&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/ShopController.php&#10;app.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;shop.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;header.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;app.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;foot&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;header.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;welcome.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;wishlist.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/wishlist.blade.php&#10;cart.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;wishlist.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/wishlist.blade.php&#10;user.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;wishlistcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/WishlistController.php&#10;cart.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;product.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;wish&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/WishlistController.php&#10;nav.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;product.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Product.php&#10;cart.blade.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;UserTest&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/tests/Unit/UserTest.php&#10;User.p&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;User.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;create_wi&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/database/migrations/2018_12_23_184511_create_wishlists_table.php&#10;Req&#9;null&#9;null&#10;create&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/database/migrations/2018_12_23_184511_create_wishlists_table.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -581,12 +596,12 @@
       <workItem from="1545577138427" duration="17124000" />
       <workItem from="1545644204334" duration="14003000" />
       <workItem from="1545674353231" duration="4077000" />
-      <workItem from="1545730982924" duration="3980000" />
+      <workItem from="1545730982924" duration="8718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60944000" />
+    <option name="totallyTimeSpent" value="65682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="22" width="1296" height="1010" extended-state="6" />
@@ -621,37 +636,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/AddProductToWishlistRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/CartTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1674">
-          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/UserTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/wishlist.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="775">
@@ -701,20 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ProductToCartRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-465">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -792,13 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -824,13 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Product.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -916,16 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomePageController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WishlistController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ShopController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1567">
@@ -936,13 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CartController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1316">
-          <caret line="47" column="76" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
@@ -950,17 +889,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WishlistController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomePageController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="417">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/design/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="1894" column="41" selection-start-line="1894" selection-start-column="41" selection-end-line="1894" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="31" column="87" selection-start-line="31" selection-start-column="87" selection-end-line="31" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ProductToCartRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/partials/_products_list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/CartTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#32#51#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/front.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+        <state relative-caret-position="496">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/ProductTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+          <folding>
+            <element signature="e#30#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/Product.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
         </state>
       </provider>
     </entry>

@@ -61,6 +61,9 @@ class CartController extends Controller
 
         Cart::session(auth()->id())->remove($product->id);
 
+        if(request()->wantsJson()){
+            return response(['msg' => $product->name . " " . __('front.removed_from_your_cart')], 200);
+        }
         return back();
     }
 }

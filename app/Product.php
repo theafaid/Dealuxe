@@ -11,6 +11,8 @@ class Product extends Model
     use HasTranslations;
 
     protected $guarded = [];
+    protected $appends = ['inCart'];
+
     public $translatable = ['name', 'description', 'details'];
 
     public function getRouteKeyName()
@@ -26,7 +28,7 @@ class Product extends Model
         return $query->inRandomOrder()->take($limit);
     }
 
-    public function inCart(){
-        return !! Cart::session(auth()->id())->get($this->id);
+    public function getInCartAttribute(){
+        return auth()->user() ? !! Cart::session(auth()->id())->get($this->id) : false;
     }
 }

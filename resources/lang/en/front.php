@@ -13,6 +13,8 @@ return [
     'shopping_cart_has_been_emptied' => 'Your Shopping cart has been cleared!',
     'you_may_like' => 'You may also like',
     'empty_your_cart'   => 'Clear My Cart',
+    'added_to_your_cart' => 'Added To Your Cart',
+    'removed_from_your_cart' => 'Removed From Your Cart',
     // product page
     'product_details' => 'Product Details',
 
