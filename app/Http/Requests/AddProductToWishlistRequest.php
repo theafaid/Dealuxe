@@ -30,6 +30,11 @@ class AddProductToWishlistRequest extends FormRequest
 
     public function save($product){
         auth()->user()->addToWishlist($product);
+
+        if(request()->wantsJson()){
+            return response(['msg' => $product->name . " " . __('front.added_to_your_wishlist')], 200);
+        }
+
         return back();
     }
 }

@@ -2,23 +2,41 @@
     export default {
         name: "Product",
 
-        props: ['to-cart-route', 'remove-from-cart-route', 'product'],
+        props: [
+            'product',
+            'to-cart-route',
+            'remove-from-cart-route',
+            'to-wishlist-route',
+            'remove-from-wishlist-route'
+        ],
 
         data(){
             return {
                 productData: this.product,
-                inCart: this.product.inCart
+                inCart: this.product.inCart,
+                inWishlist: this.product.inWishlist
             }
         },
 
         methods: {
-            toCart(){
-                if(! this.inCart){
-                    this.addToCart(this.toCartRoute, {product: this.productData.slug})
-                } else{
-                    this.removeFromCart(this.removeFromCartRoute, {product: this.productData.slug});
+            storeUpdate(type){
+                if(type == 'cart'){
+                    // update user cart data
+                    if(! this.inCart){
+                        this.addToCart(this.toCartRoute, {product: this.productData.slug})
+                    } else{
+                        this.removeFromCart(this.removeFromCartRoute, {product: this.productData.slug});
+                    }
+                    this.inCart = ! this.inCart;
+                }else{
+                    // update user wishlist
+                    if(! this.inWishlist){
+                        this.addToWishlist(this.toWishlistRoute, {product: this.productData.slug})
+                    } else{
+                        this.removeFromWishlist(this.removeFromWishlistRoute, {product: this.productData.slug});
+                    }
+                    this.inWishlist = ! this.inWishlist;
                 }
-                this.inCart = ! this.inCart;
             },
 
             addToCart(endpoint, data){
@@ -33,14 +51,36 @@
             removeFromCart(endpoint, data){
                 axios.delete(endpoint, { data: data})
                     .then(response => {
-                        this.success();
+                        this.success(response, 'warning');
                     }).catch(error => {
                         this.error('Something went wrong');
                 });
             },
 
-            success(response){
-                this.$toaster.success(response.data.msg);
+            addToWishlist(endpoint, data){
+                axios.post(endpoint, data)
+                    .then(response => {
+                        this.success(response);
+                    }).catch(error => {
+                    this.error('Something went wrong');
+                });
+            },
+
+            removeFromWishlist(endpoint, data){
+                axios.delete(endpoint, { data: data})
+                    .then(response => {
+                        this.success(response, 'warning');
+                    }).catch(error => {
+                    this.error('Something went wrong');
+                });
+            },
+
+            success(response, type = 'success'){
+                if(type == 'success'){
+                    this.$toaster.success(response.data.msg);
+                }else{
+                    this.$toaster.warning(response.data.msg);
+                }
             },
 
             error(msg){

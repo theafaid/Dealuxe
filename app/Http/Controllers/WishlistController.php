@@ -49,6 +49,10 @@ class WishlistController extends Controller
 
         auth()->user()->removeFromWishlist($product);
 
+        if(request()->wantsJson()){
+            return response(['msg' => $product->name . " " . __('front.removed_from_your_wishlist')], 200);
+        }
+
         return back();
     }
     /**

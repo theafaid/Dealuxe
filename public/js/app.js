@@ -1798,26 +1798,43 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Product",
-  props: ['to-cart-route', 'remove-from-cart-route', 'product'],
+  props: ['product', 'to-cart-route', 'remove-from-cart-route', 'to-wishlist-route', 'remove-from-wishlist-route'],
   data: function data() {
     return {
       productData: this.product,
-      inCart: this.product.inCart
+      inCart: this.product.inCart,
+      inWishlist: this.product.inWishlist
     };
   },
   methods: {
-    toCart: function toCart() {
-      if (!this.inCart) {
-        this.addToCart(this.toCartRoute, {
-          product: this.productData.slug
-        });
-      } else {
-        this.removeFromCart(this.removeFromCartRoute, {
-          product: this.productData.slug
-        });
-      }
+    storeUpdate: function storeUpdate(type) {
+      if (type == 'cart') {
+        // update user cart data
+        if (!this.inCart) {
+          this.addToCart(this.toCartRoute, {
+            product: this.productData.slug
+          });
+        } else {
+          this.removeFromCart(this.removeFromCartRoute, {
+            product: this.productData.slug
+          });
+        }
 
-      this.inCart = !this.inCart;
+        this.inCart = !this.inCart;
+      } else {
+        // update user wishlist
+        if (!this.inWishlist) {
+          this.addToWishlist(this.toWishlistRoute, {
+            product: this.productData.slug
+          });
+        } else {
+          this.removeFromWishlist(this.removeFromWishlistRoute, {
+            product: this.productData.slug
+          });
+        }
+
+        this.inWishlist = !this.inWishlist;
+      }
     },
     addToCart: function addToCart(endpoint, data) {
       var _this = this;
@@ -1834,13 +1851,39 @@ __webpack_require__.r(__webpack_exports__);
       axios.delete(endpoint, {
         data: data
       }).then(function (response) {
-        _this2.success();
+        _this2.success(response, 'warning');
       }).catch(function (error) {
         _this2.error('Something went wrong');
       });
     },
+    addToWishlist: function addToWishlist(endpoint, data) {
+      var _this3 = this;
+
+      axios.post(endpoint, data).then(function (response) {
+        _this3.success(response);
+      }).catch(function (error) {
+        _this3.error('Something went wrong');
+      });
+    },
+    removeFromWishlist: function removeFromWishlist(endpoint, data) {
+      var _this4 = this;
+
+      axios.delete(endpoint, {
+        data: data
+      }).then(function (response) {
+        _this4.success(response, 'warning');
+      }).catch(function (error) {
+        _this4.error('Something went wrong');
+      });
+    },
     success: function success(response) {
-      this.$toaster.success(response.data.msg);
+      var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'success';
+
+      if (type == 'success') {
+        this.$toaster.success(response.data.msg);
+      } else {
+        this.$toaster.warning(response.data.msg);
+      }
     },
     error: function error(msg) {
       this.$toaster.error(msg);

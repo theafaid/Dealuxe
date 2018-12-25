@@ -2,9 +2,11 @@
     <product
             inline-template
             v-cloak
+            :product="{{$product}}"
             to-cart-route="{{route('cart.store')}}"
             remove-from-cart-route="{{route('cart.remove')}}"
-            :product="{{$product}}"
+            to-wishlist-route="{{route('wishlist.store')}}"
+            remove-from-wishlist-route="{{route('wishlist.remove')}}"
     >
         <!-- Product Item Start -->
         <div class="col-xl-4 col-sm-6 col-12 mb-30">
@@ -15,10 +17,12 @@
                     <a href="product-details-variable.html" class="image"><img src="{{asset('design/images/product/product-1.jpg')}}" alt=""></a>
                     <!-- Product Action -->
                     <div class="product-action">
-                        <a @click.prevent="toCart()" :class="inCart ? 'btn-action' : ''">
+                        <a @click.prevent="storeUpdate('cart')" :class="inCart ? 'btn-action' : ''">
                             <i class="fa fa-shopping-cart"></i>
                         </a>
-                        <a href="#" class="wishlist"><span></span></a>
+                        <a @click.prevent="storeUpdate('wishlist')" :class="inWishlist ? 'btn-action' : ''">
+                            <i class="fa fa-heart"></i>
+                        </a>
                         <a href="#" class="quickview"><span></span></a>
                     </div>
                 </div>

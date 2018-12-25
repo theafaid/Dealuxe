@@ -22,4 +22,6 @@ return [
     'your_wishlist_has_cleared' => 'Your wishlist has been cleared!',
     'items_in_your_wishlist' => 'Items in your wishlist',
     'empty_your_wishlist' => 'Clear My Wishlist',
+    'added_to_your_wishlist' => 'Added to Your Wishlist',
+    'removed_from_your_wishlist' => 'Removed From Your Wishlist'
 ];

@@ -35,7 +35,7 @@ class ProductTest extends TestCase
         $product = create('App\Product');
         $user = create('App\User');
 
-        $this->assertFalse($product->inCart);
+        $this->assertFalse($product->fresh()->inCart);
 
         $this->actingAs($user);
 
@@ -45,5 +45,36 @@ class ProductTest extends TestCase
         $this->toCart($product);
 
         $this->assertTrue($product->fresh()->inCart);
+    }
+
+    /** @test */
+    function it_has_fans(){
+        $this->signIn();
+        $product = create('App\Product');
+
+        $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $product->fans);
+
+        $this->toSaveLater($product);
+
+        $this->assertInstanceOf('App\User', $fan = $product->fresh()->fans->first());
+
+        $this->assertEquals(auth()->id(), $fan->id);
+    }
+
+    /** @test */
+    function it_can_check_if_the_product_in_the_authenticated_user_wishlist(){
+        $product = create('App\Product');
+        $user = create('App\User');
+
+        $this->assertFalse($product->inWishlist);
+
+        $this->actingAs($user);
+
+        $this->assertFalse($product->fresh()->inWishlist);
+
+        $this->signIn();
+        $this->toSaveLater($product);
+
+        $this->assertTrue($product->fresh()->inWishlist);
     }
 }
