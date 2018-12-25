@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Cart;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -15,6 +16,31 @@ class ParticipateInProductTest extends TestCase
         $this->get(route('shop.show', $product->slug))
             ->assertStatus(200)
             ->assertSee($product->name);
+    }
+
+    /** @test */
+    function an_authenticated_user_must_see_the_quantity_of_his_selected_product_when_he_store_it_in_his_cart(){
+        $this->signIn();
+
+        $product = create('App\Product');
+
+        $this->get(route('shop.show', $product->slug))
+            ->assertStatus(200)
+            ->assertSee(1);
+
+        $this->assertFalse($product->inCart);
+
+        $this->addProductToCart($product, 2);
+
+        $this->assertTrue($product->inCart);
+
+        $qnt = Cart::session(auth()->id())->get($product->id)->quantity;
+
+        $this->get(route('shop.show', $product->slug))
+            ->assertStatus(200)
+            ->assertSee($qnt);
+
+        $this->assertEquals(2, $qnt);
     }
 
     /** @test */
