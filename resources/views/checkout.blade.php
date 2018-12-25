@@ -7,10 +7,10 @@
                 <div class="col">
 
                     <div class="page-banner text-center">
-                        <h1>Checkout</h1>
+                        <h1>{{__('front.checkout')}}</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li>Checkout</li>
+                            <li><a href="{{route('welcome')}}">{{__('front.home')}}</a></li>
+                            <li>{{__('front.checkout')}}</li>
                         </ul>
                     </div>
 
@@ -185,23 +185,19 @@
                                     <!-- Cart Total -->
                                     <div class="col-12 mb-60">
 
-                                        <h4 class="checkout-title">Cart Total</h4>
+                                        <h4 class="checkout-title">{{__('front.cart_total')}}</h4>
 
                                         <div class="checkout-cart-total">
 
-                                            <h4>Product <span>Total</span></h4>
+                                            <h4>{{__('front.product')}} <span>{{__('front.total')}}</span></h4>
 
                                             <ul>
-                                                <li>Teritory Quentily X 01 <span>$35.00</span></li>
-                                                <li>Adurite Silocone X 02 <span>$59.00</span></li>
-                                                <li>Baizidale Momone X 01 <span>$78.00</span></li>
-                                                <li>Makorone Cicile X 01 <span>$65.00</span></li>
+                                                @foreach($cartItems as $item)
+                                                    <li>{{$item->name}} X {{$item->quantity}} <span>{{presentPrice($item->price)}}</span></li>
+                                                @endforeach
                                             </ul>
 
-                                            <p>Sub Total <span>$296.00</span></p>
-                                            <p>Shipping Fee <span>$00.00</span></p>
-
-                                            <h4>Grand Total <span>$296.00</span></h4>
+                                            <h4>{{__('front.grand_total')}} <span>{{$cartTotal}}</span></h4>
 
                                         </div>
 

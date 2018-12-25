@@ -10,6 +10,10 @@ class CheckoutController extends Controller
     }
 
     public function index(){
-        return view('checkout');
+        $user = auth()->user();
+        return view('checkout', [
+            'cartItems' => $user->cartItems(),
+            'cartTotal' => $user->cartTotal()
+        ]);
     }
 }

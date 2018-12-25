@@ -38,4 +38,9 @@ return [
     'login' => 'Login',
     'register' => 'Register',
 
+    // checkout
+    'cart_total' => 'Cart Total',
+    'product' => 'Product',
+    'grand_total' => 'Grand Total',
+
 ];

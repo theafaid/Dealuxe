@@ -18,7 +18,6 @@ Route::delete('/wishlist/remove', 'WishlistController@remove')->name('wishlist.r
 Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
 
 Route::view('/product', 'product');
-Route::view('/checkout', 'checkout');
 Route::view('/thankyou', 'thankyou');
 
 Auth::routes();
