@@ -1,4 +1,9 @@
 @extends('layouts.app')
+
+@push('header')
+<link rel="stylesheet" href="{{asset('design/css/checkout.css')}}">
+@endpush
+
 @section('content')
     <!-- Page Banner Section Start -->
     <div class="page-banner-section section">
@@ -208,47 +213,21 @@
 
                                         <h4 class="checkout-title">Payment Method</h4>
 
-                                        <div class="checkout-payment-method">
+                                        <form action="/charge" method="post" id="payment-form">
+                                            <div class="form-row">
+                                                <label for="card-element">
+                                                    Credit or debit card
+                                                </label>
+                                                <div id="card-element">
+                                                    <!-- A Stripe Element will be inserted here. -->
+                                                </div>
 
-                                            <div class="single-method">
-                                                <input type="radio" id="payment_check" name="payment-method" value="check">
-                                                <label for="payment_check">Check Payment</label>
-                                                <p data-method="check">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
+                                                <!-- Used to display form errors. -->
+                                                <div id="card-errors" role="alert"></div>
                                             </div>
 
-                                            <div class="single-method">
-                                                <input type="radio" id="payment_bank" name="payment-method" value="bank">
-                                                <label for="payment_bank">Direct Bank Transfer</label>
-                                                <p data-method="bank">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-                                            </div>
-
-                                            <div class="single-method">
-                                                <input type="radio" id="payment_cash" name="payment-method" value="cash">
-                                                <label for="payment_cash">Cash on Delivery</label>
-                                                <p data-method="cash">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-                                            </div>
-
-                                            <div class="single-method">
-                                                <input type="radio" id="payment_paypal" name="payment-method" value="paypal">
-                                                <label for="payment_paypal">Paypal</label>
-                                                <p data-method="paypal">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-                                            </div>
-
-                                            <div class="single-method">
-                                                <input type="radio" id="payment_payoneer" name="payment-method" value="payoneer">
-                                                <label for="payment_payoneer">Payoneer</label>
-                                                <p data-method="payoneer">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-                                            </div>
-
-                                            <div class="single-method">
-                                                <input type="checkbox" id="accept_terms">
-                                                <label for="accept_terms">I’ve read and accept the terms & conditions</label>
-                                            </div>
-
-                                        </div>
-
-                                        <button class="place-order btn btn-lg btn-round">Place order</button>
-
+                                            <button class="place-order btn btn-lg btn-round">Submit Payment</button>
+                                        </form>
                                     </div>
 
                                 </div>
@@ -263,3 +242,8 @@
 
     </div><!-- Cart Section End -->
 @endsection
+
+@push('footer')
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{{asset('design/js/checkout.js')}}"></script>
+@endpush
