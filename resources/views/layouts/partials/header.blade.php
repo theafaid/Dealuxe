@@ -32,8 +32,6 @@
 
     <!-- Modernizer JS -->
     <script src="{{asset('design')}}/js/vendor/modernizr-2.8.3.min.js"></script>
-
-    @stack('header')
 </head>
 
 <body>

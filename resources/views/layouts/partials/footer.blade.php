@@ -94,6 +94,7 @@
 <!-- Main JS -->
 <script src="{{asset('design')}}/js/main.js"></script>
 
+
 @stack('footer')
 </body>
 

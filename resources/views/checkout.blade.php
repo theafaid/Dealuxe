@@ -31,8 +31,8 @@
             <div class="row">
                 <div class="col-12">
 
-                    <!-- Checkout Form s-->
-                    <form action="#" class="checkout-form">
+                    {{--<!-- Checkout Form s-->--}}
+                    {{--<form action="#" class="checkout-form">--}}
                         <div class="row row-40">
 
                             <div class="col-lg-7">
@@ -213,7 +213,8 @@
 
                                         <h4 class="checkout-title">Payment Method</h4>
 
-                                        <form action="/charge" method="post" id="payment-form">
+                                        <form action="{{route('checkout.charge')}}" method="POST" id="payment-form">
+                                            @csrf
                                             <div class="form-row">
                                                 <label for="card-element">
                                                     Credit or debit card
@@ -234,7 +235,7 @@
                             </div>
 
                         </div>
-                    </form>
+                    {{--</form>--}}
 
                 </div>
             </div>

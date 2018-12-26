@@ -16,4 +16,8 @@ class CheckoutController extends Controller
             'cartTotal' => $user->cartTotal()
         ]);
     }
+
+    public function charge(){
+        return request()->all();
+    }
 }

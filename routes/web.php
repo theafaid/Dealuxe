@@ -16,6 +16,7 @@ Route::post('/wishlist/clear', 'WishlistController@clear')->name('wishlist.clear
 Route::delete('/wishlist/remove', 'WishlistController@remove')->name('wishlist.remove');
 
 Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+Route::post('/checkout', 'CheckoutController@charge')->name('checkout.charge');
 
 Route::view('/product', 'product');
 Route::view('/thankyou', 'thankyou');
