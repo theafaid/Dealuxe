@@ -27,6 +27,7 @@ Vue.use(Toaster, {timeout: 3000})
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('shop-page', require('./pages/Shop.vue').default);
 Vue.component('cart', require('./components/Cart').default);
+Vue.component('checkout-form', require('./components/CheckoutForm').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

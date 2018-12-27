@@ -29,7 +29,7 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="{{asset('design')}}/css/style.css">
-
+    <script src="https://js.stripe.com/v3/"></script>
     @stack('header')
     <!-- Modernizer JS -->
     <script src="{{asset('design')}}/js/vendor/modernizr-2.8.3.min.js"></script>
