@@ -31,12 +31,17 @@
             <div class="row">
                 <div class="col-12">
 
+                    @if($failedMsg = session('failed'))
+                        <div class="alert alert-danger">
+                            {{$failedMsg}}
+                        </div>
+                    @endif
                     {{--<!-- Checkout Form s-->--}}
-                    {{--<form action="#" class="checkout-form">--}}
+                    <form action="{{route('checkout.store')}}" method="POST" class="checkout-form" id="payment-form">
+                        @csrf
                         <div class="row row-40">
 
                             <div class="col-lg-7">
-
                                 <!-- Billing Address -->
                                 <div id="billing-form" class="mb-10">
                                     <h4 class="checkout-title">Billing Address</h4>
@@ -213,8 +218,6 @@
 
                                         <h4 class="checkout-title">Payment Method</h4>
 
-                                        <form action="{{route('checkout.charge')}}" method="POST" id="payment-form">
-                                            @csrf
                                             <div class="form-row">
                                                 <label for="card-element">
                                                     Credit or debit card
@@ -228,14 +231,13 @@
                                             </div>
 
                                             <button class="place-order btn btn-lg btn-round">Submit Payment</button>
-                                        </form>
                                     </div>
 
                                 </div>
                             </div>
 
                         </div>
-                    {{--</form>--}}
+                    </form>
 
                 </div>
             </div>
