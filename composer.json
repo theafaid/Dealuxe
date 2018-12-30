@@ -40,9 +40,9 @@
             "App\\": "app/"
         },
         "files": [
-            "app/http/helpers.php",
-            "tests/utilities/helper.php"
-        ],
+		"tests/utilities/helper.php",
+		"app/Http/helpers.php"
+	],
         "classmap": [
             "database/seeds",
             "database/factories"
