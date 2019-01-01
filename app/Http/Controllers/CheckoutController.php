@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Stripe\{Charge, Customer};
+use App\Http\Requests\CheckoutRequest;
 
 class CheckoutController extends Controller
 {
@@ -17,34 +18,25 @@ class CheckoutController extends Controller
      */
     public function index(){
         $user = auth()->user();
+        
         return view('checkout', [
             'cartItems' => $user->cartItems(),
             'cartTotal' => $user->cartTotal()
         ]);
     }
 
-    public function store(){
-        $contents = auth()->user()->cartItems()->map(function($item){
+    public function store(CheckoutRequest $request){
+
+        $content = $request->user() ->cartItems()->map(function($item){
             return "product:" . $item['attributes']['product']['slug'] . " | qnt: ". $item['quantity'];
         })->values()->toJson();
 
         try{
-            $customer = Customer::create([
-                'email' => auth()->user()->email,
-                'source' => request('stripeToken')
-            ]);
-
-            Charge::create([
-                'customer' => $customer->id,
-                'amount' => substr(auth()->user()->cartTotal(), 1) * 100,
-                'currency' => 'usd',
-                'metadata' => [
-                    'content' => $contents,
-                    'quantity' => auth()->user()->cartItemsCount()
-                ],
-            ]);
+            $request->persist($content);
         }catch(\Exception $ex){
             return response(['msg' => $ex->getMessage()], 422);
         }
+
+        return response(['msg' => 'success'], 200);
     }
 }
