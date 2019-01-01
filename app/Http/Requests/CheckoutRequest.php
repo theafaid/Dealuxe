@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Stripe\{Charge, Customer};
+use Cart;
 
 class CheckoutRequest extends FormRequest
 {
@@ -47,5 +48,9 @@ class CheckoutRequest extends FormRequest
                 'quantity' => $user->cartItemsCount()
             ],
         ]);
+
+        session()->flash('payment_succeded', 'success');
+
+        Cart::session($user->id)->clear();
     }
 }

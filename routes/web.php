@@ -17,9 +17,7 @@ Route::delete('/wishlist/remove', 'WishlistController@remove')->name('wishlist.r
 
 Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
 Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
-Route::get('/thankyou', function(){
-    return "thank you for you payment";
-})->name('thankyou');
+Route::get('/thankyou', 'ConfirmationController@index')->name('thankyou');
 Route::view('/product', 'product');
 Auth::routes();
 
