@@ -44,6 +44,28 @@ class ParticipateInProductTest extends TestCase
     }
 
     /** @test */
+    function an_authenticated_user_can_update_quantity_for_a_product(){
+        $this->signIn();
+        $product = create('App\Product');
+
+        $this->toCart($product);
+
+        $user = auth()->user();
+
+        $qnt = $user->cartItems()->first()->quantity;
+
+        $this->assertEquals(1, $qnt);
+
+        $this->patch(route('cart.update'), [
+            'product' => $product->slug,
+            'qnt' => 2
+        ]);
+
+        $qnt = $user->fresh()->cartItems()->first()->quantity;
+
+        $this->assertEquals(2, $qnt);
+    }
+    /** @test */
     function a_user_must_see_might_also_like_products_in_single_product_page(){
 
         $product1 = create('App\Product');
