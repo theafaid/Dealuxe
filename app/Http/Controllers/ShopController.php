@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Cart;
 use App\Product;
 use Illuminate\Http\Request;
@@ -12,11 +13,25 @@ class ShopController extends Controller
      * Display a listing of the Shop Products.
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($categorySlug = null)
     {
-        $products = Product::inRandomOrder()->paginate();
 
-        return view('shop', ['products' => $products]);
+
+        $category = $categorySlug ? Category::whereSlug($categorySlug)->firstOrFail() : null;
+
+
+        if($category){
+            $products = $category->products()->paginate();
+        }else{
+            $products = Product::inRandomOrder()->paginate();
+        }
+
+
+        return view('shop', [
+
+            'products' => $products,
+            'categories' => \App\Category::all()
+        ]);
     }
 
     /**

@@ -37,7 +37,7 @@
                     <div class="head">
                         <!-- Title-->
                         <div class="top">
-                            <h4 class="title"><a href="{{route('shop.show', $product->slug)}}">{{$product->name}}</a></h4>
+                            <h4 class="title"><a href="{{route('shop.show', $product->slug)}}">{{$product->name}} | {{$product->categories()->first()->name}}</a></h4>
                         </div>
                         <!-- Price & Ratting -->
                         <div class="bottom">

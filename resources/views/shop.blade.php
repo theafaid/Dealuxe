@@ -78,14 +78,11 @@
                         </div>
 
                         <div class="sidebar">
-                            <h4 class="sidebar-title">Brand</h4>
+                            <h4 class="sidebar-title">{{__('front.categories')}}</h4>
                             <ul class="sidebar-list">
-                                <li><a href="#">Baizidale Momone</a></li>
-                                <li><a href="#">Murikhete Paris</a></li>
-                                <li><a href="#">Vortahole Valohoi</a></li>
-                                <li><a href="#">Origeno Veledita</a></li>
-                                <li><a href="#">Buffekhete Parbi</a></li>
-                                <li><a href="#">Makorone Cicile</a></li>
+                                @foreach($categories as $category)
+                                    <li><a href="{{route('shop.index', ['category' => $category->slug])}}">{{ $category->name }}</a></li>
+                                @endforeach
                             </ul>
                         </div>
 
