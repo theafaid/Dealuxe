@@ -80,6 +80,18 @@
                 });
             },
 
+            updateQnt(e){
+                if(! this.inCart) return;
+                axios.patch('/cart/update', {
+                    product: this.productData.slug,
+                    qnt: this.quantity ? this.quantity: 1
+                }).then(response => {
+                    this.$toaster.success(response.data.msg);
+                }).catch(error => {
+                    this.$toaster.error(response.data.msg);
+                });
+            },
+
             success(response, type = 'success'){
                 if(type == 'success'){
                     this.$toaster.success(response.data.msg);

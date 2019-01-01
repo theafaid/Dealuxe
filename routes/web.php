@@ -8,6 +8,7 @@ Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::post('/cart/clear', 'CartController@clear')->name('cart.clear');
+Route::patch('/cart/update', 'CartController@update')->name('cart.update');
 Route::delete('/cart/remove', 'CartController@remove')->name('cart.remove');
 
 Route::get('/wishlist', 'WishlistController@index')->name('wishlist.index');

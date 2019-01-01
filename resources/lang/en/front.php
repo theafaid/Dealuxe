@@ -17,6 +17,7 @@ return [
     'removed_from_your_cart' => 'Removed From Your Cart',
     // product page
     'product_details' => 'Product Details',
+    'cart_updated_successfully' => 'Your cart updated successfully',
 
     // wishlist
     'your_wishlist_has_cleared' => 'Your wishlist has been cleared!',

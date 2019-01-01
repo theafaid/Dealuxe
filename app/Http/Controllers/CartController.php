@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductToCartRequest;
+use App\Http\Requests\UpdateCartRequest;
 use App\Product;
 use Cart;
 
@@ -35,6 +36,23 @@ class CartController extends Controller
         $product = Product::whereSlug(request('product'))->first();
 
         return $request->save($product);
+    }
+
+
+    /** 
+     * Update Cart
+     */
+    public function update(UpdateCartRequest $request){
+        
+        $product = Product::whereSlug(request('product'))->first();
+
+        try{
+            $request->save($product);
+        }catch(\Exception $ex){
+            return response(['msg' => $ex->getmessage()], 422);
+        }
+
+        return response(['msg' => __('front.cart_updated_successfully')]);
     }
 
     /**

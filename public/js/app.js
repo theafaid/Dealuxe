@@ -2032,6 +2032,19 @@ __webpack_require__.r(__webpack_exports__);
         _this4.error('Something went wrong');
       });
     },
+    updateQnt: function updateQnt(e) {
+      var _this5 = this;
+
+      if (!this.inCart) return;
+      axios.patch('/cart/update', {
+        product: this.productData.slug,
+        qnt: this.quantity ? this.quantity : 1
+      }).then(function (response) {
+        _this5.$toaster.success(response.data.msg);
+      }).catch(function (error) {
+        _this5.$toaster.error(response.data.msg);
+      });
+    },
     success: function success(response) {
       var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'success';
 
