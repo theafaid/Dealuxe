@@ -1865,12 +1865,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['checkout-route', 'stripe-key', 'thankyou-route'],
   data: function data() {
     return {
       complete: false,
-      stripeOptions: {}
+      stripeOptions: {},
+      error: false,
+      errorMsg: false
     };
   },
   components: {
@@ -1878,13 +1886,16 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     pay: function pay() {
+      var _this = this;
+
       Object(vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__["createToken"])().then(function (data) {
-        axios.post("/checkout", {
+        axios.post(_this.checkoutRoute, {
           stripeToken: data.token.id
         }).then(function (response) {
-          console.log(response.data);
+          return window.location = _this.thankyouRoute;
         }).catch(function (error) {
-          return console.log(error.response.data);
+          _this.error = true;
+          _this.errorMsg = error.response.data.msg;
         });
       });
     }
@@ -2084,7 +2095,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.stripe-card {\n    background-color: white;\n    height: 40px;\n    padding: 10px 12px;\n    border-radius: 4px;\n    border: 1px solid transparent;\n    box-shadow: 0 1px 3px 0 #e6ebf1;\n    transition: box-shadow 150ms ease;\n}\n.stripe-card:focus {\n    box-shadow: 0 1px 3px 0 #cfd7df;\n}\n.stripe-card.complete {\n    border-color: green;\n}\n", ""]);
+exports.push([module.i, "\n.stripe-card {\n    background-color: white;\n    height: 40px;\n    padding: 10px 12px;\n    border-radius: 4px;\n    border: 1px solid transparent;\n    box-shadow: 0 1px 3px 0 #e6ebf1;\n    transition: box-shadow 150ms ease;\n}\n.stripe-card:focus {\n    box-shadow: 0 1px 3px 0 #cfd7df;\n}\n.stripe-card.complete {\n    border-color: green;\n}\n.payment-err-msg{\n    width: 100%\n}\n", ""]);
 
 // exports
 
@@ -2368,13 +2379,26 @@ var render = function() {
     [
       _c("h4", { staticClass: "checkout-title" }, [_vm._v("Payment Method")]),
       _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.error,
+              expression: "error"
+            }
+          ],
+          staticClass: "alert alert-danger payment-err-msg"
+        },
+        [_vm._v("\n        " + _vm._s(_vm.errorMsg) + "\n        "), _c("br")]
+      ),
+      _vm._v(" "),
       _c("card", {
         staticClass: "stripe-card form-control",
         class: { complete: _vm.complete },
-        attrs: {
-          stripe: "pk_test_LXrT8vaoQOXTHBVC2vvLP0KR",
-          options: _vm.stripeOptions
-        },
+        attrs: { stripe: _vm.stripeKey, options: _vm.stripeOptions },
         on: {
           change: function($event) {
             _vm.complete = $event.complete
@@ -15314,8 +15338,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\Dealuxe\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\Dealuxe\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/laravel/dealuxe/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/laravel/dealuxe/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

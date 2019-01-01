@@ -44,7 +44,7 @@ class CheckoutController extends Controller
                 ],
             ]);
         }catch(\Exception $ex){
-            return back()->with('failed', $ex->getMessage());
+            return response(['msg' => $ex->getMessage()], 422);
         }
     }
 }

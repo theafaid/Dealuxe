@@ -206,7 +206,11 @@
 
                                 <!-- Payment Method -->
                                 <div class="col-12 mb-30">
-                                    <checkout-form></checkout-form>
+                                    <checkout-form 
+                                    checkout-route={{ route('checkout.store') }}
+                                    stripe-key={{ config('services.stripe.key') }}
+                                    thankyou-route={{ route('thankyou') }}>
+                                    </checkout-form>
 
                                     {{--<form action="{{route('checkout.charge')}}" method="POST" id="payment-form">--}}
                                     {{--@csrf--}}

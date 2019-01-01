@@ -1,9 +1,14 @@
 <template>
     <div>
         <h4 class="checkout-title">Payment Method</h4>
+        <div v-show="error" class="alert alert-danger payment-err-msg">
+            {{ errorMsg }}
+            <br>
+        </div>
+
         <card class='stripe-card form-control'
               :class='{ complete }'
-              stripe='pk_test_LXrT8vaoQOXTHBVC2vvLP0KR'
+              :stripe=stripeKey
               :options='stripeOptions'
               @change='complete = $event.complete'
         />
@@ -19,11 +24,15 @@
     import { Card, createToken } from 'vue-stripe-elements-plus'
 
     export default {
+        props: ['checkout-route', 'stripe-key', 'thankyou-route'],
+        
         data () {
             return {
                 complete: false,
                 stripeOptions: {
-                }
+                },
+                error: false,
+                errorMsg: false
             }
         },
 
@@ -32,9 +41,12 @@
         methods: {
             pay () {
                 createToken().then(data => {
-                    axios.post("/checkout", {stripeToken: data.token.id})
-                        .then(response => {console.log(response.data)})
-                        .catch(error => console.log(error.response.data));
+                    axios.post(this.checkoutRoute, {stripeToken: data.token.id})
+                        .then(response => window.location = this.thankyouRoute)
+                        .catch(error => {
+                            this.error = true;
+                            this.errorMsg = error.response.data.msg;
+                        });
                 })
             }
         }
@@ -59,5 +71,9 @@
 
     .stripe-card.complete {
         border-color: green;
+    }
+
+    .payment-err-msg{
+        width: 100%
     }
 </style>
