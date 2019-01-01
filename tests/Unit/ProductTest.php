@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Database\Eloquent\Collection;
 
 class ProductTest extends TestCase
 {
@@ -52,13 +53,19 @@ class ProductTest extends TestCase
         $this->signIn();
         $product = create('App\Product');
 
-        $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $product->fans);
+        $this->assertInstanceOf(Collection::class, $product->fans);
 
         $this->toSaveLater($product);
 
         $this->assertInstanceOf('App\User', $fan = $product->fresh()->fans->first());
 
         $this->assertEquals(auth()->id(), $fan->id);
+    }
+
+    /** @test */
+    function it_has_categories(){
+        $product = create('App\Product');
+        $this->assertInstanceOf(Collection::class, $product->categories);
     }
 
     /** @test */
