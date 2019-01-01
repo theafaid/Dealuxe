@@ -5,7 +5,6 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Stripe\{Charge, Customer};
 use Cart;
-
 class CheckoutRequest extends FormRequest
 {
     /**

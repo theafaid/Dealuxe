@@ -1870,6 +1870,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['checkout-route', 'stripe-key', 'thankyou-route'],
@@ -1878,7 +1879,8 @@ __webpack_require__.r(__webpack_exports__);
       complete: false,
       stripeOptions: {},
       error: false,
-      errorMsg: false
+      errorMsg: false,
+      showPayButton: true
     };
   },
   components: {
@@ -1888,6 +1890,7 @@ __webpack_require__.r(__webpack_exports__);
     pay: function pay() {
       var _this = this;
 
+      this.showPayButton = false;
       Object(vue_stripe_elements_plus__WEBPACK_IMPORTED_MODULE_0__["createToken"])().then(function (data) {
         axios.post(_this.checkoutRoute, {
           stripeToken: data.token.id
@@ -1895,6 +1898,7 @@ __webpack_require__.r(__webpack_exports__);
           return window.location = _this.thankyouRoute;
         }).catch(function (error) {
           _this.error = true;
+          _this.showPayButton = true;
           _this.errorMsg = error.response.data.msg;
         });
       });
@@ -2406,15 +2410,17 @@ var render = function() {
         }
       }),
       _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "pay-with-stripe place-order btn btn-lg",
-          attrs: { disabled: !_vm.complete },
-          on: { click: _vm.pay }
-        },
-        [_vm._v("Pay with credit card\n    ")]
-      )
+      _vm.showPayButton
+        ? _c(
+            "button",
+            {
+              staticClass: "pay-with-stripe place-order btn btn-lg",
+              attrs: { disabled: !_vm.complete },
+              on: { click: _vm.pay }
+            },
+            [_vm._v("Pay with credit card\n    ")]
+          )
+        : _vm._e()
     ],
     1
   )

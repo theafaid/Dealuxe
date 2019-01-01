@@ -13,6 +13,7 @@
               @change='complete = $event.complete'
         />
         <button
+                v-if="showPayButton"
                 class='pay-with-stripe place-order btn btn-lg'
                 @click='pay'
                 :disabled='!complete'>Pay with credit card
@@ -32,7 +33,8 @@
                 stripeOptions: {
                 },
                 error: false,
-                errorMsg: false
+                errorMsg: false,
+                showPayButton: true
             }
         },
 
@@ -40,11 +42,13 @@
 
         methods: {
             pay () {
+                this.showPayButton = false;
                 createToken().then(data => {
                     axios.post(this.checkoutRoute, {stripeToken: data.token.id})
                         .then(response => window.location = this.thankyouRoute)
                         .catch(error => {
                             this.error = true;
+                            this.showPayButton = true;
                             this.errorMsg = error.response.data.msg;
                         });
                 })
