@@ -54,6 +54,9 @@ class Product extends Model
         return $this->belongsToMany('App\User', 'user_wishlist', 'product_id', 'user_id');
     }
 
+    public function categories(){
+        return $this->belongsToMany('App\Category');
+    }
     /**
      * Check if the product is in the authenticated user wishlist
      * @return bool

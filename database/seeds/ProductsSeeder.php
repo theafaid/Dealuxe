@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Category;
 use App\Product;
 
 class ProductsSeeder extends Seeder
@@ -12,7 +13,7 @@ class ProductsSeeder extends Seeder
      */
     public function run()
     {
-        for($i=1; $i<=20; $i++){
+        for($i=1; $i<=100; $i++){
 
             $product = new Product();
 
@@ -32,9 +33,10 @@ class ProductsSeeder extends Seeder
             ]);
 
             $product->slug = "laptop-{$i}";
-            $product->price = $i * 1024;
-
+            $product->price = rand(10000, 100000) ;
             $product->save();
+
+            $product->categories()->attach(Category::all()->random()->id);
         }
     }
 }
