@@ -17,18 +17,14 @@ class CouponsTest extends TestCase
         $coupon = create('App\Coupon', ['type' => 'fixed','value' => 20000]);
 
 
-        $this->post(route('coupon.store'), [
-            'coupon' => $coupon->code
-        ])->assertRedirect(route('login'));
+        $this->storeCoupon($coupon)->assertRedirect(route('login'));
     }
 
     /** @test */
     function it_require_a_valid_coupon_code_to_add_a_coupon_for_a_user(){
-        $this->signIn();
-        $product = create('App\Product');
-        $this->toCart($product);
+        $this->signIn()->generateProductThenToCart();
 
-        $this->post(route('coupon.store'))
+      $this->storeCoupon(null)
             ->assertRedirect()
             ->assertSessionHasErrors(['coupon']);
     }
@@ -36,24 +32,19 @@ class CouponsTest extends TestCase
     /** @test */
     function it_require_at_least_one_item_in_the_cart_to_add_a_coupon(){
         $this->signIn();
-
         $coupon = create('App\Coupon');
 
-        $product = create('App\Product');
-
-        $this->post(route('coupon.store'), ['coupon' => $coupon->code])
-            ->assertStatus(403);
+        $this->storeCoupon($coupon);
 
         $this->assertFalse(session()->has('coupon'));
 
-        $this->toCart($product);
+        $this->generateProductThenToCart();
 
-        $this->post(route('coupon.store'), ['coupon' => $coupon->code])
+        $this->storeCoupon($coupon)
             ->assertRedirect()
             ->assertSessionHas('coupon')
             ->assertSessionHas('success');
     }
-
 
 
     /** @test */
@@ -67,9 +58,7 @@ class CouponsTest extends TestCase
         $coupon = create('App\Coupon', ['type' => 'fixed','value' => 20000]);
 
 
-        $this->post(route('coupon.store'), [
-            'coupon' => $coupon->code
-        ])
+        $this->storeCoupon($coupon)
             ->assertRedirect(route('checkout.index'))
             ->assertSessionHas('coupon')
             ->assertSessionHas('success');

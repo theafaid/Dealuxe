@@ -42,4 +42,16 @@ abstract class TestCase extends BaseTestCase
             ]); 
         }
     }
+
+    public function generateProductThenToCart(){
+        $product = create('App\Product');
+        $this->toCart($product);
+    }
+
+    public function storeCoupon($coupon = null){
+        return $this->post(route('coupon.store'),
+        [
+            'coupon' => $coupon ? $coupon->code : null
+        ]);
+    }
 }

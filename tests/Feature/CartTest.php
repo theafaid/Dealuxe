@@ -7,8 +7,10 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class CartTest extends TestCase
 {
     use RefreshDatabase;
+
     protected function setUp(){
         parent::setUp();
+
         if($userId = auth()->id()){
             \Cart::session($userId)->clear();
         }
@@ -33,19 +35,18 @@ class CartTest extends TestCase
     function an_authenticated_user_can_store_product_in_his_cart(){
         $this->signIn();
 
-        $product1 = create('App\Product');
-        $product2 = create('App\Product');
+        $products = create('App\Product', [], 2);
 
-        $this->addProductToCart($product1)
-            ->assertSessionHas('success', $product1->name . " " . __('front.added_to_your_cart'));
+        $this->addProductToCart($products[0])
+            ->assertSessionHas('success', $products[0]->name . " " . __('front.added_to_your_cart'));
 
         $cartItems = auth()->user()->cartItems();
 
         $this->assertCount(1, $cartItems);
         $this->assertEquals(1, $cartItems->count());
 
-        $this->addProductToCart($product2)
-            ->assertSessionHas('success', $product2->name . " " . __('front.added_to_your_cart'));
+        $this->addProductToCart($products[1])
+            ->assertSessionHas('success', $products[1]->name . " " . __('front.added_to_your_cart'));
 
         $cartItems = auth()->user()->cartItems();
 
@@ -65,12 +66,10 @@ class CartTest extends TestCase
     /** @test */
     function an_authenticated_user_can_browse_his_cart(){
         $this->signIn();
-        $product1 = create('App\Product');
-        $product2 = create('App\Product');
-        $product3 = create('App\Product');
-        $product4 = create('App\Product');
 
-        $this->toCart([$product1, $product2]);
+        $products = create('App\Product', [], 4);
+
+        $this->toCart([$products[0], $products[1]]);
 
         $cartItems = auth()->user()->cartItems();
 
@@ -80,7 +79,7 @@ class CartTest extends TestCase
             ->assertStatus(200)
             ->assertSee($cartItems->random()->name);
 
-        $this->toCart([$product3, $product4]);
+        $this->toCart([$products[2], $products[3]]);
 
         $cartItems = auth()->user()->cartItems();
 
@@ -95,10 +94,9 @@ class CartTest extends TestCase
     function an_authenticated_user_can_clear_his_cart(){
         $this->signIn();
 
-        $product1 = create('App\Product');
-        $product2 = create('App\Product');
+        $products = create('App\Product', [], 2);
 
-        $this->toCart([$product1, $product2]);
+        $this->toCart([$products[0], $products[1]]);
 
         $this->assertEquals(2, auth()->user()->cartItems()->count());
 
