@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/checkout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="208" column="126" selection-start-line="208" selection-start-column="126" selection-end-line="208" selection-end-column="126" />
+            <state relative-caret-position="286">
+              <caret line="203" column="104" selection-start-line="203" selection-start-column="94" selection-end-line="203" selection-end-column="104" />
               <folding>
                 <element signature="e#9857#9880#0#HTML" expanded="true" />
                 <element signature="e#10287#10310#0#HTML" expanded="true" />
@@ -72,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+            <state relative-caret-position="350">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -449,12 +449,12 @@
       <workItem from="1546341606617" duration="97000" />
       <workItem from="1546367989808" duration="79000" />
       <workItem from="1546368069834" duration="1119000" />
-      <workItem from="1546428201492" duration="22821000" />
+      <workItem from="1546428201492" duration="23270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124406000" />
+    <option name="totallyTimeSpent" value="124855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1280" height="1024" extended-state="6" />
@@ -842,8 +842,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/checkout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="208" column="126" selection-start-line="208" selection-start-column="126" selection-end-line="208" selection-end-column="126" />
+        <state relative-caret-position="286">
+          <caret line="203" column="104" selection-start-line="203" selection-start-column="94" selection-end-line="203" selection-end-column="104" />
           <folding>
             <element signature="e#9857#9880#0#HTML" expanded="true" />
             <element signature="e#10287#10310#0#HTML" expanded="true" />
@@ -853,8 +853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+        <state relative-caret-position="350">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>

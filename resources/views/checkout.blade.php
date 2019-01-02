@@ -200,6 +200,9 @@
 
 
                                         @if($coupon != null)
+
+                                            <h4>{{__('front.total_before_discount')}} <span>{{$cartTotal}}</span></h4>
+
                                             <div>
                                                 <form style="display: inline" action="{{route('coupon.remove')}}" method="POST">
                                                     @csrf

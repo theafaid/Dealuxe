@@ -23,7 +23,6 @@ class CheckoutController extends Controller
         $cartTotal = $user->cartTotal(false, false);
 
         // discount must be 100% if it was bigger than the cart grand total
-
         if($coupon = session()->get('coupon')){
             $discount = $coupon['discount'] >= $cartTotal ? $cartTotal : $coupon['discount'];
         }else{
@@ -34,7 +33,7 @@ class CheckoutController extends Controller
 
         return view('checkout', [
             'cartItems'  => $user->cartItems(),
-            'cartTotal'  => $cartTotal,
+            'cartTotal'  => presentPrice($cartTotal),
             'discount'   => "-".presentPrice($discount),
             'coupon'     => $coupon,
             'grandTotal' => $grandTotal
