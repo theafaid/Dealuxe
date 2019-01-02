@@ -199,19 +199,17 @@
                                         </ul><br>
 
 
-                                        @if($coupon = session('coupon'))
+                                        @if($coupon != null)
                                             <div>
                                                 <form style="display: inline" action="{{route('coupon.remove')}}" method="POST">
                                                     @csrf
                                                     {{method_field('DELETE')}}
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-close"></i></button>
                                                 </form>
-                                                <h4 style="display: inline">{{__('front.coupon')}} [{{$coupon['code']}}]<span>-{{presentPrice($coupon['discount'])}}</span></h4>
+                                                <h4 style="display: inline">{{__('front.coupon')}} [{{$coupon['code']}}]<span>{{$discount}}</span></h4>
                                             </div>
-                                            <h4>{{__('front.grand_total')}} <span>{{presentPrice($cartTotal - $coupon['discount'])}}</span></h4>
-                                        @else
-                                            <h4>{{__('front.grand_total')}} <span>{{presentPrice($cartTotal)}}</span></h4>
                                         @endif
+                                        <h4>{{__('front.grand_total')}} <span>{{$grandTotal}}</span></h4>
 
 
                                     </div>

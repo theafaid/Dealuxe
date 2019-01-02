@@ -17,11 +17,27 @@ class CheckoutController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(){
+
         $user = auth()->user();
 
+        $cartTotal = $user->cartTotal(false, false);
+
+        // discount must be 100% if it was bigger than the cart grand total
+
+        if($coupon = session()->get('coupon')){
+            $discount = $coupon['discount'] >= $cartTotal ? $cartTotal : $coupon['discount'];
+        }else{
+            $discount = 0;
+        }
+
+        $grandTotal = presentPrice($cartTotal - $discount);
+
         return view('checkout', [
-            'cartItems' => $user->cartItems(),
-            'cartTotal' => $user->cartTotal(false, false)
+            'cartItems'  => $user->cartItems(),
+            'cartTotal'  => $cartTotal,
+            'discount'   => "-".presentPrice($discount),
+            'coupon'     => $coupon,
+            'grandTotal' => $grandTotal
         ]);
     }
 
