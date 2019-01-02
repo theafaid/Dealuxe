@@ -13,24 +13,23 @@ class ShopController extends Controller
      * Display a listing of the Shop Products.
      * @return \Illuminate\Http\Response
      */
-    public function index($categorySlug = null)
+    public function index()
     {
+        $categoryName = '';
 
-
-        $category = $categorySlug ? Category::whereSlug($categorySlug)->firstOrFail() : null;
-
-
-        if($category){
-            $products = $category->products()->paginate();
+        if($categorySlug = request('category')){
+            $category =  Category::whereSlug($categorySlug)->firstOrFail();
+            $categoryName = $category->name;
+            $products = $category->products()->latest()->paginate();
         }else{
             $products = Product::inRandomOrder()->paginate();
         }
 
 
         return view('shop', [
-
             'products' => $products,
-            'categories' => \App\Category::all()
+            'categories' => \App\Category::all(),
+            'categoryName' => $categoryName
         ]);
     }
 

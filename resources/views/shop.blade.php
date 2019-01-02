@@ -24,7 +24,8 @@
                 <div class="row">
 
                     <div class="col-xl-9 col-lg-8 col-12 order-1 order-lg-2">
-
+                        <h1>{{$categoryName != null ? $categoryName : __('front.our_products')}}</h1>
+                        <hr>
                         <!-- Shop Toolbar Start -->
                         <div class="row">
                             <div class="col">
@@ -58,7 +59,7 @@
                         <div class="row mt-20">
 
                             <div class="col">
-                                {{$products->links()}}
+                                {{$products->appends(request()->query())->links()}}
                             </div>
                         </div>
 
@@ -80,6 +81,7 @@
                         <div class="sidebar">
                             <h4 class="sidebar-title">{{__('front.categories')}}</h4>
                             <ul class="sidebar-list">
+                                <li><a href="{{route('shop.index')}}">{{ __('front.all_categories')}}</a></li>
                                 @foreach($categories as $category)
                                     <li><a href="{{route('shop.index', ['category' => $category->slug])}}">{{ $category->name }}</a></li>
                                 @endforeach

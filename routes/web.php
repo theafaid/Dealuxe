@@ -2,7 +2,7 @@
 
 Route::get('/', 'WelcomePageController@index')->name('welcome');
 
-Route::get('/shop/{category?}', 'ShopController@index')->name('shop.index');
+Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
 Route::get('/cart', 'CartController@index')->name('cart.index');

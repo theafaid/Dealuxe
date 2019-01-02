@@ -9,6 +9,10 @@ return [
     'your_cart_is_empty' => 'Your Cart Is Empty',
     'total' => 'Total',
 
+    // shop page
+    'all_categories' => 'All Categories',
+    'our_products' => 'Our Products',
+
     // cart page
     'shopping_cart_has_been_emptied' => 'Your Shopping cart has been cleared!',
     'you_may_like' => 'You may also like',
