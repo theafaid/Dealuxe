@@ -22,8 +22,8 @@ class CheckoutController extends Controller
 
         $cartTotal = $user->cartTotal(false, false);
 
-        // discount must be 100% if it was bigger than the cart grand total
         if($coupon = session()->get('coupon')){
+            // discount must be 100% if it was bigger than the cart grand total
             $discount = $coupon['discount'] >= $cartTotal ? $cartTotal : $coupon['discount'];
         }else{
             $discount = 0;
@@ -43,7 +43,7 @@ class CheckoutController extends Controller
     public function store(CheckoutRequest $request){
 
         $content = $request->user() ->cartItems()->map(function($item){
-            return "product:" . $item['attributes']['product']['slug'] . " | qnt: ". $item['quantity'];
+            return "product:" . $item['attributes']['product']['slug'] . " | qnt: ". $item['quantity'] . "<br>";
         })->values()->toJson();
 
         try{

@@ -32,19 +32,30 @@ class CheckoutRequest extends FormRequest
     public function persist($content){
 
         $user = $this->user();
-        
+
+        $cartTotal = $user->cartTotal($toDollar = false, $dollarSign = false);
+
         $customer = Customer::create([
             'email' => $user->email,
             'source' => $this->stripeToken
         ]);
 
+        if($coupon = session('coupon')){
+            // discount must be 100% if it was bigger than the cart grand total
+            $discount = $coupon['discount'] >= $cartTotal ? $cartTotal : $coupon['discount'];
+        }else{
+            $discount = 0;
+        }
+
         Charge::create([
             'customer' => $customer->id,
-            'amount' => substr($user->cartTotal(), 1) * 100,
+            'amount' => $cartTotal - $discount,
             'currency' => 'usd',
             'metadata' => [
                 'content' => $content,
-                'quantity' => $user->cartItemsCount()
+                'quantity' => $user->cartItemsCount(),
+                'coupon' => $coupon ?: "no coupon",
+                'discount' => $discount
             ],
         ]);
 
