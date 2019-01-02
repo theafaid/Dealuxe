@@ -96,7 +96,6 @@
                 <shop-page inline-template>
                     <!-- Product Slider 4 Column Start-->
                     <div class="product-slider product-slider-4 section">
-
                         @foreach($products as $product)
                             <product
                                     inline-template

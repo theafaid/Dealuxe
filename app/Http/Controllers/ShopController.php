@@ -121,15 +121,17 @@ class ShopController extends Controller
      */
     protected function sortProducts($products, $sortBy = null){
 
-        $allowedFilters = ['price_low_high', 'price_high_low'];
+        $allowedFilters = ['price_low_high', 'price_high_low', 'featured'];
 
         if(is_null($sortBy) || !in_array($sortBy, $allowedFilters)) return $products;
 
 
         if($sortBy == 'price_low_high'){
             $products = $products->orderBy('price', 'asc');
-        }elseif($sortBy == 'price_high_low'){
+        }elseif($sortBy == 'price_high_low') {
             $products = $products->orderBy('price', 'desc');
+        }elseif($sortBy == 'featured'){
+            $products = $products->where('featured', true);
         }else{
             return $products;
         }

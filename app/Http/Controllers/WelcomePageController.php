@@ -12,8 +12,17 @@ class WelcomePageController extends Controller
      */
     public function index(){
 
-        $products = Product::latest()->take(8)->get();
 
-        return view('welcome', ['products' => $products]);
+        if(count($featured = Product::where('featured', true)->take(8)->get()) >= 8){
+            $products = $featured;
+        }else{
+            $products = Product::latest()->take(8)->get();
+        }
+
+
+        return view('welcome',
+            [
+                'products' => $products
+            ]);
     }
 }

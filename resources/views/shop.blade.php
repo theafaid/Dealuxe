@@ -24,7 +24,17 @@
                 <div class="row">
 
                     <div class="col-xl-9 col-lg-8 col-12 order-1 order-lg-2">
-                        <h1>{{$categoryName != null ? $categoryName : __('front.our_products')}}</h1>
+                        <h1>
+                            @if($categoryName != null)
+                                $categoryName
+                            @else
+                                @if(request('sortBy') == 'featured')
+                                    {{__('front.featured_products')}}
+                                @else
+                                    {{__('front.our_products')}}
+                                @endif
+                            @endif
+                        </h1>
                         <hr>
                         <!-- Shop Toolbar Start -->
                         <div class="row">
@@ -39,6 +49,7 @@
                                             <a href="{{route('shop.index', ['category' => request('category'), 'sortBy' => 'price_high_low'])}}">
                                                 {{__('front.price_high_low')}}
                                             </a>
+                                            |
                                             <a href="{{route('shop.index', ['category' => request('category'), 'sortBy' => 'price_low_high'])}}">
                                                 {{__('front.price_low_high')}}
                                             </a>
@@ -97,6 +108,7 @@
                             <h4 class="sidebar-title">{{__('front.categories')}}</h4>
                             <ul class="sidebar-list">
                                 <li><a href="{{route('shop.index')}}">{{ __('front.all_categories')}}</a></li>
+                                <li><a href="{{route('shop.index', ['sortBy' => 'featured'])}}">{{ __('front.featured')}}</a></li>
                                 @foreach($categories as $category)
                                     <li><a href="{{route('shop.index', ['category' => $category->slug])}}">{{ $category->name }}</a></li>
                                 @endforeach
