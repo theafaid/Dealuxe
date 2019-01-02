@@ -20,18 +20,21 @@ class ShopController extends Controller
         if($categorySlug = request('category')){
             $category =  Category::whereSlug($categorySlug)->firstOrFail();
             $categoryName = $category->name;
-            $products = $category->products()->latest()->paginate();
+            $products = $category->products()->latest();
         }else{
-            $products = Product::inRandomOrder()->paginate();
+            $products = Product::latest()->take(15);
         }
+
+        $productsAfterSorting = $this->sortProducts($products, request('sortBy'));
 
 
         return view('shop', [
-            'products' => $products,
+            'products' => $productsAfterSorting->paginate(),
             'categories' => \App\Category::all(),
             'categoryName' => $categoryName
         ]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -108,5 +111,29 @@ class ShopController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Sort products by request
+     * @param $products
+     * @param null $sortBy
+     * @return mixed
+     */
+    protected function sortProducts($products, $sortBy = null){
+
+        $allowedFilters = ['price_low_high', 'price_high_low'];
+
+        if(is_null($sortBy) || !in_array($sortBy, $allowedFilters)) return $products;
+
+
+        if($sortBy == 'price_low_high'){
+            $products = $products->orderBy('price', 'asc');
+        }elseif($sortBy == 'price_high_low'){
+            $products = $products->orderBy('price', 'desc');
+        }else{
+            return $products;
+        }
+
+        return $products;
     }
 }

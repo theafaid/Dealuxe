@@ -35,17 +35,32 @@
                                         <button class="list" data-mode="list"><span>list</span></button>
                                     </div>
                                     <div class="product-showing mr-auto">
-                                        <p>Showing 9 of 72</p>
+                                        <p>
+                                            <a href="{{route('shop.index', ['category' => request('category'), 'sortBy' => 'price_high_low'])}}">
+                                                {{__('front.price_high_low')}}
+                                            </a>
+                                            <a href="{{route('shop.index', ['category' => request('category'), 'sortBy' => 'price_low_high'])}}">
+                                                {{__('front.price_low_high')}}
+                                            </a>
+                                        </p>
                                     </div>
                                     <div class="product-short">
-                                        <p>Short by</p>
+                                        <p>Sort by</p>
                                         <select class="nice-select">
                                             <option value="trending">Trending items</option>
                                             <option value="sales">Best sellers</option>
                                             <option value="rating">Best rated</option>
                                             <option value="date">Newest items</option>
-                                            <option value="price-asc">Price: low to high</option>
-                                            <option value="price-desc">Price: high to low</option>
+                                            <option value="price-asc">
+                                                <a href="{{route('shop.index', ['sortBy' => 'price_low_high'])}}">
+                                                    {{__('front.price_low_high')}}
+                                                </a>
+                                            </option>
+                                            <option value="price-desc">
+                                                <a href="{{route('shop.index', ['sortBy' => 'price_high_low'])}}">
+                                                    {{__('front.price_high_low')}}
+                                                </a>
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
