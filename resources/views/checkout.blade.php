@@ -204,6 +204,27 @@
 
                                 </div>
 
+                                <!-- Store a coupon -->
+                                <div class="col-12 mb-30">
+                                    <h4 class="checkout-title">{{__('front.having_a_coupon')}}</h4>
+                                    @if($successMsg = session('success'))
+                                        <div class="alert alert-success">
+                                            {{$successMsg}}
+                                        </div>
+                                    @endif
+                                    @if(count($errors))
+                                        <div class="alert alert-danger">
+                                            {{$errors->first('coupon')}}
+                                        </div>
+                                    @endif
+
+                                    <form method="post" action="{{route('coupon.store')}}">
+                                        @csrf
+                                        <input type="text" name="coupon" class="form-control" placeholder="Coupon" required>
+                                        <input class="place-order btn btn-sm" type="submit" value="add coupon">
+                                    </form>
+                                </div>
+
                                 <!-- Payment Method -->
                                 <div class="col-12 mb-30">
                                     <checkout-form 
@@ -211,22 +232,6 @@
                                     stripe-key={{ config('services.stripe.key') }}
                                     thankyou-route={{ route('thankyou') }}>
                                     </checkout-form>
-
-                                    {{--<form action="{{route('checkout.charge')}}" method="POST" id="payment-form">--}}
-                                    {{--@csrf--}}
-                                    {{--<div class="form-row">--}}
-                                    {{--<label for="card-element">--}}
-                                    {{--Credit or debit card--}}
-                                    {{--</label>--}}
-                                    {{--<div id="card-element">--}}
-                                    {{--<!-- A Stripe Element will be inserted here. -->--}}
-                                    {{--</div>--}}
-
-                                    {{--<!-- Used to display form errors. -->--}}
-                                    {{--<div id="card-errors" role="alert"></div>--}}
-                                    {{--</div>--}}
-                                    {{----}}
-                                    {{--</form>--}}
                                 </div>
 
                             </div>

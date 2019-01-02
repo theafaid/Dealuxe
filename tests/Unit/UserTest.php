@@ -51,16 +51,28 @@ class UserTest extends TestCase
 
         $this->signIn();
 
-        $cartTotal= auth()->user()->cartTotal();
+        $user = auth()->user();
+
+        $cartTotal= $user->cartTotal();
 
         $this->assertEquals("$0", $cartTotal);
 
         $this->toCart($product);
 
-        $cartTotal= auth()->user()->cartTotal();
+        $cartTotal= $user->cartTotal();
 
         $this->assertEquals("$".($product->price/100), $cartTotal);
+
+        $cartTotal = $user->cartTotal($toDollar = false, $dollerSign = false);
+
+        $this->assertEquals(($product->price), $cartTotal);
+
+        $cartTotal = $user->cartTotal($toDollar = true, $dollerSign = false);
+
+        $this->assertEquals(($product->price/100), $cartTotal);
+
     }
+
 
     /** @test */
     function it_has_many_wishlist(){

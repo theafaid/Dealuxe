@@ -18,6 +18,10 @@ Route::delete('/wishlist/remove', 'WishlistController@remove')->name('wishlist.r
 
 Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
 Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
+
+Route::post('/coupon', 'CouponsController@store')->name('coupon.store');
+Route::delete('/coupon', 'CouponsController@destroy')->name('coupons.remove');
+
 Route::get('/thankyou', 'ConfirmationController@index')->name('thankyou');
 Route::view('/product', 'product');
 Auth::routes();

@@ -50,5 +50,7 @@ return [
     'cart_total' => 'Cart Total',
     'product' => 'Product',
     'grand_total' => 'Grand Total',
+    'having_a_coupon' => 'Having a coupon ?',
+    'coupon_applied_successfully' => 'Coupon applied successfully :)',
 
 ];

@@ -35,7 +35,7 @@ if(!function_exists('setActiveCategory')){
             return $output;
         }
 
-        if($slug == 'featured' && ! $category && $sortBy){
+        if($slug == 'featured' && ! $category && $sortBy == 'featured'){
             return $output;
         }
 

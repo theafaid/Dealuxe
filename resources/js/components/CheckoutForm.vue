@@ -14,7 +14,7 @@
         />
         <button
                 v-if="showPayButton"
-                class='pay-with-stripe place-order btn btn-lg'
+                class='pay-with-stripe place-order btn btn-sm'
                 @click='pay'
                 :disabled='!complete'>Pay with credit card
         </button>

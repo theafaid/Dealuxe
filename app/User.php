@@ -40,8 +40,10 @@ class User extends Authenticatable
         return Cart::session(auth()->id())->getContent()->count();
     }
 
-    public function cartTotal(){
-        return "$" . (Cart::session(auth()->id())->getTotal() / 100);
+    public function cartTotal($toDollar = true, $dollarSign = true){
+        $dollarSign = $dollarSign ? "$" : null;
+        $total = Cart::session($this->id)->getTotal();
+        return $dollarSign . ($toDollar ? $total/100 : $total);
     }
 
     /**
