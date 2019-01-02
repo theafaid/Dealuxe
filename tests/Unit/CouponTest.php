@@ -34,7 +34,15 @@ class CouponTest extends TestCase
         $coupon = create('App\Coupon', ['type' => 'fixed', 'value' => 1000]);
 
         $this->assertEquals(Coupon::findByCode($coupon->code)->id, $coupon->id);
+    }
 
+    /** @test */
+    function can_be_added_to_a_session(){
+        $coupon = create('App\Coupon');
+        $coupon->addToSession($cartTotal = 100);
+
+        $this->assertTrue(session()->has('coupon'));
+        $this->assertEquals(session('coupon')['discount'], $coupon->discount());
     }
 }
 

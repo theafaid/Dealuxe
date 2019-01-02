@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Coupon;
+use App\Http\Requests\StoreCouponRequest;
 
 class CouponsController extends Controller
 {
@@ -12,26 +13,13 @@ class CouponsController extends Controller
         return $this->middleware('auth');
     }
 
-    public function store(){
+    public function store(StoreCouponRequest $request){
 
-        request()->validate(['coupon' => 'required|string|exists:coupons,code']);
 
         $coupon = Coupon::findByCode(request('coupon'));
 
+        return $request->save($coupon);
 
-        $cartTotal = auth()->user()->cartTotal(false, false);
-
-        session()->put('coupon', [
-            'name' => $coupon->code,
-            'discount' => $coupon->discount($cartTotal),
-            'value' => 'cent'
-        ]);
-
-        return session('coupon');
-
-
-        return redirect(route('checkout.index'))
-            ->with('success', __('front.coupon_applied_successfully'));
     }
 
     public function destroy(){

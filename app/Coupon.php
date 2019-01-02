@@ -19,4 +19,12 @@ class Coupon extends Model
 
         return ($total * $this->value) / 100;
     }
+
+    public function addToSession($cartTotal){
+        return session()->put('coupon', [
+            'name' => $this->code,
+            'discount' => $this->discount($cartTotal),
+            'value' => 'cent'
+        ]);
+    }
 }
