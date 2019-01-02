@@ -2692,6 +2692,8 @@ input::placeholder, textarea::placeholder {
 .sidebar-list li a {
     display: block;
     line-height: 20px; }
+.sidebar-list li .active{
+    color: #d0a97e}
 
 /*-- Post List --*/
 .sidebar-post {

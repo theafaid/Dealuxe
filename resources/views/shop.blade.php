@@ -107,10 +107,10 @@
                         <div class="sidebar">
                             <h4 class="sidebar-title">{{__('front.categories')}}</h4>
                             <ul class="sidebar-list">
-                                <li><a href="{{route('shop.index')}}">{{ __('front.all_categories')}}</a></li>
-                                <li><a href="{{route('shop.index', ['sortBy' => 'featured'])}}">{{ __('front.featured')}}</a></li>
+                                <li><a class="{{setActiveCategory('all_categories')}}" href="{{route('shop.index')}}">{{ __('front.all_categories')}}</a></li>
+                                <li><a class="{{setActiveCategory('featured')}}" href="{{route('shop.index', ['sortBy' => 'featured'])}}">{{ __('front.featured')}}</a></li>
                                 @foreach($categories as $category)
-                                    <li><a href="{{route('shop.index', ['category' => $category->slug])}}">{{ $category->name }}</a></li>
+                                    <li><a class="{{setActiveCategory($category->slug)}}" href="{{route('shop.index', ['category' => $category->slug])}}">{{ $category->name }}</a></li>
                                 @endforeach
                             </ul>
                         </div>
