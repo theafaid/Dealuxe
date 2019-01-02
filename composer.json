@@ -14,7 +14,8 @@
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
         "spatie/laravel-translatable": "^3.1",
-        "stripe/stripe-php": "^6.27"
+        "stripe/stripe-php": "^6.27",
+        "tcg/voyager": "^1.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
