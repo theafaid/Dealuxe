@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->text('description');
-            $table->string('details');
+            $table->text('details');
             $table->integer('price');
             $table->boolean('featured')->default(false);
             $table->timestamps();

@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="body">
                                         <p>
-                                            {{$product->description}}
+                                            {!! $product->description !!}
                                         </p>
 
                                         <form method="POST" action="{{route('cart.store')}}">
@@ -126,7 +126,7 @@
                             <p>{{$product->description}}</p>
                         </div>
                         <div class="tab-pane" id="specification">
-                            {{$product->details}}
+                            {!! $product->details !!}
                             {{--<ul class="specification">--}}
                             {{--<li>We provide the best Beard oil all over the world</li>--}}
                             {{--<li>We are the worldd best store for Beard Oil</li>--}}
