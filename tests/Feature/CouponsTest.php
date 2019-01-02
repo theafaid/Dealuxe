@@ -64,4 +64,20 @@ class CouponsTest extends TestCase
             ->assertSessionHas('success');
     }
 
+    /** @test */
+    function an_authenticated_user_can_remove_a_coupon(){
+        $this->signIn()->generateProductThenToCart();
+        $coupon = create('App\Coupon');
+
+        $this->storeCoupon($coupon);
+
+        $this->assertTrue(session()->has('coupon'));
+
+        $this->delete(route('coupon.remove'))
+            ->assertRedirect();
+
+        $this->assertFalse(session()->has('coupon'));
+
+    }
+
 }

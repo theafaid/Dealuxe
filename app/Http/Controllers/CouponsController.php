@@ -23,6 +23,7 @@ class CouponsController extends Controller
     }
 
     public function destroy(){
-
+        session()->forget('coupon');
+        return back();
     }
 }

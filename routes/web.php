@@ -20,7 +20,7 @@ Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
 Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 
 Route::post('/coupon', 'CouponsController@store')->name('coupon.store');
-Route::delete('/coupon', 'CouponsController@destroy')->name('coupons.remove');
+Route::delete('/coupon', 'CouponsController@destroy')->name('coupon.remove');
 
 Route::get('/thankyou', 'ConfirmationController@index')->name('thankyou');
 Route::view('/product', 'product');
