@@ -22,7 +22,7 @@ class Coupon extends Model
 
     public function addToSession($cartTotal){
         return session()->put('coupon', [
-            'name' => $this->code,
+            'code' => $this->code,
             'discount' => $this->discount($cartTotal),
             'value' => 'cent'
         ]);

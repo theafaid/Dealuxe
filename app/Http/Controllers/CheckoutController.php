@@ -21,7 +21,7 @@ class CheckoutController extends Controller
 
         return view('checkout', [
             'cartItems' => $user->cartItems(),
-            'cartTotal' => $user->cartTotal()
+            'cartTotal' => $user->cartTotal(false, false)
         ]);
     }
 

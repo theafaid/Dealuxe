@@ -196,34 +196,43 @@
                                             @foreach($cartItems as $item)
                                                 <li>{{$item->name}} X {{$item->quantity}} <span>{{presentPrice($item->price)}}</span></li>
                                             @endforeach
-                                        </ul>
+                                        </ul><br>
 
-                                        <h4>{{__('front.grand_total')}} <span>{{$cartTotal}}</span></h4>
+
+                                        @if($coupon = session('coupon'))
+                                            <h4>{{__('front.coupon')}} [{{$coupon['code']}}]<span>-{{presentPrice($coupon['discount'])}}</span></h4>
+                                            <h4>{{__('front.grand_total')}} <span>{{presentPrice($cartTotal - $coupon['discount'])}}</span></h4>
+                                        @else
+                                            <h4>{{__('front.grand_total')}} <span>{{{presentPrice($cartTotal)}}}}</span></h4>
+                                        @endif
+
 
                                     </div>
 
                                 </div>
 
-                                <!-- Store a coupon -->
-                                <div class="col-12 mb-30">
-                                    <h4 class="checkout-title">{{__('front.having_a_coupon')}}</h4>
-                                    @if($successMsg = session('success'))
-                                        <div class="alert alert-success">
-                                            {{$successMsg}}
-                                        </div>
-                                    @endif
-                                    @if(count($errors))
-                                        <div class="alert alert-danger">
-                                            {{$errors->first('coupon')}}
-                                        </div>
-                                    @endif
+                                @if(count($cartItems))
+                                    <!-- Store a coupon -->
+                                    <div class="col-12 mb-30">
+                                        <h4 class="checkout-title">{{__('front.having_a_coupon')}}</h4>
+                                        @if($successMsg = session('success'))
+                                            <div class="alert alert-success">
+                                                {{$successMsg}}
+                                            </div>
+                                        @endif
+                                        @if(count($errors))
+                                            <div class="alert alert-danger">
+                                                {{$errors->first('coupon')}}
+                                            </div>
+                                        @endif
 
-                                    <form method="post" action="{{route('coupon.store')}}">
-                                        @csrf
-                                        <input type="text" name="coupon" class="form-control" placeholder="Coupon" required>
-                                        <input class="place-order btn btn-sm" type="submit" value="add coupon">
-                                    </form>
-                                </div>
+                                        <form method="post" action="{{route('coupon.store')}}">
+                                            @csrf
+                                            <input type="text" name="coupon" class="form-control" placeholder="{{__('front.coupon_code')}}" required>
+                                            <input class="place-order btn btn-sm" type="submit" value="add coupon">
+                                        </form>
+                                    </div>
+                                @endif
 
                                 <!-- Payment Method -->
                                 <div class="col-12 mb-30">
