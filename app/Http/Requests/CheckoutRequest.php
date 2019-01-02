@@ -62,5 +62,7 @@ class CheckoutRequest extends FormRequest
         session()->flash('payment_succeded', 'success');
 
         Cart::session($user->id)->clear();
+
+        session()->forget('coupon');
     }
 }
