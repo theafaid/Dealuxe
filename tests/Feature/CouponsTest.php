@@ -16,7 +16,6 @@ class CouponsTest extends TestCase
 
         $coupon = create('App\Coupon', ['type' => 'fixed','value' => 20000]);
 
-
         $this->storeCoupon($coupon)->assertRedirect(route('login'));
     }
 

@@ -19,25 +19,32 @@ class CheckoutController extends Controller
     public function index(){
 
         $user = auth()->user();
-
         $cartTotal = $user->cartTotal(false, false);
+        $discountData = $this->checkCoupon($cartTotal);
+        $grandTotal = presentPrice($cartTotal - $discountData['discount']);
 
+        return view('checkout', [
+            'cartItems'  => $user->cartItems(),
+            'cartTotal'  => presentPrice($cartTotal),
+            'discount'   => "-".presentPrice($discountData['discount']),
+            'coupon'     => $discountData['coupon'],
+            'grandTotal' => $grandTotal
+        ]);
+    }
+
+    /**
+     * Check for a coupon request then return the discount
+     * @param $cartTotal
+     * @return array
+     */
+    public function checkCoupon($cartTotal){
         if($coupon = session()->get('coupon')){
             // discount must be 100% if it was bigger than the cart grand total
             $discount = $coupon['discount'] >= $cartTotal ? $cartTotal : $coupon['discount'];
         }else{
             $discount = 0;
         }
-
-        $grandTotal = presentPrice($cartTotal - $discount);
-
-        return view('checkout', [
-            'cartItems'  => $user->cartItems(),
-            'cartTotal'  => presentPrice($cartTotal),
-            'discount'   => "-".presentPrice($discount),
-            'coupon'     => $coupon,
-            'grandTotal' => $grandTotal
-        ]);
+        return ['discount' => $discount, 'coupon' => $coupon];
     }
 
     public function store(CheckoutRequest $request){

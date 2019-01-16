@@ -13,8 +13,12 @@ class CouponsController extends Controller
         return $this->middleware('auth');
     }
 
+    /**
+     * Store a coupon
+     * @param StoreCouponRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(StoreCouponRequest $request){
-
 
         $coupon = Coupon::findByCode(request('coupon'));
 
@@ -22,6 +26,9 @@ class CouponsController extends Controller
 
     }
 
+    /**
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function destroy(){
         session()->forget('coupon');
         return back();
