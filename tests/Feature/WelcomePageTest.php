@@ -16,10 +16,12 @@ class WelcomePageTest extends TestCase
     }
 
     /** @test */
-    function a_user_must_see_some_products_in_welcome_page(){
-        $product = create('App\Product');
+    function a_user_must_see_featured_or_latest_products_in_welcome_page(){
+        $featuredProducts    = create('App\Product', ['featured' => true], 8);
+        $notFeaturedProducts = create('App\Product', ['featured' => false], 8);
 
         $this->get(route('welcome'))
-            ->assertSee($product->name);
+            ->assertSee($featuredProducts->random()->name)
+            ->assertDontSee($notFeaturedProducts->random()->name);
     }
 }
