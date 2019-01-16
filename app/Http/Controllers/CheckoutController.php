@@ -51,6 +51,11 @@ class CheckoutController extends Controller
         return ['discount' => $discount, 'coupon' => $coupon];
     }
 
+    /**
+     * Store a payment
+     * @param CheckoutRequest $request
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     */
     public function store(CheckoutRequest $request){
 
         if(! $request->user()->cartTotal() > 0) {
