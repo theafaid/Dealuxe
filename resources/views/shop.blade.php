@@ -25,14 +25,10 @@
 
                     <div class="col-xl-9 col-lg-8 col-12 order-1 order-lg-2">
                         <h1>
-                            @if($categoryName != null)
-                                $categoryName
+                            @if(request('sortBy') == 'featured')
+                                {{__('front.featured_products')}}
                             @else
-                                @if(request('sortBy') == 'featured')
-                                    {{__('front.featured_products')}}
-                                @else
-                                    {{__('front.our_products')}}
-                                @endif
+                                {{$categoryName}}
                             @endif
                         </h1>
                         <hr>
@@ -78,9 +74,15 @@
                             </div>
                         </div><!-- Shop Toolbar End -->
 
-                        <div class="shop-product-wrap grid row">
-                            @include('layouts.partials._products_list')
-                        </div>
+                        @if(count($products))
+                            <div class="shop-product-wrap grid row">
+                                @include('layouts.partials._products_list')
+                            </div>
+                        @else
+                            <div class="alert alert-danger">
+                                {{__('front.no_products_founded')}}
+                            </div>
+                        @endif
 
                         <div class="row mt-20">
 

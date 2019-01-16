@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Filters\ShopFilters;
 use Cart;
 use App\Product;
 use Illuminate\Http\Request;
@@ -15,26 +15,13 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $categoryName = '';
-
-        if($categorySlug = request('category')){
-            $category =  Category::whereSlug($categorySlug)->firstOrFail();
-            $categoryName = $category->name;
-            $products = $category->products()->latest();
-        }else{
-            $products = Product::latest()->take(15);
-        }
-
-        $productsAfterSorting = $this->sortProducts($products, request('sortBy'));
-
+        $data = $this->getProducts();
 
         return view('shop', [
-            'products' => $productsAfterSorting->paginate(),
-            'categories' => \App\Category::all(),
-            'categoryName' => $categoryName
+            'products' => $data['products']->paginate(),
+            'categoryName' => $data['categoryName']
         ]);
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -114,28 +101,25 @@ class ShopController extends Controller
     }
 
     /**
-     * Sort products by request
-     * @param $products
-     * @param null $sortBy
-     * @return mixed
+     * Filter products then sort it
+     * @return array
      */
-    protected function sortProducts($products, $sortBy = null){
+    protected function getProducts(){
 
-        $allowedFilters = ['price_low_high', 'price_high_low', 'featured'];
-
-        if(is_null($sortBy) || !in_array($sortBy, $allowedFilters)) return $products;
-
-
-        if($sortBy == 'price_low_high'){
-            $products = $products->orderBy('price', 'asc');
-        }elseif($sortBy == 'price_high_low') {
-            $products = $products->orderBy('price', 'desc');
-        }elseif($sortBy == 'featured'){
-            $products = $products->where('featured', true);
+        if($categorySlug = request('category')){
+            $data = ShopFilters::productsByCategory($categorySlug);
+            $categoryName = $data['categoryName'];
+            $products = $data['products'];
         }else{
-            return $products;
+            $categoryName = __('front.our_products');
+            $products = ShopFilters::getRandProducts();
         }
 
-        return $products;
+        $products = ShopFilters::sortProducts($products, request('sortBy'));
+
+        return [
+            'categoryName' => $categoryName,
+            'products' => $products
+        ];
     }
 }

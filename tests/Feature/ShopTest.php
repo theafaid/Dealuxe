@@ -11,8 +11,10 @@ class ShopTest extends TestCase
 
     /** @test */
     function a_user_can_browse_shop_page(){
+        $products = create('App\Product', [], 2);
         $this->get(route('shop.index'))
-            ->assertStatus(200);
+            ->assertStatus(200)
+            ->assertSee($products->random()->name);
     }
 
     /** @test */

@@ -13,7 +13,12 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        view()->composer("*", function($view){
+            $categories = cache()->rememberForever("categories", function(){
+                return \App\Category::all();
+            });
+            return $view->with('categories', $categories);
+        });
     }
 
     /**
