@@ -20,6 +20,10 @@ class CheckoutController extends Controller
 
         $user = auth()->user();
         $cartTotal = $user->cartTotal(false, false);
+        if(! $cartTotal > 0) {
+            return redirect(route('shop.index'));
+        }
+
         $discountData = $this->checkCoupon($cartTotal);
         $grandTotal = presentPrice($cartTotal - $discountData['discount']);
 
@@ -49,7 +53,12 @@ class CheckoutController extends Controller
 
     public function store(CheckoutRequest $request){
 
-        $content = $request->user() ->cartItems()->map(function($item){
+        if(! $request->user()->cartTotal() > 0) {
+            // cart is empty
+            return response(['msg' => __('front.your_cart_is_empty')], 422);
+        }
+
+        $content = $request->user()->cartItems()->map(function($item){
             return "product:" . $item['attributes']['product']['slug'] . " | qnt: ". $item['quantity'] . "<br>";
         })->values()->toJson();
 

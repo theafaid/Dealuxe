@@ -59,8 +59,10 @@
         <div class="mini-cart-footer">
             <h4>{{__('front.total')}}: {{auth()->user()->cartTotal()}}</h4>
             <div class="buttons">
+                @if(count(auth()->user()->cartItems()))
                 <a href="{{route('cart.index')}}">{{__('front.view_cart')}}</a>
-                <a href="checkout.html">Checkout</a>
+                    <a href="{{route('checkout.index')}}">{{__('front.checkout')}}</a>
+                @endif
             </div>
         </div>
     </div>

@@ -47,11 +47,17 @@ return [
     'register' => 'Register',
 
     // checkout
+    'checkout' => 'Checkout',
     'cart_total' => 'Cart Total',
     'product' => 'Product',
     'grand_total' => 'Grand Total',
     'having_a_coupon' => 'Having a coupon ?',
     'coupon' => 'Coupon',
     'coupon_applied_successfully' => 'Coupon applied successfully :)',
+
+    // sidebar
+    'categories' => 'Categories',
+    'featured' => 'Featured',
+    'no_products_founded' => 'Sorry! We don\'t have any products'
 
 ];

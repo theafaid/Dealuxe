@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('header')
+<script src="https://js.stripe.com/v3/"></script>
+@endpush
+
 @section('content')
     <!-- Page Banner Section Start -->
     <div class="page-banner-section section">

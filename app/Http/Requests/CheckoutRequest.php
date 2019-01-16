@@ -54,12 +54,12 @@ class CheckoutRequest extends FormRequest
             'metadata' => [
                 'content' => $content,
                 'quantity' => $user->cartItemsCount(),
-                'coupon' => $coupon ?: "no coupon",
+                'coupon' => $coupon['code'] ?: "no coupon",
                 'discount' => $discount
             ],
         ]);
 
-        session()->flash('payment_succeded', 'success');
+        session()->flash('payment_succeeded', 'success');
 
         Cart::session($user->id)->clear();
 
