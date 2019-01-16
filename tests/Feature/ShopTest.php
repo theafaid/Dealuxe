@@ -19,46 +19,38 @@ class ShopTest extends TestCase
 
     /** @test */
     function a_user_must_see_some_products_in_shop_page_and_must_see_all_categories(){
-        $category1 = create('App\Category');
-        $category2 = create('App\Category');
-        $product1 = create('App\Product');
-        $product2 = create('App\Product');
+        $categories = create('App\Category', [], 2);
+        $products   = create('App\Product', [], 2);
 
         $this->get(route('shop.index'))
             ->assertStatus(200)
-            ->assertSee($product1->name)
-            ->assertSee($product2->name)
-            ->assertSee($category1->name)
-            ->assertSee($category2->name);
+            ->assertSee($products[0]->name)
+            ->assertSee($products[1]->name)
+            ->assertSee($categories[0]->name)
+            ->assertSee($categories[1]->name);
     }
 
     /** @test */
     function a_user_can_filter_products_by_category(){
         $category = create('App\Category');
+        $products   = create('App\Product', [], 3);
 
-        $product1  = create('App\Product');
-        $product2  = create('App\Product');
-        $product3  = create('App\Product');
-
-        $product1->categories()->attach($category->id);
-        $product2->categories()->attach($category->id);
+        $products[0]->categories()->attach($category->id);
+        $products[1]->categories()->attach($category->id);
 
         $this->get(route('shop.index', ['category' => $category->slug]))
             ->assertStatus(200)
             ->assertSee($category->name)
-            ->assertSee($product1->name)
-            ->assertSee($product2->name)
-            ->assertDontSee($product3->name);
+            ->assertSee($products[0]->name)
+            ->assertSee($products[1]->name)
+            ->assertDontSee($products[2]->name);
 
 
-        $product3->categories()->attach($category->id);
+        $products[2]->categories()->attach($category->id);
 
         $this->get(route('shop.index', ['category' => $category->slug]))
             ->assertStatus(200)
-            ->assertSee($category->name)
-            ->assertSee($product1->name)
-            ->assertSee($product2->name)
-            ->assertSee($product3->name);
+            ->assertSee($products[2]->name);
 
     }
 }
