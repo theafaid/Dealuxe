@@ -2427,7 +2427,7 @@ var render = function() {
         ? _c(
             "button",
             {
-              staticClass: "pay-with-stripe place-order btn btn-lg",
+              staticClass: "pay-with-stripe place-order btn btn-sm",
               attrs: { disabled: !_vm.complete },
               on: { click: _vm.pay }
             },
