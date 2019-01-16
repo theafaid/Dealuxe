@@ -33,6 +33,10 @@ class ProductToCartRequest extends FormRequest
     public function save($product){
         Cart::session(auth()->id());
 
+        if(Cart::get($product->id)){
+            Cart::remove($product->id);
+        }
+
         Cart::add([
             'id' => $product->id,
             'name' => $product->name,
@@ -42,7 +46,6 @@ class ProductToCartRequest extends FormRequest
                 'product' => $product
             ]
         ]);
-
 
         if(request()->wantsJson()){
             return response(['msg' => $product->name . " " . __('front.added_to_your_cart')], 200);

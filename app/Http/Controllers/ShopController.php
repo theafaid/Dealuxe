@@ -52,11 +52,7 @@ class ShopController extends Controller
      */
     public function show(Product $product)
     {
-        /** check if user was put the product in his cart
-         * so in this case we will return the quantity of the product
-         * that user was stored
-         **/
-
+        // The qnt of the product will be according to the cart
         $qnt = $product->inCart ? Cart::session(auth()->id())->get($product->id)->quantity : 1;
 
         return view('product', [

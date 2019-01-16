@@ -14,8 +14,7 @@ class ParticipateInProductTest extends TestCase
     function a_user_can_see_single_product_page(){
         $product = create('App\Product');
         $this->get(route('shop.show', $product->slug))
-            ->assertStatus(200)
-            ->assertSee($product->name);
+            ->assertStatus(200);
     }
 
     /** @test */
