@@ -87,36 +87,42 @@
                                             {!! $product->description !!}
                                         </p>
 
-                                        <form method="POST" action="{{route('cart.store')}}">
-                                            @csrf
-                                            <input type="hidden" name="product" value="{{$product->slug}}">
+                                        @if(auth()->user() && auth()->user()->hasVerifiedEmail())
+                                            <form method="POST" action="{{route('cart.store')}}">
+                                                @csrf
+                                                <input type="hidden" name="product" value="{{$product->slug}}">
 
-                                            <div class="quantity">
-                                                <h4>Quantity:</h4>
-                                                <div><input @change="updateQnt" type="number" name="qnt" value="" min="1" max="15" v-model="quantity"></div>
-                                            </div>
-
-                                            @auth
-                                                <!-- Product Action -->
-                                                <div class="product-action">
-                                                    <a
-                                                            :class="inCart ? 'btn btn-primary' : 'btn btn-default'"
-                                                            @click.prevent="storeUpdate('cart')">
-                                                        <i class="fa fa-shopping-cart"></i>
-                                                    </a>
-                                                    <a
-                                                            :class="inWishlist ? 'btn btn-danger' : 'btn btn-default'"
-                                                            @click.prevent="storeUpdate('wishlist')" :class="inWishlist ? 'btn-action' : ''">
-                                                        <i class="fa fa-heart"></i>
-                                                    </a>
+                                                <div class="quantity">
+                                                    <h4>Quantity:</h4>
+                                                    <div><input @change="updateQnt" type="number" name="qnt" value="" min="1" max="15" v-model="quantity"></div>
                                                 </div>
-                                            @else
-                                                <a class="btn btn-danger" href="{{route('auth_portal')}}">
-                                                    {{__('front.interested_signin')}}
-                                                </a>
-                                            @endauth
-                                        </form>
 
+                                                    <!-- Product Action -->
+                                                    <div class="product-action">
+                                                        <a
+                                                                :class="inCart ? 'btn btn-primary' : 'btn btn-default'"
+                                                                @click.prevent="storeUpdate('cart')">
+                                                            <i class="fa fa-shopping-cart"></i>
+                                                        </a>
+                                                        <a
+                                                                :class="inWishlist ? 'btn btn-danger' : 'btn btn-default'"
+                                                                @click.prevent="storeUpdate('wishlist')" :class="inWishlist ? 'btn-action' : ''">
+                                                            <i class="fa fa-heart"></i>
+                                                        </a>
+                                                    </div>
+                                                @else
+                                                    @if(auth()->user())
+                                                        <div class="badge badge-danger">
+                                                            {{__('front.please_verify_your_email_msg', ['name' => auth()->user()->name])}}
+                                                        </div>
+
+                                                    @else
+                                                        <a class="btn btn-danger" href="{{route('auth_portal')}}">
+                                                            {{__('front.interested_signin')}}
+                                                        </a>
+                                                    @endif
+                                            </form>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

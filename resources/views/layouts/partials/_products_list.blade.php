@@ -15,9 +15,9 @@
                 <div class="product-image">
                     <!-- Image -->
                     <a href="product-details-variable.html" class="image"><img src="{{$product->image}}" alt=""></a>
-                    @auth
-                        <!-- Product Action -->
-                        <div class="product-action">
+                @if(auth()->user() && auth()->user()->hasVerifiedEmail())
+                    <!-- Product Action -->
+                    <div class="product-action">
                             <a
                                     :class="inCart ? 'btn btn-primary' : 'btn btn-default'"
                                     @click.prevent="storeUpdate('cart')">
@@ -30,7 +30,7 @@
                             </a>
                             <a href="#" class="quickview"><span></span></a>
                         </div>
-                    @endauth
+                    @endif
                 </div>
                 <!-- Content -->
                 <div class="product-content">

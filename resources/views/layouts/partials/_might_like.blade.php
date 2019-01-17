@@ -24,7 +24,7 @@
                         <div class="product-image">
                             <!-- Image -->
                             <a href="product-details-variable.html" class="image"><img src="{{asset('design/images/product/product-1.jpg')}}" alt=""></a>
-                        @auth
+                        @if(auth()->user() && auth()->user()->hasVerifiedEmail())
                             <!-- Product Action -->
                                 <div class="product-action">
                                     <a @click.prevent="storeUpdate('cart')" :class="inCart ? 'btn btn-primary' : 'btn btn-default'">

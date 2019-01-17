@@ -47,6 +47,9 @@ return [
     'register' => 'Register',
     'reset_my_pass' => 'Reset My Password',
 
+    // verfication
+    'please_verify_your_email_msg' => 'Hey :name .. Please verify your email to start participate in our website',
+
     // checkout
     'checkout' => 'Checkout',
     'cart_total' => 'Cart Total',
