@@ -1,4 +1,10 @@
 <!-- Header Section Start -->
+@auth
+    @notVerified
+        @include('layouts.partials._notVerifiedMsg')
+    @endnotVerified
+@endauth
+
 <div class="header-section section bg-white">
     <div class="container">
         <div class="row">
@@ -61,7 +67,7 @@
                 </nav>
             </div>
 
-         @auth
+         @authAndVerified
             <!-- Header Action -->
             <div class="col">
                 <div class="header-action">
@@ -73,12 +79,10 @@
                     @include('layouts.partials._header_cart_data')
                 </div>
             </div>
-         @endauth
-
+         @endauthAndVerified
             <div class="col-12 d-block d-lg-none">
                 <div class="mobile-menu"></div>
             </div>
-
         </div>
     </div>
 </div>

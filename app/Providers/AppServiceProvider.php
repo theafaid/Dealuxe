@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Stripe\Stripe;
+use Schema;
+use Blade;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,8 +16,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \Schema::defaultStringLength(191);
+        Schema::defaultStringLength(191);
         Stripe::setApiKey(config('services.stripe.secret'));
+        Blade::if('authAndVerified', function(){
+            $user = auth()->user();
+            return $user && $user->hasVerifiedEmail();
+        });
+        Blade::if('notVerified', function(){
+            return ! auth()->user()->hasVerifiedEmail();
+        });
     }
 
     /**

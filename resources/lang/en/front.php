@@ -26,7 +26,7 @@ return [
     'product_details' => 'Product Details',
     'cart_updated_successfully' => 'Your cart updated successfully',
 
-    // wishlist
+    // wish list
     'your_wishlist_has_cleared' => 'Your wishlist has been cleared!',
     'items_in_your_wishlist' => 'Items in your wishlist',
     'empty_your_wishlist' => 'Clear My Wishlist',
@@ -47,9 +47,9 @@ return [
     'register' => 'Register',
     'reset_my_pass' => 'Reset My Password',
 
-    // verfication
+    // verification
     'please_verify_your_email_msg' => 'Hey :name .. Please verify your email to start participate in our website',
-
+    'resend_verification_msg' => 'Resend the verification email',
     // checkout
     'checkout' => 'Checkout',
     'cart_total' => 'Cart Total',

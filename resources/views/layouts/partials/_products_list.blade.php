@@ -15,7 +15,7 @@
                 <div class="product-image">
                     <!-- Image -->
                     <a href="product-details-variable.html" class="image"><img src="{{$product->image}}" alt=""></a>
-                @if(auth()->user() && auth()->user()->hasVerifiedEmail())
+                @authAndVerified
                     <!-- Product Action -->
                     <div class="product-action">
                             <a
@@ -30,7 +30,7 @@
                             </a>
                             <a href="#" class="quickview"><span></span></a>
                         </div>
-                    @endif
+                    @endauthAndVerified
                 </div>
                 <!-- Content -->
                 <div class="product-content">

@@ -87,7 +87,7 @@
                                             {!! $product->description !!}
                                         </p>
 
-                                        @if(auth()->user() && auth()->user()->hasVerifiedEmail())
+                                        @authAndVerified
                                             <form method="POST" action="{{route('cart.store')}}">
                                                 @csrf
                                                 <input type="hidden" name="product" value="{{$product->slug}}">
@@ -111,18 +111,17 @@
                                                         </a>
                                                     </div>
                                                 @else
-                                                    @if(auth()->user())
+                                                    @auth
                                                         <div class="badge badge-danger">
                                                             {{__('front.please_verify_your_email_msg', ['name' => auth()->user()->name])}}
                                                         </div>
-
                                                     @else
                                                         <a class="btn btn-danger" href="{{route('auth_portal')}}">
                                                             {{__('front.interested_signin')}}
                                                         </a>
                                                     @endif
                                             </form>
-                                        @endif
+                                        @endauthAndVerified
                                     </div>
                                 </div>
                             </div>
