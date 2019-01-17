@@ -37,4 +37,20 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showLoginForm()
+    {
+        session()->put('prevUrl', url()->previous());
+        return view('auth.auth_portal');
+    }
+
+    public function redirectTo(){
+       $path = str_replace(url('/'), '', session()->get('prevUrl', $this->redirectTo));
+       return $path;
+    }
 }
