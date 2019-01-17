@@ -10,7 +10,7 @@
                     <div class="page-banner text-center">
                         <h1>{!!__('front.login_and_register') !!}</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="{{route('home')}}">{{__('front.home')}}</a></li>
+                            <li><a href="{{route('welcome')}}">{{__('front.home')}}</a></li>
                             <li>{!!__('front.login_and_register') !!}</li>
                         </ul>
                     </div>

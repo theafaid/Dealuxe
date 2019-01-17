@@ -9,7 +9,7 @@
                     <div class="page-banner text-center">
                         <h1>{!!__('front.reset_my_pass') !!}</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="{{route('home')}}">{{__('front.home')}}</a></li>
+                            <li><a href="{{route('welcome')}}">{{__('front.home')}}</a></li>
                             <li>
                                 {{ __('Reset Password') }}
                             </li>
