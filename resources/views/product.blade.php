@@ -43,10 +43,10 @@
                             <div class="product-image left-thumbnail mb-xs-20">
                                 <!-- Image -->
                                 <div class="product-slider single-product-slider-syn">
-                                    <div class="item"><img src="/{{$product->image}}" alt=""></div>
+                                    <div class="item"><img src="{{$product->image}}" alt=""></div>
                                 </div>
                                 <div class="product-slider single-product-thumb-slider-syn" data-vertical="true">
-                                    <div class="item"><img src="/{{$product->image}}" alt=""></div>
+                                    <div class="item"><img src="{{$product->image}}" alt=""></div>
                                 </div>
                             </div>
                             <!-- Content -->

@@ -7,7 +7,6 @@ $factory->define(App\Product::class, function (Faker $faker) {
     return [
         'name' => $name,
         'slug' => str_slug($name),
-        'image' => asset('design/images/default/product.jpg'),
         'price' => $faker->numberBetween(1000, 2000),
         'description' => $faker->paragraph,
         'details' => $faker->paragraph

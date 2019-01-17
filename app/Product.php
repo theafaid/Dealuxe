@@ -20,6 +20,10 @@ class Product extends Model
         return "slug";
     }
 
+    public function getImageAttribute($value){
+        if(! is_null($value) && file_exists("storage/{$value}")) return "/".$value;
+        return "/design/images/default/no-product-img.jpg";
+    }
     /**
      * Change the actual price to dollar format
      * @return string
