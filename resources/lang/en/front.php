@@ -45,6 +45,7 @@ return [
     'repeat_password' => 'Repeat Your Password',
     'login' => 'Login',
     'register' => 'Register',
+    'reset_my_pass' => 'Reset My Password',
 
     // checkout
     'checkout' => 'Checkout',
