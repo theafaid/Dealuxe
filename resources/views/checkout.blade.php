@@ -198,7 +198,11 @@
 
                                         <ul>
                                             @foreach($cartItems as $item)
-                                                <li>{{$item->name}} X {{$item->quantity}} <span>{{presentPrice($item->price)}}</span></li>
+                                                <li>
+                                                    <img width="50" height="50"  src="{{$item['attributes']['product']['image']}}">
+                                                    {{$item->name}} X {{$item->quantity}}
+                                                    <span>{{presentPrice($item->price)}}</span>
+                                                </li>
                                             @endforeach
                                         </ul><br>
 

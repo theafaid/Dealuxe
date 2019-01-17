@@ -32,7 +32,7 @@
                         <li class="mini-cart-product">
                             <div class="image">
                                 <a href="{{route('cart.index')}}">
-                                    <img src="{{asset('design')}}/images/product/product-4.jpg" alt="">
+                                    <img src="/{{$item['attributes']['product']['image']}}" alt="">
                                 </a>
                                 <form action="{{route('cart.remove')}}" method="POST">
                                     @csrf

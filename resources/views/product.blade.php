@@ -36,23 +36,17 @@
                             remove-from-cart-route="{{route('cart.remove')}}"
                             to-wishlist-route="{{route('wishlist.store')}}"
                             remove-from-wishlist-route="{{route('wishlist.remove')}}">
+
+
                         <div class="product-details mb-50">
                             <!-- Image -->
                             <div class="product-image left-thumbnail mb-xs-20">
                                 <!-- Image -->
                                 <div class="product-slider single-product-slider-syn">
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-1.jpg" alt=""></div>
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-2.jpg" alt=""></div>
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-3.jpg" alt=""></div>
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-4.jpg" alt=""></div>
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-5.jpg" alt=""></div>
+                                    <div class="item"><img src="/{{$product->image}}" alt=""></div>
                                 </div>
                                 <div class="product-slider single-product-thumb-slider-syn" data-vertical="true">
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-1.jpg" alt=""></div>
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-2.jpg" alt=""></div>
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-3.jpg" alt=""></div>
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-4.jpg" alt=""></div>
-                                    <div class="item"><img src="{{asset('design')}}/images/product/product-5.jpg" alt=""></div>
+                                    <div class="item"><img src="/{{$product->image}}" alt=""></div>
                                 </div>
                             </div>
                             <!-- Content -->

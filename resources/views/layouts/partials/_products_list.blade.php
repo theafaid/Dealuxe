@@ -14,7 +14,7 @@
                 <!-- Image -->
                 <div class="product-image">
                     <!-- Image -->
-                    <a href="product-details-variable.html" class="image"><img src="{{asset('design/images/product/product-1.jpg')}}" alt=""></a>
+                    <a href="product-details-variable.html" class="image"><img src="{{$product->image}}" alt=""></a>
                     @auth
                         <!-- Product Action -->
                         <div class="product-action">

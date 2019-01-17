@@ -51,7 +51,7 @@
                             <tbody>
                                 @foreach($cartItems as $item)
                                     <tr>
-                                        <td class="pro-thumbnail"><a href="#"><img src="{{asset('design')}}/images/product/product-1.jpg" alt="Product"></a></td>
+                                        <td class="pro-thumbnail"><a href="#"><img src="{{$item['attributes']['product']['image']}}" alt="Product"></a></td>
                                         <td class="pro-title"><a href="{{route('shop.show', slugFromItem($item))}}">{{$item->name}}</a></td>
                                         <td class="pro-price"><span>{{presentPrice($item->price)}}</span></td>
                                         <td class="pro-quantity"><div class="pro-qty"><input type="text" value="{{$item->quantity}}"></div></td>
