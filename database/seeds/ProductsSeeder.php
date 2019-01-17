@@ -34,7 +34,7 @@ class ProductsSeeder extends Seeder
 
             $product->slug = "laptop-{$i}";
             $product->price = rand(10000, 100000) ;
-            $product->image = asset("design/images/default/product.jpg");
+            $product->image = "/storage/design/images/default/product.jpg";
             $product->save();
 
             $product->categories()->attach(Category::all()->random()->id);
