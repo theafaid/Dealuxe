@@ -39,14 +39,27 @@
 
 
                         <div class="product-details mb-50">
+                            @php
+                                $images = $product->images ? json_decode($product->images, true) : null;
+                            @endphp
                             <!-- Image -->
                             <div class="product-image left-thumbnail mb-xs-20">
                                 <!-- Image -->
                                 <div class="product-slider single-product-slider-syn">
                                     <div class="item"><img src="{{$product->image}}" alt=""></div>
+                                    @if(! is_null($images))
+                                        @foreach($images as $img)
+                                            <div class="item"><img src="/{{$img}}" alt=""></div>
+                                        @endforeach
+                                    @endif
                                 </div>
                                 <div class="product-slider single-product-thumb-slider-syn" data-vertical="true">
                                     <div class="item"><img src="{{$product->image}}" alt=""></div>
+                                    @if(! is_null($images))
+                                        @foreach($images as $img)
+                                            <div class="item"><img src="/{{$img}}" alt=""></div>
+                                        @endforeach
+                                    @endif
                                 </div>
                             </div>
                             <!-- Content -->
