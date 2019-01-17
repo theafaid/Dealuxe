@@ -2,7 +2,6 @@
 <div class="header-section section bg-white">
     <div class="container">
         <div class="row">
-
             <!-- Header Logo -->
             <div class="col">
                 <div class="header-logo">
