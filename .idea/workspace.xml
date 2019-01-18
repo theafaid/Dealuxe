@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95f7c15c-5887-468d-afe0-102c2326b20d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/voyager/products/browse.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/voyager/products/edit-add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/CategoryProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CategoryProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/edit-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/edit-add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Voyager/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Voyager/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,55 +35,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="1185" column="6" selection-start-line="1185" selection-start-column="6" selection-end-line="1185" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/CategoryProduct.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
-              <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_18_123502_add_time_stamp_in_category_product_table.php">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/edit-add.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="82" column="134" selection-start-line="82" selection-start-column="134" selection-end-line="82" selection-end-column="134" />
-              <folding>
-                <element signature="e#2797#2923#0#HTML" expanded="true" />
-                <element signature="e#5363#5383#0#HTML" expanded="true" />
-                <element signature="e#5565#5605#0#HTML" expanded="true" />
-                <element signature="e#6323#6330#1#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Voyager/ProductsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="335" column="32" selection-start-line="335" selection-start-column="32" selection-end-line="335" selection-end-column="32" />
-              <folding>
-                <element signature="e#48#72#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="684">
+              <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -88,19 +55,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
+            <state relative-caret-position="759">
               <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerDatabaseController.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/vendor/voyager/products/browse.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="25" selection-end-line="280" />
+            <state relative-caret-position="367">
+              <caret line="175" column="96" selection-start-line="175" selection-start-column="96" selection-end-line="175" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Voyager/ProductsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="284" selection-start-line="284" selection-end-line="284" />
               <folding>
-                <element signature="e#48#62#0#PHP" expanded="true" />
+                <element signature="e#48#72#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,11 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>links</find>
-      <find>low_high</find>
-      <find>sidebar-list</find>
-      <find>payment</find>
-      <find>total</find>
       <find>{{description</find>
       <find>details</find>
       <find>category</find>
@@ -145,8 +116,13 @@
       <find>cart</find>
       <find>auth</find>
       <find>redirect</find>
+      <find>rtl</find>
+      <find>price</find>
       <find>update</find>
       <find>store</find>
+      <find>span</find>
+      <find>row-&gt;field</find>
+      <find>no-sort</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,9 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/js/app.js" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/partials/footer.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/StoreCouponRequest.php" />
         <option value="$PROJECT_DIR$/resources/js/components/CheckoutForm.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ConfirmationController.php" />
         <option value="$PROJECT_DIR$/resources/views/shop.blade.php" />
@@ -165,7 +138,6 @@
         <option value="$PROJECT_DIR$/tests/Feature/CheckoutTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2018_12_23_084249_create_products_table.php" />
-        <option value="$PROJECT_DIR$/config/voyager.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/partials/_header_cart_data.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/cart.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/checkout.blade.php" />
@@ -180,7 +152,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
         <option value="$PROJECT_DIR$/resources/lang/ar/front.php" />
@@ -201,11 +172,16 @@
         <option value="$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerController.php" />
         <option value="$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerDatabaseController.php" />
         <option value="$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerBreadController.php" />
-        <option value="$PROJECT_DIR$/resources/views/vendor/voyager/products/edit-add.blade.php" />
         <option value="$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerBaseController.php" />
         <option value="$PROJECT_DIR$/app/CategoryProduct.php" />
+        <option value="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/posts/edit-add.blade.php" />
+        <option value="$PROJECT_DIR$/config/voyager.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Voyager/ProductsController.php" />
         <option value="$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/edit-add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/vendor/voyager/products/edit-add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/vendor/voyager/products/browse.blade.php" />
       </list>
     </option>
   </component>
@@ -502,14 +478,6 @@
               <item name="dealuxe" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dealuxe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dealuxe" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -519,6 +487,15 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="voyager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dealuxe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dealuxe" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="voyager" type="462c0819:PsiDirectoryNode" />
+              <item name="products" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dealuxe" type="b2602c69:ProjectViewProjectNode" />
@@ -565,41 +542,6 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="bread" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dealuxe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dealuxe" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="voyager" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dealuxe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dealuxe" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="voyager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dealuxe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dealuxe" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="voyager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dealuxe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dealuxe" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="tcg" type="462c0819:PsiDirectoryNode" />
-              <item name="voyager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -610,7 +552,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="StripeElement&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/node_modules/vue-stripe-elements-plus/src/StripeElement.vue&#10;checkout.js&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/js/checkout.js&#10;.env&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/.env&#10;checkout.css&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/checkout.css&#10;checkout.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/checkout.blade.php&#10;helper&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/helpers.php&#10;cartcontroll&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/CartController.php&#10;user.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/User.php&#10;services.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/config/services.php&#10;web.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;header.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;checkout.cs&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/checkout.css&#10;checkout.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/checkout.blade.php&#10;header.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;footer.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;main.js&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/js/main.js&#10;bootstr&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/bootstrap.min.css&#10;header.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;checkout.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/checkout.blade.php&#10;header.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;Shopcon&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/app/Http/Controllers/ShopController.php&#10;produ&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;product.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;front.php&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/lang/en/front.php&#10;app.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/config/app.php&#10;web.&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/routes/web.php&#10;mig&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_might_like.blade.php&#10;_produc&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_products_list.blade.php&#10;welcome.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/welcome.blade.php&#10;shop.v&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/pages/Shop.vue&#10;cart.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;app.js&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/app.js&#10;shop.bl&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;app.b&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/app.blade.php&#10;nav.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;nav.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/nav.blade.php&#10;auth&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/auth/auth_portal.blade.php&#10;front.ph&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/lang/en/front.php&#10;product.bla&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;like&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/_might_like.blade.php&#10;shop.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/header.blade.php&#10;bootstrap.min&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/bootstrap.min.css&#10;foo&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php&#10;shop.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/shop.blade.php&#10;Product.vue&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/js/components/Product.vue&#10;sty&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/public/design/css/style.css&#10;cart.blade&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/cart.blade.php&#10;product.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/product.blade.php&#10;footer.blad&#9;FILE&#9;file://C:/xampp/htdocs/Dealuxe/resources/views/layouts/partials/footer.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../edume" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -668,12 +610,13 @@
       <workItem from="1547731724661" duration="9590000" />
       <workItem from="1547744733765" duration="3404000" />
       <workItem from="1547748479950" duration="4674000" />
-      <workItem from="1547813695371" duration="7124000" />
+      <workItem from="1547813695371" duration="9576000" />
+      <workItem from="1547843621548" duration="3049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176125000" />
+    <option name="totallyTimeSpent" value="181626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1280" height="1024" extended-state="6" />
@@ -703,7 +646,7 @@
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.37763372" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.37763372" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32911393" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
@@ -727,48 +670,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ProductToCartRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/ProductFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/partials/_header_cart_data.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1221">
-          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cart.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/checkout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6039">
           <caret line="183" selection-start-line="183" selection-end-line="183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ShopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,13 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -990,13 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="1185" column="6" selection-start-line="1185" selection-start-column="6" selection-end-line="1185" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_02_150841_create_coupons_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -1018,16 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerDatabaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="25" selection-end-line="280" />
-          <folding>
-            <element signature="e#48#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerBreadController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -1038,16 +919,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vendor/voyager/products/edit-add.blade.php">
+    <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerBaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="66">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38478">
+          <caret line="1185" column="6" selection-start-line="1185" selection-start-column="6" selection-end-line="1185" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerDatabaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" selection-end-line="280" />
           <folding>
-            <element signature="e#2767#2893#0#HTML" expanded="true" />
-            <element signature="e#4855#4875#0#HTML" expanded="true" />
-            <element signature="e#5055#5095#0#HTML" expanded="true" />
-            <element signature="e#5811#5818#1#HTML" expanded="true" />
+            <element signature="e#48#62#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ShopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/resources/views/posts/edit-add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="183" column="44" selection-start-line="183" selection-start-column="44" selection-end-line="183" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/voyager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="121" column="22" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1058,31 +988,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/src/Http/Controllers/VoyagerBaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/CategoryProduct.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Voyager/ProductsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="335" column="32" selection-start-line="335" selection-start-column="32" selection-end-line="335" selection-end-column="32" />
+        <state relative-caret-position="424">
+          <caret line="284" selection-start-line="284" selection-end-line="284" />
           <folding>
             <element signature="e#48#72#0#PHP" expanded="true" />
           </folding>
@@ -1091,14 +1007,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/edit-add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="82" column="134" selection-start-line="82" selection-start-column="134" selection-end-line="82" selection-end-column="134" />
+        <state relative-caret-position="222">
+          <caret line="165" column="34" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
           <folding>
-            <element signature="e#2797#2923#0#HTML" expanded="true" />
-            <element signature="e#5363#5383#0#HTML" expanded="true" />
-            <element signature="e#5565#5605#0#HTML" expanded="true" />
-            <element signature="e#6323#6330#1#HTML" expanded="true" />
+            <element signature="e#2767#2893#0#HTML" expanded="true" />
+            <element signature="e#4855#4875#0#HTML" expanded="true" />
+            <element signature="e#5055#5095#0#HTML" expanded="true" />
+            <element signature="e#5811#5818#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/vendor/voyager/products/edit-add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+          <folding>
+            <element signature="e#3185#3311#0#HTML" expanded="true" />
+            <element signature="e#6835#6855#0#HTML" expanded="true" />
+            <element signature="e#7037#7077#0#HTML" expanded="true" />
+            <element signature="e#7795#7802#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/tcg/voyager/resources/views/bread/browse.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="16" lean-forward="true" selection-end-line="283" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/vendor/voyager/products/browse.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="175" column="96" selection-start-line="175" selection-start-column="96" selection-end-line="175" selection-end-column="96" />
         </state>
       </provider>
     </entry>

@@ -53,7 +53,7 @@ class ShopController extends Controller
     public function show(Product $product)
     {
         // The qnt of the product will be according to the cart
-        $qnt = $product->inCart ? Cart::session(auth()->id())->get($product->id)->quantity : 1;
+        $qnt = $product->inCart ? Cart::session(auth()->id())->get($product->id)['quantity'] : 1;
 
         return view('product', [
             'product'   => $product,
