@@ -64,17 +64,8 @@ class CheckoutController extends Controller
      */
     public function store(CheckoutRequest $request){
 
-        if(! $request->user()->cartTotal() > 0) {
-            // cart is empty
-            return response(['msg' => __('front.your_cart_is_empty')], 422);
-        }
-
-        $content = $request->user()->cartItems()->map(function($item){
-            return "product:" . $item['attributes']['product']['slug'] . " | qnt: ". $item['quantity'] . "<br>";
-        })->values()->toJson();
-
         try{
-            $request->persist($content);
+            $request->persist();
         }catch(\Exception $ex){
             return response(['msg' => $ex->getMessage()], 422);
         }
