@@ -55,15 +55,11 @@ class CheckoutRequest extends FormRequest
 
         $grandTotal = $cartTotal - $discount;
 
-        try{
             if($this->customerCheckout($user, $grandTotal, $coupon, $discount)){
                 $this->recordInOrdersTables($user, $grandTotal, $coupon, $discount);
             }
 
             $this->forgetSession($user);
-        }catch(\Exception $ex){
-            return $ex->getMessage();
-        }
     }
 
     private function recordInOrdersTables($user, $grandTotal, $coupon, $discount){
