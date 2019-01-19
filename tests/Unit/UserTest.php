@@ -2,7 +2,6 @@
 
 namespace Tests\Unit;
 
-use App\Profile;
 use Illuminate\Support\Collection;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -189,5 +188,11 @@ class UserTest extends TestCase
         $this->generateProductThenToCart();
 
         $this->assertTrue(auth()->user()->canCheckout());
+    }
+
+    /** @test */
+    function it_has_many_orders(){
+        $user = create('App\User');
+        $this->assertInstanceOf(Collection::class, $user->orders);
     }
 }
