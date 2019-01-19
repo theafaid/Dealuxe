@@ -44,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Requests/CheckoutRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="363">
+              <caret line="61" column="36" selection-start-line="57" selection-start-column="8" selection-end-line="61" selection-end-column="36" />
               <folding>
                 <element signature="e#37#58#0#PHP" expanded="true" />
               </folding>
@@ -469,12 +469,12 @@
       <workItem from="1547813695371" duration="9576000" />
       <workItem from="1547843621548" duration="3472000" />
       <workItem from="1547908901579" duration="1386000" />
-      <workItem from="1547910299627" duration="26200000" />
+      <workItem from="1547910299627" duration="26288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209635000" />
+    <option name="totallyTimeSpent" value="209723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="2" width="1280" height="1022" extended-state="6" />
@@ -900,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/CheckoutRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="363">
+          <caret line="61" column="36" selection-start-line="57" selection-start-column="8" selection-end-line="61" selection-end-column="36" />
           <folding>
             <element signature="e#37#58#0#PHP" expanded="true" />
           </folding>
