@@ -7,6 +7,8 @@ Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 // User must verified his email
 Route::group(['middleware' => 'verified'], function(){
+    // view profile
+    Route::get('/profile', 'ProfilesController@index')->name('profile.index');
     // show cart
     Route::get('/cart', 'CartController@index')->name('cart.index');
     // add a product to cart
