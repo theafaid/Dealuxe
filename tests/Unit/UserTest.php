@@ -132,4 +132,20 @@ class UserTest extends TestCase
         $user = create('App\User');
         $this->assertInstanceOf('App\Profile', $user->profile);
     }
+
+    /** @test */
+    function it_check_if_it_has_a_complete_profile(){
+        $user = create('App\User');
+
+        $this->assertFalse($user->hasCompleteProfile());
+
+        $user->profile->province = "province";
+        $user->profile->city = "city";
+        $user->profile->address = "address";
+        $user->profile->phone = "0123456789";
+        $user->profile->postal_code = "11111";
+        $user->profile->save();
+
+        $this->assertTrue($user->hasCompleteProfile());
+    }
 }

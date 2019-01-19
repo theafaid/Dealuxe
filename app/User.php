@@ -101,4 +101,20 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
     public function createProfile(){
         return $this->profile()->create();
     }
+
+    /**
+     * Determine if the profile for a user is completed
+     * @return mixed
+     */
+    public function hasCompleteProfile(){
+        return $this->profile->isCompleted();
+    }
+
+    /**
+     * Complete a profile for a user
+     * @param $data
+     */
+    public function completeProfile($data){
+        $this->profile->complete($data);
+    }
 }
