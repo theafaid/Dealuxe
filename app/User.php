@@ -11,6 +11,12 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
 {
     use Notifiable;
 
+    protected static function boot(){
+        parent::boot();
+        static::created(function($user){
+            $user->createProfile();
+        });
+    }
     /**
      * The attributes that are mass assignable.
      *
