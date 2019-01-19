@@ -87,4 +87,12 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
     public function profile(){
         return $this->hasOne('App\Profile');
     }
+
+    /**
+     * Create a profile for a user
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function createProfile(){
+        return $this->profile()->create();
+    }
 }
