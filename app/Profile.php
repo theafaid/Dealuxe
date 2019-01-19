@@ -27,6 +27,16 @@ class Profile extends Model
     }
 
     /**
+     * Fill a user profile
+     * @param $data
+     */
+    public function fill($data){
+        foreach($data as $key => $val){
+            $this[$key] = $val;
+        }
+    }
+
+    /**
      * Get table columns
      * @return array
      */

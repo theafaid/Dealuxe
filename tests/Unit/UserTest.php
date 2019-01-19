@@ -148,4 +148,35 @@ class UserTest extends TestCase
 
         $this->assertTrue($user->hasCompleteProfile());
     }
+
+    /** @test */
+    function can_complete_his_profile(){
+        $user = create('App\User');
+
+        $this->assertFalse($user->hasCompleteProfile());
+
+        $data = [
+            'province' => 'province',
+            'city' => 'city',
+            'address' => 'adress',
+            'phone' => '123456789',
+            'postal_code' => '11111'
+        ];
+
+        $user->completeProfile($data);
+
+        $this->assertTrue($user->hasCompleteProfile());
+
+        $data = [
+            'province' => 'province',
+            'city' => 'city',
+            'address' => null,
+            'phone' => null,
+            'postal_code' => null
+        ];
+
+        $user->completeProfile($data);
+
+        $this->assertFalse($user->hasCompleteProfile(false));
+    }
 }

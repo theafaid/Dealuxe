@@ -115,6 +115,6 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
      * @param $data
      */
     public function completeProfile($data){
-        $this->profile->complete($data);
+        $this->profile->fill($data);
     }
 }

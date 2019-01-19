@@ -2,7 +2,6 @@
 
 namespace Tests\Unit;
 
-use App\Profile;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -30,5 +29,22 @@ class ProfileTest extends TestCase
       $user->profile->save();
 
       $this->assertTrue($user->profile->isCompleted());
+  }
+
+  /** @test */
+  function can_fill_a_profile_data(){
+      $user = create('App\User');
+
+      $data = [
+          'province' => 'province',
+          'city' => 'city',
+          'address' => 'adress',
+          'phone' => '123456789',
+          'postal_code' => '11111'
+      ];
+
+      $user->profile->fill($data);
+
+      $this->assertTrue($user->hasCompleteProfile());
   }
 }
