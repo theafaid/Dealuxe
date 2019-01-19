@@ -14,7 +14,7 @@ class CheckoutRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return $this->user()->canCheckout();
     }
 
     /**
@@ -29,7 +29,7 @@ class CheckoutRequest extends FormRequest
         ];
     }
 
-    public function     persist($content){
+    public function persist($content){
 
         $user = $this->user();
 

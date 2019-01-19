@@ -137,7 +137,7 @@ class UserTest extends TestCase
     function it_check_if_it_has_a_complete_profile(){
         $user = create('App\User');
 
-        $this->assertFalse($user->hasCompleteProfile());
+        $this->assertFalse($user->hasCompletedProfile());
 
         $user->profile->province = "province";
         $user->profile->city = "city";
@@ -146,14 +146,14 @@ class UserTest extends TestCase
         $user->profile->postal_code = "11111";
         $user->profile->save();
 
-        $this->assertTrue($user->hasCompleteProfile());
+        $this->assertTrue($user->hasCompletedProfile());
     }
 
     /** @test */
     function can_complete_his_profile(){
         $user = create('App\User');
 
-        $this->assertFalse($user->hasCompleteProfile());
+        $this->assertFalse($user->hasCompletedProfile());
 
         $data = [
             'province' => 'province',
@@ -165,7 +165,7 @@ class UserTest extends TestCase
 
         $user->completeProfile($data);
 
-        $this->assertTrue($user->hasCompleteProfile());
+        $this->assertTrue($user->hasCompletedProfile());
 
         $data = [
             'province' => 'province',
@@ -177,6 +177,6 @@ class UserTest extends TestCase
 
         $user->completeProfile($data);
 
-        $this->assertFalse($user->hasCompleteProfile(false));
+        $this->assertFalse($user->hasCompletedProfile(false));
     }
 }

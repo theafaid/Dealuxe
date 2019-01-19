@@ -45,6 +45,6 @@ class ProfileTest extends TestCase
 
       $user->profile->fill($data);
 
-      $this->assertTrue($user->hasCompleteProfile());
+      $this->assertTrue($user->hasCompletedProfile());
   }
 }

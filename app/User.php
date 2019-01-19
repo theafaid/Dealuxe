@@ -87,6 +87,14 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
     }
 
     /**
+     * Determine if the user can checkout or not
+     * @return bool
+     */
+    public function canCheckout(){
+        return (bool) ( count($this->cartItems()) > 0 && $this->hasCompletedProfile() );
+    }
+
+    /**
      * Get user profile
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -106,7 +114,7 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
      * Determine if the profile for a user is completed
      * @return mixed
      */
-    public function hasCompleteProfile(){
+    public function hasCompletedProfile(){
         return $this->profile->isCompleted();
     }
 

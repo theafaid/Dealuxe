@@ -20,7 +20,7 @@ class CheckoutController extends Controller
 
         $user = auth()->user();
 
-        if(! $user->hasCompleteProfile()){
+        if(! $user->hasCompletedProfile()){
             session()->flash('error', __('front.please_complete_your_profile_first'));
             return redirect(route('profile.index'));
         }
