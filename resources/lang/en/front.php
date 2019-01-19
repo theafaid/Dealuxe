@@ -62,6 +62,8 @@ return [
     // sidebar
     'categories' => 'Categories',
     'featured' => 'Featured',
-    'no_products_founded' => 'Sorry! We don\'t have any products'
+    'no_products_founded' => 'Sorry! We don\'t have any products',
 
+    // admin
+    'super_admin' => 'Super Admin',
 ];

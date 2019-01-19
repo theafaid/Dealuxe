@@ -10,11 +10,18 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
+        $role = Role::firstOrNew(['name' => 'super_admin']);
+        if (!$role->exists) {
+            $role->fill([
+                    'display_name' => __('front.super_admin'),
+                ])->save();
+        }
+
         $role = Role::firstOrNew(['name' => 'admin']);
         if (!$role->exists) {
             $role->fill([
-                    'display_name' => __('voyager::seeders.roles.admin'),
-                ])->save();
+                'display_name' => __('voyager::seeders.roles.admin'),
+            ])->save();
         }
 
         $role = Role::firstOrNew(['name' => 'user']);
