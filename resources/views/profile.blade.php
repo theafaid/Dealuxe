@@ -13,7 +13,6 @@
                             <li>{{__('front.my_account')}}</li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -23,6 +22,7 @@
     <!-- My Account Section Start -->
     <div class="my-account-section section position-relative pt-90 pb-60 pt-lg-80 pb-lg-50 pt-md-70 pb-md-40 pt-sm-60 pb-sm-30 pt-xs-50 pb-xs-20 fix">
         <div class="container">
+            @include('layouts.partials._message')
             <div class="row">
                 <div class="col-12">
 

@@ -64,6 +64,6 @@ return [
     'featured' => 'Featured',
     'no_products_founded' => 'Sorry! We don\'t have any products',
 
-    // admin
-    'super_admin' => 'Super Admin',
+    // profile
+    'please_complete_your_profile_first' => 'Please complete your profile before checkout',
 ];

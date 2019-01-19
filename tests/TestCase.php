@@ -8,9 +8,23 @@ abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
 
-    public function signIn(){
+    public function signIn($completeProfile = false){
         $user = create('App\User');
+
+        if($completeProfile == true){
+            $data = [
+                'province' => 'province',
+                'city' => 'city',
+                'address' => 'adress',
+                'phone' => '123456789',
+                'postal_code' => '11111'
+            ];
+
+            $user->completeProfile($data);
+        }
+
         $this->actingAs($user);
+
         return $this;
     }
 

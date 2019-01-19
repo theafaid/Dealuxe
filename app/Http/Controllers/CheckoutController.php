@@ -19,6 +19,12 @@ class CheckoutController extends Controller
     public function index(){
 
         $user = auth()->user();
+
+        if(! $user->hasCompleteProfile()){
+            session()->flash('error', __('front.please_complete_your_profile_first'));
+            return redirect(route('profile.index'));
+        }
+
         $cartTotal = $user->cartTotal(false, false);
         if(! $cartTotal > 0) {
             return redirect(route('shop.index'));
