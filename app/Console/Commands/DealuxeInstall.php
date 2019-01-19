@@ -70,9 +70,13 @@ class DealuxeInstall extends Command
             $this->error("cannot copy \"{$path}\" to storage/\"{$path}\"");
         }
 
-        $this->call('migrate:fresh');
+        $this->call('migrate:fresh',[
+            '--force' => true
+        ]);
 
-        $this->call('db:seed');
+        $this->call('db:seed', [
+            '--force' => true
+        ]);
 
         $this->info('Dummy Data Installed Successfully');
     }
