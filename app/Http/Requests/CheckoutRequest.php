@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\OrderProduct;
 use Illuminate\Foundation\Http\FormRequest;
 use Stripe\{Charge, Customer};
 use Cart;
@@ -48,6 +49,7 @@ class CheckoutRequest extends FormRequest
         }
 
         $grandTotal = $cartTotal - $discount;
+
         Charge::create([
             'customer' => $customer->id,
             'amount' => $grandTotal,
@@ -62,10 +64,6 @@ class CheckoutRequest extends FormRequest
 
         session()->flash('payment_succeeded', 'success');
 
-        Cart::session($user->id)->clear();
-
-        session()->forget('coupon');
-
         $orderData = [
             'user_id' => $this->user()->id,
             'discount' => $discount,
@@ -73,11 +71,18 @@ class CheckoutRequest extends FormRequest
             'total' => $grandTotal
         ];
 
-        $user->newOrder($orderData);
-//
-//        // foreach products
-//        OrderProduct::create([
-//            'order_id' =>
-//        ]);
+        $order = $user->newOrder($orderData);
+
+        foreach($user->cartItems() as $item){
+            OrderProduct::create([
+                'order_id' => $order->id,
+                'product_id' => $item['attributes']['product']['id'],
+                'quantity' => $item['quantity']
+            ]);
+        }
+
+        Cart::session($user->id)->clear();
+
+        session()->forget('coupon');
     }
 }

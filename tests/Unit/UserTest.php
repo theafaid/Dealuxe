@@ -207,10 +207,11 @@ class UserTest extends TestCase
             'total' => 20000
         ];
 
-        $user->newOrder($orderData);
+        $order = $user->newOrder($orderData);
 
         $this->assertNotNull($user->orders);
-        $this->assertEquals($user->orders->first()->user_id, $user->id);
         $this->assertDatabaseHas('orders', $orderData);
+        $this->assertEquals($order->id, $user->orders->first()->id);
+        $this->assertEquals($user->orders->first()->user_id, $user->id);
     }
 }

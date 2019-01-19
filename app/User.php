@@ -69,7 +69,7 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
     }
 
     public function newOrder($data){
-        $this->orders()->create($data);
+       return $this->orders()->create($data);
     }
     /**
      * Add product to user wishlist

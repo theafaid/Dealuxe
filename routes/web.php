@@ -45,7 +45,3 @@ Auth::routes(['verify' => true]);
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
-Route::get('test', function(){
-    Cart::session(auth()->user())->clear();
-});
