@@ -28,7 +28,6 @@ class OrderTest extends TestCase
 
         return Order::create([
             'user_id' => $user->id,
-            'name_on_card' => 'JohnDoe',
             'discount' => 0,
             'total' => '10000',
         ]);

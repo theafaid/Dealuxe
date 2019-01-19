@@ -47,43 +47,33 @@ class CheckoutRequest extends FormRequest
             $discount = 0;
         }
 
-//        Charge::create([
-//            'customer' => $customer->id,
-//            'amount' => $cartTotal - $discount,
-//            'currency' => 'usd',
-//            'metadata' => [
-//                'content' => $content,
-//                'quantity' => $user->cartItemsCount(),
-//                'coupon' => $coupon['code'] ?: "no coupon",
-//                'discount' => $discount
-//            ],
-//        ]);
-//
-//        session()->flash('payment_succeeded', 'success');
-//
-//        Cart::session($user->id)->clear();
-//
-//        session()->forget('coupon');
-//
-//        // record order
-//        $table->unsignedInteger('user_id')->nullable();
-//        $table->foreign('user_id')->references('id')->on('users')
-//            ->onDelete('set null')->onUpdate('cascade');
-//
-//        $table->string('name_on_card');
-//        $table->integer('discount')->default(0);
-//        $table->string('coupon_code')->nullable();
-//        $table->integer('total');
-//        $table->string('payment_gateway')->default('stripe');
-//        $table->boolean('shipped')->default(false);
-//        $table->string('error')->nullable();
-//        $table->timestamps();
-//        // $user->newOrder();
-        Order::create([
-            'user_id' => $this->user()->id,
-            'name_on_card' => $customer->name_on_card,
-            'discount' => $discount
+        $grandTotal = $cartTotal - $discount;
+        Charge::create([
+            'customer' => $customer->id,
+            'amount' => $grandTotal,
+            'currency' => 'usd',
+            'metadata' => [
+                'content' => $content,
+                'quantity' => $user->cartItemsCount(),
+                'coupon' => $coupon['code'] ?: "no coupon",
+                'discount' => $discount
+            ],
         ]);
+
+        session()->flash('payment_succeeded', 'success');
+
+        Cart::session($user->id)->clear();
+
+        session()->forget('coupon');
+
+        $orderData = [
+            'user_id' => $this->user()->id,
+            'discount' => $discount,
+            'coupon_code' => $coupon['code'] ?: null,
+            'total' => $grandTotal
+        ];
+
+        $user->newOrder($orderData);
 //
 //        // foreach products
 //        OrderProduct::create([

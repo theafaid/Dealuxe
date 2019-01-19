@@ -195,4 +195,22 @@ class UserTest extends TestCase
         $user = create('App\User');
         $this->assertInstanceOf(Collection::class, $user->orders);
     }
+
+    /** @test */
+    function can_create_new_order(){
+        $user = create('App\User');
+
+        $orderData = [
+            'user_id' => $user->id,
+            'discount' => 10000,
+            'coupon_code' => "test-coupon",
+            'total' => 20000
+        ];
+
+        $user->newOrder($orderData);
+
+        $this->assertNotNull($user->orders);
+        $this->assertEquals($user->orders->first()->user_id, $user->id);
+        $this->assertDatabaseHas('orders', $orderData);
+    }
 }
