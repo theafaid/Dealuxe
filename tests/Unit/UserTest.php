@@ -179,4 +179,15 @@ class UserTest extends TestCase
 
         $this->assertFalse($user->hasCompletedProfile(false));
     }
+
+    /** @test */
+    function can_check_if_user_can_checkout(){
+        $this->signIn($completeProfile = true);
+
+        $this->assertFalse(auth()->user()->canCheckout());
+
+        $this->generateProductThenToCart();
+
+        $this->assertTrue(auth()->user()->canCheckout());
+    }
 }
