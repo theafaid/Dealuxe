@@ -79,11 +79,11 @@ class CheckoutRequest extends FormRequest
 //        $table->string('error')->nullable();
 //        $table->timestamps();
 //        // $user->newOrder();
-//        Order::create([
-//            'user_id' => $this->user()->id,
-//            'name_on_card' => $customer->name_on_card,
-//            'discount' => $discount
-//        ]);
+        Order::create([
+            'user_id' => $this->user()->id,
+            'name_on_card' => $customer->name_on_card,
+            'discount' => $discount
+        ]);
 //
 //        // foreach products
 //        OrderProduct::create([
