@@ -24,7 +24,6 @@ class CreateOrdersTable extends Migration
             $table->integer('total');
             $table->string('payment_gateway')->default('stripe');
             $table->boolean('shipped')->default(false);
-            $table->string('error')->nullable();
             $table->timestamps();
         });
     }
