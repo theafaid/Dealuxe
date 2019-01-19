@@ -67,12 +67,24 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
         return;
     }
 
-    /** @test */
+    /**
+     * Remove a product from user wish list
+     * @param $product
+     * @return int|void
+     */
     public function removeFromWishlist($product){
         $wishlist = $this->wishlist();
         if($wishlist->where(['product_id' => $product->id])->exists()){
             return $wishlist->detach($product->id);
         }
         return;
+    }
+
+    /**
+     * Get user profile
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function profile(){
+        return $this->hasOne('App\Profile');
     }
 }

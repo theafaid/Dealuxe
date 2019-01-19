@@ -2,6 +2,8 @@
 
 namespace Tests\Unit;
 
+use App\Profile;
+use Illuminate\Support\Collection;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -123,5 +125,19 @@ class UserTest extends TestCase
         $user->removeFromWishlist($product);
 
         $this->assertCount(0, $user->fresh()->wishlist);
+    }
+
+    /** @test */
+    function it_has_a_profile(){
+        $user = create('App\User');
+       Profile::create([
+            'user_id' => $user->id,
+            'address' => 'address data',
+            'province' => 'province data',
+            'city' => 'city data',
+            'postal_code' => '11111',
+            'phone' => '+20123456789'
+        ]);
+        $this->assertInstanceOf('App\Profile', $user->profile);
     }
 }
