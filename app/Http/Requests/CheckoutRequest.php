@@ -2,8 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\Mail\OrderCreated;
 use App\OrderProduct;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Mail;
 use Stripe\{Charge, Customer};
 use Cart;
 class CheckoutRequest extends FormRequest
@@ -30,12 +32,13 @@ class CheckoutRequest extends FormRequest
         ];
     }
 
-
     /**
      * First the customer will checkout by the payment gateway
      * then we will create a record in orders table for the customer
      * after this we will create a new record in order_product table
-     * when the 3 points done > Just we will clear the coupon session if it exists and user cart
+     * when the 3 points done > Just we will send mail to the customer that
+     * new order has been created by him
+     * then clear the coupon session if it exists and user cart
      * will be cleared
      * @return string
      */
@@ -56,12 +59,23 @@ class CheckoutRequest extends FormRequest
         $grandTotal = $cartTotal - $discount;
 
         if($this->customerCheckout($user, $grandTotal, $coupon, $discount)){
-            $this->recordInOrdersTables($user, $grandTotal, $coupon, $discount);
+           $order = $this->recordInOrdersTables($user, $grandTotal, $coupon, $discount);
+            if($order){
+                $this->sendSuccessMailToCustomer($user, $order, $grandTotal);
+            }
         }
 
         $this->forgetSession($user);
     }
 
+    /**
+     * Record the order in orders table
+     * @param $user
+     * @param $grandTotal
+     * @param $coupon
+     * @param $discount
+     * @return mixed
+     */
     private function recordInOrdersTables($user, $grandTotal, $coupon, $discount){
         $orderData = [
             'user_id' => $this->user()->id,
@@ -79,6 +93,8 @@ class CheckoutRequest extends FormRequest
                 'quantity' => $item['quantity']
             ]);
         }
+
+        return $order;
     }
     /**
      * Stripe Checkout
@@ -119,6 +135,16 @@ class CheckoutRequest extends FormRequest
         return $user->cartItems()->map(function($item){
             return "product:" . $item['attributes']['product']['slug'] . " | qnt: ". $item['quantity'] . "<br>";
         })->values()->toJson();
+    }
+
+    /**
+     * Send a mail to the customer with his checkout information
+     * @param $user
+     * @param $order
+     * @param $grandTotal
+     */
+    private function sendSuccessMailToCustomer($user, $order, $grandTotal){
+        Mail::to($user->email)->send(new OrderCreated($order, $grandTotal));
     }
 
     /**

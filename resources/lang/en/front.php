@@ -66,4 +66,20 @@ return [
 
     // profile
     'please_complete_your_profile_first' => 'Please complete your profile before checkout',
+
+    // mail
+    'hey' => 'Hey',
+    'order_created_mail_subject' => 'Your Order Has Created Successfully',
+    'order_created_mail_header' => 'Your request has been successfully sent to us',
+    'we_inform_that_order_was_sent' => 'We inform you that your request was sent to us, and it includes the following',
+    'remember_that_your_information_is' => 'Remember that your information is',
+    'postal_code' => 'Postal Code',
+    'phone' => 'Phone',
+    'province' => 'Province',
+    'city' => 'City',
+    'address' => 'Address',
+    'thanks_for_using_' => 'Thanks, For using',
+    'product_name' => 'Product',
+    'product_price' => 'Product Price',
+    'quantity' => 'Quantity',
 ];

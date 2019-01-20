@@ -45,3 +45,8 @@ Auth::routes(['verify' => true]);
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+
+Route::get('test', function(){
+    return new \App\Mail\OrderCreated(\App\Order::first());
+});
