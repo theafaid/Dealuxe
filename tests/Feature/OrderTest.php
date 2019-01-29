@@ -22,14 +22,4 @@ class OrderTest extends TestCase
         $order = $this->createOrder();
         $this->assertInstanceOf(Collection::class, $order->products );
     }
-
-    protected function createOrder(){
-        $user = create('App\User');
-
-        return Order::create([
-            'user_id' => $user->id,
-            'discount' => 0,
-            'total' => '10000',
-        ]);
-    }
 }
