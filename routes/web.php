@@ -46,7 +46,3 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-
-Route::get('test', function(){
-    return App\Order::first()->products;
-});
