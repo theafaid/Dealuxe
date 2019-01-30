@@ -11,6 +11,9 @@ window.Vue = require('vue');
 
 import Toaster from 'v-toaster'
 import 'v-toaster/dist/v-toaster.css'
+import InstantSearch from 'vue-instantsearch';
+
+Vue.use(InstantSearch);
 Vue.use(Toaster, {timeout: 3000})
 
 /**
