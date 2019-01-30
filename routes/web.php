@@ -48,5 +48,5 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 Route::get('test', function(){
-    return new \App\Mail\OrderCreated(\App\Order::first());
+    return App\Order::first()->products;
 });

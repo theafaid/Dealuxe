@@ -15357,8 +15357,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/laravel/dealuxe/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/laravel/dealuxe/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /media/aaaf/DC1A6E5D1A6E34A4/Work/myApps/inProgress/dealuxe/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /media/aaaf/DC1A6E5D1A6E34A4/Work/myApps/inProgress/dealuxe/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
