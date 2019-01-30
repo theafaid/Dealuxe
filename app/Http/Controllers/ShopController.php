@@ -15,6 +15,10 @@ class ShopController extends Controller
      */
     public function index()
     {
+        if(request()->has('q')){
+            return redirect()->route('search', ['q' => request('q')]);
+        }
+
         $data = $this->getProducts();
 
         return view('shop', [

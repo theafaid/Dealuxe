@@ -42,3 +42,12 @@ if(!function_exists('setActiveCategory')){
         return request('category') == $slug ? $output : null;
     }
 }
+
+/**
+ * Get App locale
+ */
+if(!function_exists('lang')){
+    function lang(){
+        return app()->getLocale();
+    }
+}

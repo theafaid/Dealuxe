@@ -99,9 +99,8 @@
                         <div class="sidebar">
                             <h4 class="sidebar-title">Search</h4>
                             <div class="sidebar-search">
-                                <form action="#">
-                                    <input type="text" placeholder="Enter key words">
-                                    <input type="submit" value="search">
+                                <form action="{{route('search')}}">
+                                    <input type="text" name="q" placeholder="Enter key words">
                                 </form>
                             </div>
                         </div>

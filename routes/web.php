@@ -5,6 +5,9 @@ Route::get('/', 'WelcomePageController@index')->name('welcome');
 Route::get('/shop', 'ShopController@index')->name('shop.index');
 // single product page
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
+// searching
+Route::get('/search', 'SearchController@index')->name('search');
+
 // User must verified his email
 Route::group(['middleware' => 'verified'], function(){
     // view profile

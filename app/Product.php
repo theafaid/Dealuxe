@@ -73,4 +73,20 @@ class Product extends Model
 
         return in_array($this->id, $wishlistIds);
     }
+    
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray()
+    {
+        $attributes = [
+            'path' => route('shop.show', $this->slug),
+            'categories' => $this->categories->pluck('name')->toArray()
+        ];
+
+        return array_merge($this->toArray(), $attributes);
+//        return $this->toArray() + ['categories' => $this->categories->pluck('name')->toArray()];
+    }
 }
