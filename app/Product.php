@@ -4,11 +4,12 @@ namespace App;
 
 use Cart;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 use Spatie\Translatable\HasTranslations;
 
 class Product extends Model
 {
-    use HasTranslations;
+    use HasTranslations, Searchable;
 
     protected $guarded = [];
     protected $appends = ['inCart', 'inWishlist'];
