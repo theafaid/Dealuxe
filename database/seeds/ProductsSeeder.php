@@ -13,7 +13,9 @@ class ProductsSeeder extends Seeder
      */
     public function run()
     {
-        for($i=1; $i<=100; $i++){
+
+        for($i=1; $i<=10; $i++){
+            config('scout.driver', null);
 
             $product = new Product();
 
