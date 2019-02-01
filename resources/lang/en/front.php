@@ -28,6 +28,7 @@ return [
     'inStock' => 'In Stock',
     'lowStock' => 'Low Stock',
     'notAvailable' => 'Not Available',
+    'do_not_have_qnt' => 'Sorry, We currently don\'t have enough items in stock.',
 
     // wish list
     'your_wishlist_has_cleared' => 'Your wishlist has been cleared!',

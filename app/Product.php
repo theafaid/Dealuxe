@@ -34,6 +34,16 @@ class Product extends Model
     }
 
     /**
+     * Check if the quantity of the product bigger
+     * than the order quantity
+     * @param $quantity
+     * @return bool
+     */
+    public function hasCount($quantity){
+        return $this->quantity >= $quantity;
+    }
+
+    /**
      * Fetch might also like products
      * @param $query
      * @param int $limit
@@ -73,7 +83,7 @@ class Product extends Model
 
         return in_array($this->id, $wishlistIds);
     }
-    
+
     /**
      * Get the indexable data array for the model.
      *

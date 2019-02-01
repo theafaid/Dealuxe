@@ -35,7 +35,11 @@ class CartController extends Controller
 
         $product = Product::whereSlug(request('product'))->first();
 
-        return $request->save($product);
+        if($product->hasCount($request->qnt)){
+            return $request->save($product);
+        }
+
+        return response(__('front.do_not_have_qnt'), 422);
     }
 
 

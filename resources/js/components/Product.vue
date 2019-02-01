@@ -49,7 +49,7 @@
                     .then(response => {
                         this.success(response);
                     }).catch(error => {
-                        this.error('Something went wrong');
+                        this.error(error.response.data);
                 });
             },
 

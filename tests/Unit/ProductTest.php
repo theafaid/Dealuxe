@@ -32,6 +32,13 @@ class ProductTest extends TestCase
     }
 
     /** @test */
+    function it_can_check_if_the_quantity_is_available(){
+        $product = create('App\Product', ['quantity' => 5]);
+        $this->assertFalse($product->hasCount(6));
+        $this->assertTrue($product->hasCount(5));
+        $this->assertTrue($product->hasCount(4));
+    }
+    /** @test */
     function it_can_check_if_the_product_in_the_authenticated_user_cart(){
         $product = create('App\Product');
         $user = create('App\User');
