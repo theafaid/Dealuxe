@@ -62,6 +62,8 @@ return [
     'having_a_coupon' => 'Having a coupon ?',
     'coupon' => 'Coupon',
     'coupon_applied_successfully' => 'Coupon applied successfully :)',
+    'sorry' => 'sorry, ',
+    'no_longer_available' => 'No longer available',
 
     // sidebar
     'categories' => 'Categories',

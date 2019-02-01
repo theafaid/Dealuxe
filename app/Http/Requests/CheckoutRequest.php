@@ -34,7 +34,8 @@ class CheckoutRequest extends FormRequest
     }
 
     /**
-     * First the customer will checkout by the payment gateway
+     * First we will check race condition when there are less items available to purchase
+     * then the customer will checkout by the payment gateway
      * then we will create a record in orders table for the customer
      * after this we will create a new record in order_product table
      * when the 3 points done > Just we will send mail to the customer that
@@ -47,6 +48,9 @@ class CheckoutRequest extends FormRequest
     public function persist(){
 
         $user = $this->user();
+        if($this->productsAreNoLongerAvailable($user->cartItems()))
+            return response(['msg' => __('front.one_of_items_not_available')], 422);
+
         // user cart total
         $cartTotal = $user->cartTotal($toDollar = false, $dollarSign = false);
 
@@ -162,6 +166,21 @@ class CheckoutRequest extends FormRequest
             $product->update(['quantity' => $product->quantity - $item['quantity']]);
 
         })->filter();
+    }
+
+    /**
+     * Check if the products in cart are no longer available
+     * @param $items
+     * @return bool
+     */
+    private function productsAreNoLongerAvailable($items){
+        foreach($items as $item){
+            $product = Product::find($item['attributes']['product']['id']);
+            if($product->quantity < $item['quantity']){
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
