@@ -64,6 +64,19 @@ class CartTest extends TestCase
     }
 
     /** @test */
+    function it_check_that_order_quantity_is_available_for_a_product(){
+        $this->signIn();
+        $product = create('App\Product', ['quantity' => 5]);
+
+        $this->post(route('cart.store'), [
+            'product' => $product->slug,
+            'qnt' => 6
+        ])
+            ->assertStatus(422)
+            ->assertJson(['msg' => __('front.do_not_have_qnt')]);
+    }
+
+    /** @test */
     function an_authenticated_user_can_browse_his_cart(){
         $this->signIn();
 

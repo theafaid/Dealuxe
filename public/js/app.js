@@ -9875,7 +9875,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.post(endpoint, data).then(function (response) {
         _this.success(response);
       }).catch(function (error) {
-        _this.error(error.response.data);
+        _this.error(error.response.data.msg);
       });
     },
     removeFromCart: function removeFromCart(endpoint, data) {

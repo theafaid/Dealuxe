@@ -39,7 +39,7 @@ class CartController extends Controller
             return $request->save($product);
         }
 
-        return response(__('front.do_not_have_qnt'), 422);
+        return response(['msg' => __('front.do_not_have_qnt')], 422);
     }
 
 
