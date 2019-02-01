@@ -51,3 +51,25 @@ if(!function_exists('lang')){
         return app()->getLocale();
     }
 }
+
+/**
+ * Get stock level
+ */
+
+if(!function_exists('getStockLevel')){
+    function getStockLevel($quantity){
+        $stockThreshold = setting('site.stock_threshold') ?: 0;
+
+        if($stockThreshold == 0){
+            return "<span class='badge badge-danger'>" . __('front.notAvailable') . "</span>";
+        }
+
+        if($quantity >= $stockThreshold){
+            $stockLevel = "<span class='badge badge-success'>" . __('front.inStock') . "</span>";
+        }else{
+            $stockLevel = "<span class='badge badge-warning'>" . __('front.lowStock') . "</span>";
+        }
+
+        return $stockLevel;
+    }
+}

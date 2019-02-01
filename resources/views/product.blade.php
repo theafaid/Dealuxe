@@ -68,18 +68,14 @@
                                     <div class="head">
                                         <!-- Title-->
                                         <div class="top">
-                                            <h4 class="title">{{$product->name}}</h4>
+                                            <h4 class="title">
+                                                {{$product->name}}
+                                            </h4>
+                                            <div>{!! $stockLevel !!}</div>
                                         </div>
                                         <!-- Price & Ratting -->
                                         <div class="bottom">
-                                            <span class="price">{{$product->presentPrice()}}<span class="old">$75</span></span>
-                                            <span class="ratting">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </span>
+                                            <span class="price">{{$product->presentPrice()}}</span>
                                         </div>
                                     </div>
                                     <div class="body">

@@ -25,6 +25,9 @@ return [
     // product page
     'product_details' => 'Product Details',
     'cart_updated_successfully' => 'Your cart updated successfully',
+    'inStock' => 'In Stock',
+    'lowStock' => 'Low Stock',
+    'notAvailable' => 'Not Available',
 
     // wish list
     'your_wishlist_has_cleared' => 'Your wishlist has been cleared!',

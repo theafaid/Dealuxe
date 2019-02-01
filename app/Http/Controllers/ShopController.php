@@ -62,7 +62,8 @@ class ShopController extends Controller
         return view('product', [
             'product'   => $product,
             'mightLike' => $product->mightLike(10)->get(),
-            'qnt' => $qnt
+            'qnt' => $qnt,
+            'stockLevel' => getStockLevel($product->quantity)
         ]);
     }
 
@@ -121,5 +122,9 @@ class ShopController extends Controller
             'categoryName' => $categoryName,
             'products' => $products
         ];
+    }
+
+    protected function stockShreshold(){
+        return setting('site.stock_threshold');
     }
 }
