@@ -86,9 +86,10 @@
                     product: this.productData.slug,
                     qnt: this.quantity ? this.quantity: 1
                 }).then(response => {
+                    this.success(response.data.msg);
                     this.$toaster.success(response.data.msg);
                 }).catch(error => {
-                    this.$toaster.error(response.data.msg);
+                    this.error(error.response.data.msg);
                 });
             },
 

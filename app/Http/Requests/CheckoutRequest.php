@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use App\Mail\OrderCreated;
 use App\OrderProduct;
+use App\Product;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Mail;
 use Stripe\{Charge, Customer};
@@ -39,6 +40,7 @@ class CheckoutRequest extends FormRequest
      * when the 3 points done > Just we will send mail to the customer that
      * new order has been created by him
      * then clear the coupon session if it exists and user cart
+     * then decrease the quantity of all the product in the cart
      * will be cleared
      * @return string
      */
@@ -63,6 +65,7 @@ class CheckoutRequest extends FormRequest
             if($order){
                 $this->sendSuccessMailToCustomer($user, $order, $grandTotal);
             }
+            $this->decreaseQuantities($user->cartItems());
         }
 
         $this->forgetSession($user);
@@ -145,6 +148,20 @@ class CheckoutRequest extends FormRequest
      */
     private function sendSuccessMailToCustomer($user, $order, $grandTotal){
         Mail::to($user->email)->send(new OrderCreated($order, $grandTotal));
+    }
+
+
+    /**
+     * @param $items
+     * Decrease the quantities for every product
+     */
+    private function decreaseQuantities($items){
+
+        collect($items)->map(function($item){
+            $product = Product::find($item['attributes']['product']['id']);
+            $product->update(['quantity' => $product->quantity - $item['quantity']]);
+
+        })->filter();
     }
 
     /**
