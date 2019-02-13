@@ -58,18 +58,15 @@ class CheckoutController extends Controller
     }
 
     /**
-     * Store a payment
      * @param CheckoutRequest $request
-     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response|string
      */
     public function store(CheckoutRequest $request){
 
         try{
-            $request->persist();
+            return $request->persist();
         }catch(\Exception $ex){
             return response(['msg' => $ex->getMessage()], 422);
         }
-
-        return response(['msg' => 'success'], 200);
     }
 }

@@ -9772,7 +9772,7 @@ __webpack_require__.r(__webpack_exports__);
         axios.post(_this.checkoutRoute, {
           stripeToken: data.token.id
         }).then(function (response) {
-          console.log(response.data);
+          return window.location = _this.thankyouRoute;
         }).catch(function (error) {
           _this.error = true;
           _this.showPayButton = true;
