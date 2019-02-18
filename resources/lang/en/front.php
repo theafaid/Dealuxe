@@ -15,6 +15,7 @@ return [
     'featured_products' => 'Featured Products',
     'price_high_low' => 'Price: High to Low',
     'price_low_high' => 'Price: Low to High',
+    'available' => 'Available',
 
     // cart page
     'shopping_cart_has_been_emptied' => 'Your Shopping cart has been cleared!',

@@ -90,7 +90,7 @@
 
                                                 <div class="quantity">
                                                     <h4>Quantity:</h4>
-                                                    <div><input @change="updateQnt" type="number" name="qnt" value="" min="1" max="15" v-model="quantity"></div>
+                                                    <div><input @change="updateQnt" type="number" name="qnt" value="" min="1" max="{{$product->quantity}}" v-model="quantity"></div>
                                                 </div>
 
                                                     <!-- Product Action -->

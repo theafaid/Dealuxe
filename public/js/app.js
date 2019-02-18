@@ -9917,9 +9917,7 @@ __webpack_require__.r(__webpack_exports__);
         product: this.productData.slug,
         qnt: this.quantity ? this.quantity : 1
       }).then(function (response) {
-        _this5.success(response.data.msg);
-
-        _this5.$toaster.success(response.data.msg);
+        _this5.success(response);
       }).catch(function (error) {
         _this5.error(error.response.data.msg);
       });

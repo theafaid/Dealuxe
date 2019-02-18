@@ -59,15 +59,17 @@ if(!function_exists('lang')){
 if(!function_exists('getStockLevel')){
     function getStockLevel($quantity){
         $stockThreshold = setting('site.stock_threshold') ?: 0;
-
-        if($stockThreshold == 0){
+        if($quantity == 0){
             return "<span class='badge badge-danger'>" . __('front.notAvailable') . "</span>";
         }
 
+        $available = __('front.available') . "( {$quantity} )";
+
+
         if($quantity >= $stockThreshold){
-            $stockLevel = "<span class='badge badge-success'>" . __('front.inStock') . "</span>";
+            $stockLevel = "<span class='badge badge-success'>" . __('front.inStock') . " - {$available}". "</span>";
         }else{
-            $stockLevel = "<span class='badge badge-warning'>" . __('front.lowStock') . "</span>";
+            $stockLevel = "<span class='badge badge-warning'>" . __('front.lowStock') . " - {$available}"  . "</span>";
         }
 
         return $stockLevel;
