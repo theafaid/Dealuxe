@@ -26,7 +26,7 @@ class UpdateCartRequest extends FormRequest
     {
         return [
             'product' => 'required|string|exists:products,slug',
-            'qnt'     => 'sometimes|integer|min:1|max:15',
+            'qnt'     => 'sometimes|integer|min:1',
         ];
     }
 
