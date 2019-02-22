@@ -23,6 +23,7 @@ class Product extends Model
 
     public function getImageAttribute($value){
         if(! is_null($value) && file_exists("storage/{$value}")) return "/".$value;
+
         return "/design/images/default/no-product-img.jpg";
     }
     /**
