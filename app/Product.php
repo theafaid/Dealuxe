@@ -22,9 +22,15 @@ class Product extends Model
     }
 
     public function getImageAttribute($value){
+<<<<<<< HEAD
         if(! is_null($value) && file_exists("storage/{$value}")) return "/".$value;
 
         return "/design/images/default/no-product-img.jpg";
+=======
+        if(! is_null($value) && file_exists("storage/{$value}")) return "/storage/".$value;
+
+        return "/storage/design/images/default/no-product-img.jpg";
+>>>>>>> 7b363ac5f5613375c74f4bbb7863c5ee5722caec
     }
     /**
      * Change the actual price to dollar format
