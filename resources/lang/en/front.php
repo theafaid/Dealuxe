@@ -65,6 +65,7 @@ return [
     'coupon_applied_successfully' => 'Coupon applied successfully :)',
     'sorry' => 'sorry, ',
     'no_longer_available' => 'No longer available',
+    'something_went_wrong' => 'Something went wrong ! Check your internet connection then try again ..',
 
     // sidebar
     'categories' => 'Categories',

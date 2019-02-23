@@ -66,7 +66,7 @@ class CheckoutController extends Controller
         try{
             return $request->persist();
         }catch(\Exception $ex){
-            return response(['msg' => $ex->getMessage()], 422);
+            return response(['msg' => __('front.something_went_wrong')], 422);
         }
     }
 }

@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $guarded = [];
-
+    protected $with = ['user'];
+    
     /**
      * Get the order owner
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

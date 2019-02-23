@@ -120,7 +120,7 @@ class ProductsSeeder extends Seeder
 
             $product->slug = "screen-{$i}";
             $product->price = rand(10000, 100000) ;
-            $product->image = "design/images/default/accessories.jpg";
+            $product->image = "design/images/default/screen.jpg";
             $product->save();
 
             $product->categories()->attach(Category::whereSlug('screens')->first()->id);
