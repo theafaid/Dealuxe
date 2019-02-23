@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/search.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="528">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#3397#6685#0#HTML" />
               </folding>
@@ -703,12 +703,12 @@
       <workItem from="1550496187836" duration="49000" />
       <workItem from="1550850374031" duration="279000" />
       <workItem from="1550869409350" duration="16434000" />
-      <workItem from="1550889889398" duration="4096000" />
+      <workItem from="1550889889398" duration="4686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289211000" />
+    <option name="totallyTimeSpent" value="289801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -721,13 +721,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="2" weight="0.20427808" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32744282" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32744282" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TODO" order="3" weight="0.32952183" />
@@ -1133,8 +1132,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/search.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        <state relative-caret-position="528">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#3397#6685#0#HTML" />
           </folding>
