@@ -7,16 +7,19 @@ use App\Product;
 class SearchController extends Controller
 {
     public function index(){
-        if($query = request('q')){
-            $threads = Product::search($query)->get();
+
+        if(request()->has('q')){
+            $products = Product::search($query = request('q'))->paginate(20);
 
             if(request()->expectsJson()){
-                return $threads;
+                return $products;
             }
 
-            return view('search', ['threads' => $threads]);
+            return view('search', [
+                'title' => __("front.result_for {$query}")
+            ]);
         }
 
-        return view('products.index');
+        return redirect()->route('shop.index');
     }
 }

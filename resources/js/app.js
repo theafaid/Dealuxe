@@ -12,10 +12,7 @@ window.Vue = require('vue');
 import Toaster from 'v-toaster'
 import 'v-toaster/dist/v-toaster.css'
 import InstantSearch from 'vue-instantsearch';
-import VueAutosuggest from "vue-autosuggest";
-
 Vue.use(InstantSearch);
-Vue.use(VueAutosuggest);
 Vue.use(Toaster, {timeout: 3000})
 
 /**
