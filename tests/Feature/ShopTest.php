@@ -53,4 +53,22 @@ class ShopTest extends TestCase
             ->assertSee($products[2]->name);
 
     }
+
+    /** @test */
+    function sort_price_from_low_to_high(){
+        $product = create('App\Product', ['price' => 10000]);
+        $product1 = create('App\Product', ['price' => 20000]);
+
+        $this->get(route('shop.index', ['sortBy' => 'price_low_high']))
+            ->assertSeeInOrder([$product->name, $product1->name]);
+    }
+
+    /** @test */
+    function sort_price_from_high_to_low(){
+        $product = create('App\Product', ['price' => 20000]);
+        $product1 = create('App\Product', ['price' => 10000]);
+
+        $this->get(route('shop.index', ['sortBy' => 'price_low_high']))
+            ->assertSeeInOrder([$product->name, $product1->name]);
+    }
 }
