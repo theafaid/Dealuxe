@@ -73,7 +73,10 @@ return [
     'no_products_founded' => 'Sorry! We don\'t have any products',
 
     // profile
+    'address_details' => 'Address Details',
     'please_complete_your_profile_first' => 'Please complete your profile before checkout',
+    'update_address_details' => 'Update My Address Details',
+    'address_details_updated' => 'Your address details has updated successfully',
 
     // mail
     'hey' => 'Hey',

@@ -22,7 +22,6 @@
     <!-- My Account Section Start -->
     <div class="my-account-section section position-relative pt-90 pb-60 pt-lg-80 pb-lg-50 pt-md-70 pb-md-40 pt-sm-60 pb-sm-30 pt-xs-50 pb-xs-20 fix">
         <div class="container">
-            @include('layouts.partials._message')
             <div class="row">
                 <div class="col-12">
 
@@ -55,6 +54,7 @@
                             <div class="tab-content" id="myaccountContent">
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
+                                    @include('layouts.partials._message')
                                     <div class="myaccount-content">
                                         <h3>Dashboard</h3>
 
@@ -74,47 +74,54 @@
                                     <div class="myaccount-content">
                                         <h3>Orders</h3>
 
-                                        <div class="myaccount-table table-responsive text-center">
-                                            <table class="table table-bordered">
-                                                <thead class="thead-light">
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Name</th>
-                                                    <th>Date</th>
-                                                    <th>Status</th>
-                                                    <th>Total</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                                </thead>
+                                        @foreach($user->orders as $order)
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h3>{{$order->created_at->format('Y-m-d H:i')}} | ({{$order->products()->count()}}) {{__('front.products')}}</h3>
+                                                    <h4>{{__('front.total')}} {{presentPrice($order->total)}}</h4>
+                                                    <h4>{{__('front.discount')}} {{presentPrice($order->discount)}}</h4>
+                                                    <h4>
+                                                        @if($order->shipped)
+                                                            <span class="badge badge-success">{{__('front.shipped')}}</span>
+                                                        @else
+                                                            <span class="badge badge-danger">{{__('front.not_shipped')}}</span>
+                                                        @endif
+                                                    </h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="myaccount-table table-responsive text-center">
+                                                        <table class="table table-bordered">
+                                                            <thead class="thead-light">
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>{{__('front.name')}}</th>
+                                                                <th>{{__('front.product_details')}}</th>
+                                                                <th>{{__('front.product_price')}}</th>
+                                                                <th>{{__('front.quantity')}}</th>
+                                                                <th>{{__('front.action')}}</th>
+                                                            </tr>
+                                                            </thead>
 
-                                                <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Moisturizing Oil</td>
-                                                    <td>Aug 22, 2018</td>
-                                                    <td>Pending</td>
-                                                    <td>$45</td>
-                                                    <td><a href="cart.html" class="btn btn-round">View</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Katopeno Altuni</td>
-                                                    <td>July 22, 2018</td>
-                                                    <td>Approved</td>
-                                                    <td>$100</td>
-                                                    <td><a href="cart.html" class="btn btn-round">View</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td>Murikhete Paris</td>
-                                                    <td>June 12, 2017</td>
-                                                    <td>On Hold</td>
-                                                    <td>$99</td>
-                                                    <td><a href="cart.html" class="btn btn-round">View</a></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                                            <tbody>
+                                                            @foreach($order->products as $key => $product)
+                                                                <tr>
+                                                                    <td>{{$key + 1}}</td>
+                                                                    <td>
+                                                                        {{$product->name}}<br>
+                                                                        <img class="img-thumbnail img-rounded" src="{{$product->image}}" width="100" height="50">
+                                                                    </td>
+                                                                    <td>{{$product->details}}</td>
+                                                                    <td>{{presentPrice($product->price)}}</td>
+                                                                    <td>{{$product->pivot->quantity}}</td>
+                                                                    <td><a href="{{route('shop.show', $product->slug)}}" class="btn btn-round">View</a></td>
+                                                                </tr>
+                                                            @endforeach
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div><hr>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <!-- Single Tab Content End -->
@@ -168,16 +175,37 @@
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade" id="address-edit" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3>Billing Address</h3>
+                                        <h3>{{__('front.address_details')}}</h3>
 
                                         <address>
-                                            <p><strong>Alex Tuntuni</strong></p>
-                                            <p>1355 Market St, Suite 900 <br>
-                                                San Francisco, CA 94103</p>
-                                            <p>Mobile: (123) 456-7890</p>
-                                        </address>
+                                            <div class="account-details-form">
+                                                <form action="{{route('profile.updateAddress')}}" method="POST">
+                                                    @csrf
+                                                    {{method_field('PATCH')}}
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-12 mb-30">
+                                                            <input placeholder="{{__('front.province')}}" name="province" type="text" value="{{old('province') ?: $user->profile->province}}">
+                                                        </div>
 
-                                        <a href="#" class="btn btn-round d-inline-block"><i class="fa fa-edit"></i>Edit Address</a>
+                                                        <div class="col-lg-6 col-12 mb-30">
+                                                            <input placeholder="{{__('front.city')}}" name="city" type="text" value="{{old('city') ?: $user->profile->city}}">
+                                                        </div>
+
+                                                        <div class="col-12 mb-30">
+                                                            <input placeholder="{{__('front.address')}}" name="address" type="text" value="{{old('address') ?: $user->profile->address}}">
+                                                        </div>
+
+                                                        <div class="col-12 mb-30">
+                                                            <input placeholder="{{__('front.postal_code')}}" name="postal_code" type="text" value="{{old('postal_code') ?: $user->profile->postal_code}}">
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <button type="submit" class="btn btn-round btn-lg">{{__('front.update_address_details')}}</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </address>
                                     </div>
                                 </div>
                                 <!-- Single Tab Content End -->

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $guarded = [];
-    protected $with = ['user'];
+    protected $with = ['user', 'products'];
     
     /**
      * Get the order owner

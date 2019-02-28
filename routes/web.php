@@ -12,6 +12,8 @@ Route::get('/search', 'SearchController@index')->name('search');
 Route::group(['middleware' => 'verified'], function(){
     // view profile
     Route::get('/profile', 'ProfilesController@index')->name('profile.index');
+    // update address
+    Route::patch('/profile/address', 'ProfilesController@updateAddress')->name('profile.updateAddress');
     // show cart
     Route::get('/cart', 'CartController@index')->name('cart.index');
     // add a product to cart
