@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateAccountDetailsRequest;
 use App\Http\Requests\UpdateAddressRequest;
 
 class ProfilesController extends Controller
@@ -28,6 +29,15 @@ class ProfilesController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function updateAddress(UpdateAddressRequest $request){
+        return $request->persist();
+    }
+
+    /**
+     * Updated authenticated user account details
+     * @param UpdateAccountDetailsRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updateAccountDetails(UpdateAccountDetailsRequest $request){
         return $request->persist();
     }
 }

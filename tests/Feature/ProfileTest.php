@@ -37,10 +37,27 @@ class ProfileTest extends TestCase
 
         $this->assertNull($profile->address);
 
-        $this->patch(route('profile.updateAddress', $addressDetails))
+        $this->patch(route('profile.address', $addressDetails))
             ->assertRedirect(route('profile.index'));
 
         $this->assertEquals('fake address', $profile->fresh()->address);
 
+    }
+
+    /** @test */
+    function a_user_can_update_his_account_details(){
+        $this->signIn();
+        $user = auth()->user();
+
+        $this->withoutExceptionHandling();
+
+        $updatedUser = make('App\User', ['name' => 'john', 'password' => null]);
+
+        $this->patch(route('profile.account', $updatedUser->toArray()))
+            ->assertRedirect(route('profile.index'));
+
+        $this->assertEquals('john', $user->fresh()->name);
+
+        $this->assertDatabaseHas('users', ['name' => $user->fresh()->name]);
     }
 }

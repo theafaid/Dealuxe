@@ -13,7 +13,8 @@ Route::group(['middleware' => 'verified'], function(){
     // view profile
     Route::get('/profile', 'ProfilesController@index')->name('profile.index');
     // update address
-    Route::patch('/profile/address', 'ProfilesController@updateAddress')->name('profile.updateAddress');
+    Route::patch('/profile/address', 'ProfilesController@updateAddress')->name('profile.address');
+    Route::patch('/profile/account_details', 'ProfilesController@updateAccountDetails')->name('profile.account');
     // show cart
     Route::get('/cart', 'CartController@index')->name('cart.index');
     // add a product to cart

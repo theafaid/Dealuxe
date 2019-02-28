@@ -77,7 +77,9 @@ return [
     'please_complete_your_profile_first' => 'Please complete your profile before checkout',
     'update_address_details' => 'Update My Address Details',
     'address_details_updated' => 'Your address details has updated successfully',
-
+    'old_password_incorrect' => 'Incorrect old password !',
+    'account_details_updated' => 'Your account details has updated successfully',
+    'update_acc_details' => 'Update account details',
     // mail
     'hey' => 'Hey',
     'order_created_mail_subject' => 'Your Order Has Created Successfully',

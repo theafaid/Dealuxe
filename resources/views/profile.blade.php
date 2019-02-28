@@ -179,7 +179,7 @@
 
                                         <address>
                                             <div class="account-details-form">
-                                                <form action="{{route('profile.updateAddress')}}" method="POST">
+                                                <form action="{{route('profile.address')}}" method="POST">
                                                     @csrf
                                                     {{method_field('PATCH')}}
                                                     <div class="row">
@@ -213,43 +213,41 @@
                                 <!-- Single Tab Content Start -->
                                 <div class="tab-pane fade" id="account-info" role="tabpanel">
                                     <div class="myaccount-content">
-                                        <h3>Account Details</h3>
+                                        <h3>{{__('front.account_details')}}</h3>
 
                                         <div class="account-details-form">
-                                            <form action="#">
+                                            <form action="{{route('profile.account')}}" method="POST">
+                                                @csrf
+                                                {{method_field('PATCH')}}
                                                 <div class="row">
-                                                    <div class="col-lg-6 col-12 mb-30">
-                                                        <input id="first-name" placeholder="First Name" type="text">
-                                                    </div>
-
-                                                    <div class="col-lg-6 col-12 mb-30">
-                                                        <input id="last-name" placeholder="Last Name" type="text">
+                                                    <div class="col-12 mb-30">
+                                                        <input placeholder="{{__('front.name')}}" type="text" name="name" value="{{old('name') ?: $user->name}}">
                                                     </div>
 
                                                     <div class="col-12 mb-30">
-                                                        <input id="display-name" placeholder="Display Name" type="text">
+                                                        <input placeholder="{{__('front.email')}}" type="email" name="email" value="{{old('email') ?: $user->email}}">
                                                     </div>
 
                                                     <div class="col-12 mb-30">
-                                                        <input id="email" placeholder="Email Address" type="email">
+                                                        <input placeholder="{{__('front.phone')}}" type="text" name="phone" value="{{old('phone') ?: $user->profile->phone}}">
                                                     </div>
 
-                                                    <div class="col-12 mb-30"><h4>Password change</h4></div>
+                                                    <div class="col-12 mb-30"><h4>{{__('front.password_change')}}</h4></div>
 
                                                     <div class="col-12 mb-30">
-                                                        <input id="current-pwd" placeholder="Current Password" type="password">
+                                                        <input placeholder="{{__('front.old_pass')}}" type="password" name="old_pass">
                                                     </div>
 
                                                     <div class="col-lg-6 col-12 mb-30">
-                                                        <input id="new-pwd" placeholder="New Password" type="password">
+                                                        <input placeholder="{{__('front.password')}}" type="password" name="password">
                                                     </div>
 
                                                     <div class="col-lg-6 col-12 mb-30">
-                                                        <input id="confirm-pwd" placeholder="Confirm Password" type="password">
+                                                        <input placeholder="{{__('front.password_confirmation')}}" type="password" name="password_confirmation">
                                                     </div>
 
                                                     <div class="col-12">
-                                                        <button class="btn btn-round btn-lg">Save Changes</button>
+                                                        <button class="btn btn-round btn-lg">{{__('front.update_acc_details')}}</button>
                                                     </div>
 
                                                 </div>
