@@ -30,7 +30,12 @@ class Coupon extends Model
         return ($total * $this->value) / 100; // to dollars
     }
 
+    /**
+     * Store a coupon into a session
+     * @param $cartTotal
+     */
     public function addToSession($cartTotal){
+        if($cartTotal <= 0) return;
         return session()->put('coupon', [
             'code' => $this->code,
             'discount' => $this->discount($cartTotal),

@@ -32,7 +32,6 @@ class CartController extends Controller
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(ProductToCartRequest $request){
-
         $product = Product::whereSlug(request('product'))->first();
 
         if($product->hasCount($request->qnt)){
@@ -47,13 +46,12 @@ class CartController extends Controller
      * Update Cart
      */
     public function update(UpdateCartRequest $request){
-        
         $product = Product::whereSlug(request('product'))->first();
 
         if(! $product->hasCount($request->qnt)){
             return response(['msg' => __('front.do_not_have_qnt')], 422);
         }
-        
+
         try{
             $request->save($product);
         }catch(\Exception $ex){
@@ -69,7 +67,10 @@ class CartController extends Controller
      */
     public function clear(){
 
+
         Cart::session(auth()->id())->clear();
+
+        session('coupon') ? session()->forget('coupon') : null;
 
         session()->flash('success', __('front.shopping_cart_has_been_emptied'));
 
@@ -86,6 +87,8 @@ class CartController extends Controller
         $product = Product::whereSlug($data['product'])->first();
 
         Cart::session(auth()->id())->remove($product->id);
+
+        event('CartUpdated');
 
         if(request()->wantsJson()){
             return response(['msg' => $product->name . " " . __('front.removed_from_your_cart')], 200);

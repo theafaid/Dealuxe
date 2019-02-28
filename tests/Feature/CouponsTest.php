@@ -79,4 +79,22 @@ class CouponsTest extends TestCase
 
     }
 
+    /** @test */
+    function a_coupon_session_must_be_updated_after_update_the_cart(){
+        $this->signIn();
+
+        $product1 = create('App\Product', ['price' => 10000]);
+        $product2 = create('App\Product', ['price' => 10000]);
+
+        $this->toCart($product1);
+
+        $coupon = create('App\Coupon', ['type' => 'percent', 'value' => 50]);
+        $this->storeCoupon($coupon);
+
+        $this->assertEquals(session('coupon')['discount'], 5000);
+
+        $this->toCart($product2);
+
+        $this->assertEquals(session('coupon')['discount'], 10000);
+    }
 }

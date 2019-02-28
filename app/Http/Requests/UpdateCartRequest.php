@@ -37,5 +37,7 @@ class UpdateCartRequest extends FormRequest
                 'value' => $this->qnt ?: 1
             ]
         ]);
+
+        event('CartUpdated');
     }
 }

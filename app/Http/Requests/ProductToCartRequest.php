@@ -47,6 +47,8 @@ class ProductToCartRequest extends FormRequest
             ]
         ]);
 
+        event('CartUpdated');
+
         if(request()->wantsJson()){
             return response(['msg' => $product->name . " " . __('front.added_to_your_cart')], 200);
         }
