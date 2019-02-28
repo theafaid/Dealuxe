@@ -90,4 +90,8 @@ return [
     'product_name' => 'Product',
     'product_price' => 'Product Price',
     'quantity' => 'Quantity',
+
+    // search
+    'search' => 'Search',
+    'search_for_product' => 'Search for a product ?',
 ];

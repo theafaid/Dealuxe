@@ -2,19 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
-
 class SearchController extends Controller
 {
+    /**
+     * Search for a specific product
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+     */
     public function index(){
 
-        if(request()->has('q')){
-            $products = Product::search($query = request('q'))->paginate(20);
-
-            if(request()->expectsJson()){
-                return $products;
-            }
-
+        if($query = request('q')){
             return view('search', [
                 'title' => __("front.result_for {$query}")
             ]);

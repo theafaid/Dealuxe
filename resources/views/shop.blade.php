@@ -99,10 +99,9 @@
                         <div class="sidebar">
                             <h4 class="sidebar-title">Search</h4>
                             <div class="sidebar-search">
-                                <search-ui></search-ui>
-                                {{--<form action="{{route('search')}}">--}}
-                                    {{--<input type="text" name="q" placeholder="Enter key words">--}}
-                                {{--</form>--}}
+                                <form action="{{route('search')}}">
+                                    <input type="text" name="q" placeholder="{{__('front.search_for_product')}}">
+                                </form>
                             </div>
                         </div>
 
