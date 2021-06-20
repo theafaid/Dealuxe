@@ -1,0 +1,25 @@
+.flip.text-left           { text-align: right; }
+.flip.text-right          { text-align: left; }
+
+.list-unstyled {
+       padding-right: 0;
+       padding-left: initial;
+   }
+
+.list-inline {
+   margin-right: -5px;
+   margin-left: 0;
+}
+
+dd {
+margin-right: 0;
+margin-left: initial;
+}
+
+.blockquote-reverse,
+blockquote.pull-left {
+padding-left: 15px;
+padding-right: 0;
+border-right: 0;
+text-align: left;
+}
